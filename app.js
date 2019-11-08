@@ -8,24 +8,32 @@ console.log(TestRoute.comb.length); // number of permutations
 
 // HTTP Request to Google Map API
 // For now we use a set of example GPS coordinates
-var request = require('request');
-var api_key = 'AIzaSyDtZvRnTEtBj8SP7tClaNxJRx5lrwmVASE';
+api_key = 'AIzaSyDtZvRnTEtBj8SP7tClaNxJRx5lrwmVASE';
 // API KEY from Yining's old Python code
-var api_endpoint = "https://maps.googleapis.com/maps/api/distancematrix/json";
-var origin = '30.289029,-97.735392'; // this GPS coordinate is an example
-var destination = '30.399866,-97.686537'; // this GPS coordinate is an example
-
+api_endpoint = "https://maps.googleapis.com/maps/api/distancematrix/json";
+origin = 'Austin, Texas'; // this GPS coordinate is an example
+destination = 'Dallas, Texas'; // this GPS coordinate is an example
 params = {
     'origins': origin, 
     'destinations': destination, 
-    'units': 'imperial',
+    // 'units': 'imperial',
     'key': api_key
 };
 
-request({url: api_endpoint, qs: params},
-    function(error, response, body) {
-    console.log(body);
-});
+
+var request = require('request');
+request({url: api_endpoint, qs: params}, callback);
+
+function callback(error, response, body) {
+  if (error) {
+    return console.error('Error:', error);
+  }
+  if (!error && response.statusCode == 200) {
+    var info = JSON.parse(body);
+    // console.log(info);
+    console.log(info.rows[0].elements[0].duration.value);
+  }
+}
 
 
 function RouteComb(numDestn) {
@@ -37,7 +45,7 @@ function RouteComb(numDestn) {
   future update, we will include such a parameter that allows you to return to
   the origin or not.
   */
-  
+
   const RouteComb = {}; // Create an object
   RouteComb.numDestn = numDestn;
   RouteComb.dest = [];
@@ -56,6 +64,7 @@ function RouteComb(numDestn) {
 
   return RouteComb;
 }
+
 
 function permutator(inputArr) {
 // Generate all permutations
