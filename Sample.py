@@ -21,3 +21,5 @@ def get_travel_time(destination):
 
 travel_times = [get_travel_time(d) for d in destinations]
 print(travel_times)
+
+
