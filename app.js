@@ -1,9 +1,32 @@
 
-TestRoute = RouteComb(4);
-console.log(TestRoute.dest);
-console.log(TestRoute.comb);
-console.log(TestRoute.comb.length);
-console.log(TestRoute.comb[2]);
+// Test case: Generate an array of all permutations
+var numDestinations = 3; // for example, 3 destinations, excluding the origin
+TestRoute = RouteComb(numDestinations); // Construct an object RouteComb
+console.log(TestRoute.comb); // permutation array
+console.log(TestRoute.comb.length); // number of permutations
+
+
+// HTTP Request to Google Map API
+// For now we use a set of example GPS coordinates
+var request = require('request');
+var api_key = 'AIzaSyDtZvRnTEtBj8SP7tClaNxJRx5lrwmVASE';
+// API KEY from Yining's old Python code
+var api_endpoint = "https://maps.googleapis.com/maps/api/distancematrix/json";
+var origin = '30.289029,-97.735392'; // this GPS coordinate is an example
+var destination = '30.399866,-97.686537'; // this GPS coordinate is an example
+
+params = {
+    'origins': origin, 
+    'destinations': destination, 
+    'units': 'imperial',
+    'key': api_key
+};
+
+request({url: api_endpoint, qs: params},
+    function(error, response, body) {
+    console.log(body);
+});
+
 
 function RouteComb(numDestn) {
   /*
@@ -52,31 +75,3 @@ function permutator(inputArr) {
   }
   return permute(inputArr);
 }
-
-
-
-/*
-function permutator(inputArr) {
-  // This function is for 6 locations, including an origin
-    var results = [];
-  
-    function permute(arr, memo) {
-      var cur, memo = memo || [];
-  
-      for (var i = 0; i < arr.length; i++) {
-        cur = arr.splice(i, 1);
-        if (arr.length === 0) {
-          results.push(memo.concat(cur));
-        }
-        permute(arr.slice(), memo.concat(cur));
-        arr.splice(i, 0, cur[0]);
-      }
-  
-      return results;
-    }
-  
-    return permute(inputArr);
-  }
-
-console.log(permutator([0, 1, 2, 3, 4]).length)
-*/
