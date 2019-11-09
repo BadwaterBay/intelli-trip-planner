@@ -14,7 +14,7 @@ api_endpoint = "https://maps.googleapis.com/maps/api/distancematrix/json";
 origin = 'Austin, Texas'; // this GPS coordinate is an example
 destination = 'Dallas, Texas'; // this GPS coordinate is an example
 params = {
-    'origins': origin, 
+    'origins': origin,
     'destinations': destination, 
     // 'units': 'imperial',
     'key': api_key
