@@ -14,16 +14,17 @@ const api_key = 'AIzaSyDtZvRnTEtBj8SP7tClaNxJRx5lrwmVASE';
 const api_endpoint = "https://maps.googleapis.com/maps/api/distancematrix/json";
 var origin = 'Austin Central Library, Austin, Texas';
 var destination = 'Austin Community College: Northridge Campus, Austin, Texas';
+var mode = 'driving'; // driving, walking, bicycling, transit
 var params = {
     'origins': origin,
     'destinations': destination, 
     // 'units': 'imperial',
-    'key': api_key
+    'key': api_key,
+    'mode': mode
 };
 
-
 var request = require('request');
-request.get({url: api_endpoint, qs: params}, callback);
+request({url: api_endpoint, qs: params}, callback);
 
 function callback(error, response, body) {
   if (error) {
@@ -31,8 +32,7 @@ function callback(error, response, body) {
   }
   if (!error && response.statusCode == 200) {
     info = JSON.parse(body);
-    console.log("Callback travel duration in seconds: " + info.rows[0].elements[0].duration.value);
-    return info;
+    console.log("Travel duration in seconds: " + info.rows[0].elements[0].duration.value);
   }
 }
 
