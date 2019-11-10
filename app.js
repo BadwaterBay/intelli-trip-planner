@@ -11,8 +11,8 @@ console.log(TestRoute.comb.length); // number of permutations
 api_key = 'AIzaSyDtZvRnTEtBj8SP7tClaNxJRx5lrwmVASE';
 // API KEY from Yining's old Python code
 api_endpoint = "https://maps.googleapis.com/maps/api/distancematrix/json";
-origin = 'Austin, Texas'; // this GPS coordinate is an example
-destination = 'Dallas, Texas'; // this GPS coordinate is an example
+origin = 'Mueller Lake Park, Austin, Texas'; // this is an example
+destination = 'Mount Bonnell, Austin, Texas'; // this is an example
 params = {
     'origins': origin,
     'destinations': destination, 
