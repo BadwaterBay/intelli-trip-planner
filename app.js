@@ -6,14 +6,15 @@ console.log(TestRoute.comb); // permutation array
 console.log(TestRoute.comb.length); // number of permutations
 
 
+
 // HTTP Request to Google Map API
 // For now we use a set of example GPS coordinates
-api_key = 'AIzaSyDtZvRnTEtBj8SP7tClaNxJRx5lrwmVASE';
+const api_key = 'AIzaSyDtZvRnTEtBj8SP7tClaNxJRx5lrwmVASE';
 // API KEY from Yining's old Python code
-api_endpoint = "https://maps.googleapis.com/maps/api/distancematrix/json";
-origin = 'Austin Central Library, Austin, Texas';
-destination = 'Austin Community College: Northridge Campus, Austin, Texas';
-params = {
+const api_endpoint = "https://maps.googleapis.com/maps/api/distancematrix/json";
+var origin = 'Austin Central Library, Austin, Texas';
+var destination = 'Austin Community College: Northridge Campus, Austin, Texas';
+var params = {
     'origins': origin,
     'destinations': destination, 
     // 'units': 'imperial',
@@ -22,18 +23,19 @@ params = {
 
 
 var request = require('request');
-request({url: api_endpoint, qs: params}, callback);
+request.get({url: api_endpoint, qs: params}, callback);
 
 function callback(error, response, body) {
   if (error) {
     return console.error('Error:', error);
   }
   if (!error && response.statusCode == 200) {
-    var info = JSON.parse(body);
-    // console.log(info);
-    console.log(info.rows[0].elements[0].duration.value);
+    info = JSON.parse(body);
+    console.log("Callback travel duration in seconds: " + info.rows[0].elements[0].duration.value);
+    return info;
   }
 }
+
 
 
 function RouteComb(numDestn) {
