@@ -8,50 +8,46 @@ console.log(TestRoute.comb.length); // number of permutations
 var origin = 'Austin Central Library, Austin, Texas';
 var destination = 'Austin Community College: Northridge Campus, Austin, Texas';
 
-function getTravelInfo(origin, destination) {
-
-  const promise = new Promise((resolve, reject) => {
+function getDistanceMatrix(origin, destination) {
+  // origin = origin.join('|');
+  // destination = destination.join('|');
+  return new Promise((resolve, reject) => {
     // HTTP Request to Google Map API
-  // For now we use a set of example GPS coordinates
-  const api_key = 'AIzaSyDtZvRnTEtBj8SP7tClaNxJRx5lrwmVASE';
-  // API KEY from Yining's old Python code
-  const api_endpoint = "https://maps.googleapis.com/maps/api/distancematrix/json";
+    // For now we use a set of example GPS coordinates
+    const api_key = 'AIzaSyDtZvRnTEtBj8SP7tClaNxJRx5lrwmVASE';
+    // API KEY from Yining's old Python code
+    const api_endpoint = "https://maps.googleapis.com/maps/api/distancematrix/json";
 
-  var mode = 'driving'; // driving, walking, bicycling, transit
-  var params = {
-      'origins': origin,
-      'destinations': destination, 
-      // 'units': 'imperial',
-      'key': api_key,
-      'mode': mode
-  };
+    var mode = 'driving'; // driving, walking, bicycling, transit
+    var params = {
+        'origins': origin,
+        'destinations': destination, 
+        // 'units': 'imperial',
+        'key': api_key,
+        'mode': mode
+    };
 
-  var request = require('request');
-  request({url: api_endpoint, qs: params}, (error, response, body) => {
-    if (error) {
-      return console.error('Error:', error);
-    }
-    if (!error && response.statusCode == 200) {
-
-      info = JSON.parse(body);
-      console.log("Travel duration in seconds: " + info.rows[0].elements[0].duration.value);
-    }
-  }
-  
-  function callback(error, response, body) {
-    if (error) {
-      return console.error('Error:', error);
-    }
-    if (!error && response.statusCode == 200) {
-      info = JSON.parse(body);
-      console.log("Travel duration in seconds: " + info.rows[0].elements[0].duration.value);
-    }
-  }  
-})
-
-
-
+    const request = require('request');
+    request({url: api_endpoint, qs: params}, (error, response, body) => {
+      if (error) {
+        return reject(error.message);
+      }
+      else {
+        if (response.statusCode != 200) {
+          reject(`status code: ${response.statusCode}`);
+        } else {
+          resolve(JSON.parse(body));
+        }
+      }
+    })
+  })
 }
+
+(async () => {
+  const result = await getDistanceMatrix(origin,destination);
+  console.log(JSON.stringify(result, null, 2));
+  console.log(result.rows[0].elements[0].duration.value);
+})();
 
 
 /*
