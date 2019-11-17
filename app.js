@@ -5,24 +5,56 @@ TestRoute = RouteComb(numDestinations); // Construct an object RouteComb
 console.log(TestRoute.comb); // permutation array
 console.log(TestRoute.comb.length); // number of permutations
 
-
-
-// HTTP Request to Google Map API
-// For now we use a set of example GPS coordinates
-const api_key = 'AIzaSyDtZvRnTEtBj8SP7tClaNxJRx5lrwmVASE';
-// API KEY from Yining's old Python code
-const api_endpoint = "https://maps.googleapis.com/maps/api/distancematrix/json";
 var origin = 'Austin Central Library, Austin, Texas';
 var destination = 'Austin Community College: Northridge Campus, Austin, Texas';
-var mode = 'driving'; // driving, walking, bicycling, transit
-var params = {
-    'origins': origin,
-    'destinations': destination, 
-    // 'units': 'imperial',
-    'key': api_key,
-    'mode': mode
-};
 
+function getTravelInfo(origin, destination) {
+
+  const promise = new Promise((resolve, reject) => {
+    // HTTP Request to Google Map API
+  // For now we use a set of example GPS coordinates
+  const api_key = 'AIzaSyDtZvRnTEtBj8SP7tClaNxJRx5lrwmVASE';
+  // API KEY from Yining's old Python code
+  const api_endpoint = "https://maps.googleapis.com/maps/api/distancematrix/json";
+
+  var mode = 'driving'; // driving, walking, bicycling, transit
+  var params = {
+      'origins': origin,
+      'destinations': destination, 
+      // 'units': 'imperial',
+      'key': api_key,
+      'mode': mode
+  };
+
+  var request = require('request');
+  request({url: api_endpoint, qs: params}, (error, response, body) => {
+    if (error) {
+      return console.error('Error:', error);
+    }
+    if (!error && response.statusCode == 200) {
+
+      info = JSON.parse(body);
+      console.log("Travel duration in seconds: " + info.rows[0].elements[0].duration.value);
+    }
+  }
+  
+  function callback(error, response, body) {
+    if (error) {
+      return console.error('Error:', error);
+    }
+    if (!error && response.statusCode == 200) {
+      info = JSON.parse(body);
+      console.log("Travel duration in seconds: " + info.rows[0].elements[0].duration.value);
+    }
+  }  
+})
+
+
+
+}
+
+
+/*
 var request = require('request');
 request({url: api_endpoint, qs: params}, callback);
 
@@ -35,6 +67,7 @@ function callback(error, response, body) {
     console.log("Travel duration in seconds: " + info.rows[0].elements[0].duration.value);
   }
 }
+*/
 
 
 
