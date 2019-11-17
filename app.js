@@ -1,16 +1,92 @@
 
-// Test case: Generate an array of all permutations
-var numDestinations = 3; // for example, 3 destinations, excluding the origin
-TestRoute = RouteComb(numDestinations); // Construct an object RouteComb
-console.log(TestRoute.comb); // permutation array
-console.log(TestRoute.comb.length); // number of permutations
 
-var origin = 'Austin Central Library, Austin, Texas';
-var destination = 'Austin Community College: Northridge Campus, Austin, Texas';
+var origin = ["The University of Texas at Austin", 
+  "The Domain, Austin, TX",
+  "H Mart, Austin, TX",
+  "Oasis by Lake Travis, Austin, TX",
+  "Flatiron School, Austin, TX"];
+/*
+var origin = ['Houston, Texas',
+  'Denver, Colorado',
+  'Dallas, Texas'];
+*/
+
+var destination = origin;
+
+// Test case: Generate an array of all permutations
+var numDestinations = origin.length-1; // for example, 3 destinations, excluding the origin
+TestRoute = RouteComb(numDestinations); // Construct an object RouteComb
+// console.log(TestRoute.comb); // permutation array
+// console.log(TestRoute.comb.length); // number of permutations
+
+// console.log(TestRoute.comb.length);
+
+
+origins = origin.join('|');
+destinations = destination.join('|');
+// travelTimes = [];
+travelTime = 0;
+minTravelTime = 0;
+minTravelTime_i = 0;
+
+
+(async () => {
+  const result = await getDistanceMatrix(origins,destinations);
+  /*
+  console.log(JSON.stringify(result, null, 2));
+  console.log(result.rows[0].elements[1].duration.value);
+  console.log(result.rows[1].elements[2].duration.value);
+  console.log(result.rows[0].elements[2].duration.value);
+  console.log(result.rows[2].elements[1].duration.value);
+  */
+  // Add travel time of the first pair
+  for (i=0; i<TestRoute.comb.length; ++i) {
+    travelTime = 0;
+    for (j=0; j<TestRoute.comb[0].length-1; ++j) {
+      travelTime += result.rows[TestRoute.comb[i][j]].elements[TestRoute.comb[i][j+1]].duration.value;
+    }
+    if (i==0) {
+      minTravelTime = travelTime;
+    }
+    else if (travelTime < minTravelTime) {
+        minTravelTime = travelTime;
+        minTravelTime_i = i;
+    }
+  }
+  // console.log(minTravelTime);
+  // console.log(minTravelTime_i);
+  // console.log(TestRoute.comb[minTravelTime_i]);
+  // console.log(origin[0]);
+  // TestRoute.comb[minTravelTime_i].forEach((origin.[])=>console.log(`Travel route is ${origin.[]}`));
+  optimalRoute = (TestRoute.comb[minTravelTime_i].map((index) => origin[index]));
+  console.log(`The optimal travel route is: ${optimalRoute.join(' -> ')}.`);
+  // travelTimes.forEach((travelTime)=>console.log(`Travel Time is ${travelTime}`));
+
+})();
+
+
+
+
+
+
+/*
+const travelInfo = new Object({
+  this.
+  
+
+});
+*/
+
+/*
+for (i=0; i<TestRoute.comb.length-1; ++i) {
+  for (j=0; ) {
+    TestRoute.comb[i];
+  }
+}
+*/
+
 
 function getDistanceMatrix(origin, destination) {
-  // origin = origin.join('|');
-  // destination = destination.join('|');
   return new Promise((resolve, reject) => {
     // HTTP Request to Google Map API
     // For now we use a set of example GPS coordinates
@@ -20,13 +96,13 @@ function getDistanceMatrix(origin, destination) {
 
     var mode = 'driving'; // driving, walking, bicycling, transit
     var params = {
-        'origins': origin,
-        'destinations': destination, 
+        'origins': origins,
+        'destinations': destinations, 
         // 'units': 'imperial',
         'key': api_key,
         'mode': mode
     };
-
+    
     const request = require('request');
     request({url: api_endpoint, qs: params}, (error, response, body) => {
       if (error) {
@@ -43,12 +119,6 @@ function getDistanceMatrix(origin, destination) {
   })
 }
 
-(async () => {
-  const result = await getDistanceMatrix(origin,destination);
-  console.log(JSON.stringify(result, null, 2));
-  console.log(result.rows[0].elements[0].duration.value);
-})();
-
 
 /*
 var request = require('request');
@@ -64,8 +134,6 @@ function callback(error, response, body) {
   }
 }
 */
-
-
 
 function RouteComb(numDestn) {
   /*
