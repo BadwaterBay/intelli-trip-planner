@@ -1,9 +1,7 @@
 
-var origin = ["The University of Texas at Austin", 
-  "The Domain, Austin, TX",
-  "H Mart, Austin, TX",
-  "Oasis by Lake Travis, Austin, TX",
-  "Flatiron School, Austin, TX"];
+var origin = ["7630 WOOD HOLLOW DR, AUSTIN TX",
+  "Laundry Works, Austin TX",
+  "Costo Gateway, Austin, TX"];
 /*
 var origin = ['Houston, Texas',
   'Denver, Colorado',
