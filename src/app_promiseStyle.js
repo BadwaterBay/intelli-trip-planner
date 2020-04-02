@@ -1,5 +1,5 @@
-const {getDistanceMatrix} = require('./src/getDistanceMatrix');
-const {getPermutations} = require('./src/getPermutations');
+const {getDistanceMatrix} = require('./getDistanceMatrix');
+const {getPermutations} = require('./getPermutations');
 
 async function main() {
     const locations = [
