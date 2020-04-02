@@ -1,6 +1,2 @@
 .DS_Store
 node_modules/
-<<<<<<< HEAD
-=======
-.idea
->>>>>>> rewrite-google-distance-matrix-api-to-promise-style
