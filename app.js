@@ -1,20 +1,16 @@
 
-var origin = ["7630 WOOD HOLLOW DR, AUSTIN TX",
-  "Laundry Works, Austin TX",
-  "Costo Gateway, Austin, TX"];
-/*
 var origin = ['Houston, Texas',
   'Denver, Colorado',
   'Dallas, Texas'];
-*/
+
 
 var destination = origin;
 
 // Test case: Generate an array of all permutations
 var numDestinations = origin.length-1; // for example, 3 destinations, excluding the origin
 TestRoute = RouteComb(numDestinations); // Construct an object RouteComb
-// console.log(TestRoute.comb); // permutation array
-// console.log(TestRoute.comb.length); // number of permutations
+console.log(TestRoute.comb); // permutation array
+console.log(TestRoute.comb.length); // number of permutations
 
 // console.log(TestRoute.comb.length);
 
@@ -29,13 +25,13 @@ minTravelTime_i = 0;
 
 (async () => {
   const result = await getDistanceMatrix(origins,destinations);
-  /*
+  
   console.log(JSON.stringify(result, null, 2));
   console.log(result.rows[0].elements[1].duration.value);
   console.log(result.rows[1].elements[2].duration.value);
   console.log(result.rows[0].elements[2].duration.value);
   console.log(result.rows[2].elements[1].duration.value);
-  */
+  
   // Add travel time of the first pair
   for (i=0; i<TestRoute.comb.length; ++i) {
     travelTime = 0;
