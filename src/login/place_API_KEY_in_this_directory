@@ -1,1 +1,10 @@
-Place 'API_KEY_GOOG_route-optimization_dev.php' in this directory
+Place Google Maps API key in this directory
+
+The file should be named:
+'API_KEY_GOOG_route-optimization_dev.php'
+
+In this file, it should contain:
+
+<?php
+define('API_KEY_GOOGLE','YOUR_API_KEY');
+?>
