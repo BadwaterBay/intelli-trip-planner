@@ -1,6 +1,6 @@
 # Directories #
 ###############
-**/login/
+
 
 # Local configs #
 ######################
@@ -17,7 +17,7 @@
 
 # API key files #
 ###################
-api_key_google.json
+API_KEY_GOOG_route-optimization_dev.php
 
 # Packages #
 ############
