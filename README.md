@@ -1,4 +1,4 @@
-# Project title: RouteOptimization
+# Project RouteOptimization
 
 Founding members:
 Yining Wang (@yiningwoof) and Skyler Dong (@dongskyler)
