@@ -6,7 +6,7 @@ Skyler Dong (@dongskyler) and Yining Wang (@yiningwoof)
 Date created: October 27, 2019
 
 ## Goal
-The grand goal of this project is to build a web app that can intelligently recommend road trip routes, given certian criteria, such as trip duration, budget, region of interest, must-visit destinations, lodging places, time spent at a given location, etc.
+The grand goal of this project is to build a web app that can intelligently recommend road trip routes, given a number of criteria, such as trip duration, budget, region of interest, must-visit destinations, lodging places, time spent at a given location, etc.
 
 The grand goal is glorious but difficult to implement, requiring front-end website (HTML, CSS, and JavaScript), back-end database and computation, and even machine learning.
 
