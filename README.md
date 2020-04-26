@@ -1,5 +1,9 @@
 # Project RouteOptimization
 
+[![Code Inspector Rating Badge](https://www.code-inspector.com/project/7046/status/svg)](https://frontend.code-inspector.com/public/project/7046/intelli-trip-planner/dashboard)
+[![Code Inspector Score Badge](https://www.code-inspector.com/project/7046/score/svg)](https://frontend.code-inspector.com/public/project/7046/intelli-trip-planner/dashboard)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0263146bf0e24d25b0ef8f18df238136)](https://www.codacy.com/manual/dongskyler/intelli-trip-planner?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dongskyler/intelli-trip-planner&amp;utm_campaign=Badge_Grade)
+
 Founding members:
 Skyler Dong (@dongskyler) and Yining Wang (@yiningwoof)
 
