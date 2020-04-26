@@ -1,8 +1,8 @@
 # Intelli Trip Planner
 
-*[https://app.skylerdong.com/route-optimization/](https://app.skylerdong.com/route-optimization/)*
+[https://app.skylerdong.com/route-optimization/](https://app.skylerdong.com/route-optimization/)
 
-*[https://github.com/dongskyler/intelli-trip-planner](https://github.com/dongskyler/intelli-trip-planner)*
+[https://github.com/dongskyler/intelli-trip-planner](https://github.com/dongskyler/intelli-trip-planner)
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/0263146bf0e24d25b0ef8f18df238136)](https://www.codacy.com/manual/dongskyler/intelli-trip-planner?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dongskyler/intelli-trip-planner&amp;utm_campaign=Badge_Grade)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
