@@ -1,4 +1,8 @@
-# Project RouteOptimization
+# Intelli Trip Planner
+
+*https://app.skylerdong.com/route-optimization/*
+
+*https://github.com/dongskyler/intelli-trip-planner*
 
 [![Code Inspector Rating Badge](https://www.code-inspector.com/project/7046/status/svg)](https://frontend.code-inspector.com/public/project/7046/intelli-trip-planner/dashboard)
 [![Code Inspector Score Badge](https://www.code-inspector.com/project/7046/score/svg)](https://frontend.code-inspector.com/public/project/7046/intelli-trip-planner/dashboard)
