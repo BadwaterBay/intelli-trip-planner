@@ -1,16 +1,14 @@
 # Intelli Trip Planner
 
-[https://app.skylerdong.com/route-optimization/](https://app.skylerdong.com/route-optimization/)
+[https://github.com/Badwater-Apps/intelli-trip-planner](https://github.com/Badwater-Apps/intelli-trip-planner)
 
-[https://github.com/dongskyler/intelli-trip-planner](https://github.com/dongskyler/intelli-trip-planner)
-
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0263146bf0e24d25b0ef8f18df238136)](https://www.codacy.com/manual/dongskyler/intelli-trip-planner?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dongskyler/intelli-trip-planner&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/757e202e36674482ba14d67945da652e)](https://www.codacy.com/gh/Badwater-Apps/intelli-trip-planner?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Badwater-Apps/intelli-trip-planner&amp;utm_campaign=Badge_Grade)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Founding members:
-Skyler Dong (@dongskyler) and Yining Wang (@yiningwoof)
-
 Date created: October 27, 2019
+
+Currently hosted at:
+[https://app.skylerdong.com/route-optimization/](https://app.skylerdong.com/route-optimization/)
 
 ## Goal
 The grand goal of this project is to build a web app that can intelligently recommend road trip routes, given a number of criteria, such as trip duration, budget, region of interest, must-visit destinations, lodging places, time spent at a given location, etc.
@@ -34,3 +32,6 @@ https://github.com/firstcontributions/first-contributions
 
 ## Acknowledgements
 We would like to thank Jieyi "Jay" Hu for his support and input.
+
+Contributors:
+Skyler Dong (@dongskyler) and Yining Wang (@yiningwoof)
