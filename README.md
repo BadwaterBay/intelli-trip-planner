@@ -33,5 +33,5 @@ https://github.com/firstcontributions/first-contributions
 ## Acknowledgements
 We would like to thank Jieyi "Jay" Hu for his support and input.
 
-Contributors:
+## Contributors
 Skyler Dong (@dongskyler) and Yining Wang (@yiningwoof)
