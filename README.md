@@ -37,6 +37,6 @@ We would like to thank [Jieyi "Jay" Hu](https://github.com/bgjehu) for his suppo
 
 ## Contributors
 
-[Skyler Dong](https://github.com/dongskyler) and [Yining Wang](https://github.com/yiningwoof)
+[Skyler Dong](https://github.com/dongskyler), [Yining Wang](https://github.com/yiningwoof), and [Jieyi "Jay" Hu](https://github.com/bgjehu)
 
 Date created: October 27, 2019
