@@ -2,7 +2,7 @@
 
 [https://github.com/Badwater-Apps/intelli-trip-planner](https://github.com/Badwater-Apps/intelli-trip-planner)
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/757e202e36674482ba14d67945da652e)](https://www.codacy.com/gh/Badwater-Apps/intelli-trip-planner?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Badwater-Apps/intelli-trip-planner&amp;utm_campaign=Badge_Grade)
+[![CodeFactor](https://www.codefactor.io/repository/github/badwater-apps/intelli-trip-planner/badge)](https://www.codefactor.io/repository/github/badwater-apps/intelli-trip-planner)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Currently hosted at:
