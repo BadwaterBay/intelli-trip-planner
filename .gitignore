@@ -18,6 +18,8 @@ private/
 # API key files #
 ###################
 API_KEY_GOOG_route-optimization_dev.php
+API_KEY_GOOG_route-optimization_dev.json
+API_KEY_GOOG_route-optimization_dev.txt
 
 # Packages #
 ############
