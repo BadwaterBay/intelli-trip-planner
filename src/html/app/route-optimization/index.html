@@ -1,6 +1,3 @@
-<?php
-  require_once './API_KEY_GOOG_route-optimization_dev.php';
-?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -36,8 +33,11 @@
     </div><!--column-->
   </div><!--row-->
 </div><!--maincontent-->
-<script defer src="<?php echo PATH; ?>/app/route-optimization/app.js"></script>
-<script type="text/javascript" defer src="https://maps.googleapis.com/maps/api/js?key=<?php echo API_KEY_GOOGLE; ?>&callback=initMap"></script>
+<script type="text/javascript" defer src="./app.js"></script>
+<script type="text/javascript" defer src="./API_KEY_GOOG_route-optimization_dev.php">
+  urlGoogleMaps = 'https://maps.googleapis.com/maps/api/js?key=' + googleMapsAPIKEY + '&callback=initMap';
+</script>
+<script type="text/javascript" defer src=urlGoogleMaps></script>
 </script>
 </body>
 </html>
