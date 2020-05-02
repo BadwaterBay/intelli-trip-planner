@@ -3,7 +3,7 @@ function initMap() {
     // Prevent reload page
     e.preventDefault();
 
-    var origin = $("#route-opt-input").val().split('\n');
+    let origin = $("#route-opt-input").val().split('\n');
     origin = origin.filter(item => item);
 
     if (origin.length>10) {
@@ -11,14 +11,14 @@ function initMap() {
       return;
     }
 
-    var destination = origin;
-    var numDestinations = origin.length-1; // for example, 3 destinations, excluding the origin
-    TestRoute = RouteComb(numDestinations); // Construct an object RouteComb  
-    var travelTime = 0;
-    var minTravelTime = 0;
-    var minTravelTime_i = 0;
+    let destination = origin;
+    let numDestinations = origin.length-1; // for example, 3 destinations, excluding the origin
+    TestRoute = RouteComb(numDestinations); // Construct an object RouteComb
+    let travelTime = 0;
+    let minTravelTime = 0;
+    let minTravelTime_i = 0;
 
-    var service = new google.maps.DistanceMatrixService;
+    let service = new google.maps.DistanceMatrixService;
 
     service.getDistanceMatrix({
       origins: origin,
@@ -62,31 +62,31 @@ function initMap() {
       RouteComb.numDestn = numDestn;
       RouteComb.dest = [];
       RouteComb.comb = [];
-  
-      for (var i=1; i<=numDestn; ++i) {
+
+      for (let i=1; i<=numDestn; ++i) {
         RouteComb.dest.push(i);
       }
       // Generate an array of destination indices from 1 to n, as 0 is reserved for
       // the origin.
-  
+
       RouteComb.comb = permutator(RouteComb.dest);
       // Generate all permutations
-  
-      var origin = 0;
-      for (var i=0; i<RouteComb.comb.length; RouteComb.comb[i].unshift(0), ++i);
+
+      let origin = 0;
+      for (let i=0; i<RouteComb.comb.length; RouteComb.comb[i].unshift(0), ++i);
       // Add origin 0 to the array
-  
+
       return RouteComb;
     }
-  
+
     function permutator(inputArr) {
     // Generate all permutations
       // console.log('permutator activated!');
-      var results = [];
+      let results = [];
       function permute(arr, memo) {
-        var cur, memo = memo || [];
-        
-        for (var i=0; i<arr.length; ++i) {
+        let cur, memo = memo || [];
+
+        for (let i=0; i<arr.length; ++i) {
             cur = arr.splice(i, 1);
             if (arr.length === 0) {
             results.push(memo.concat(cur));
