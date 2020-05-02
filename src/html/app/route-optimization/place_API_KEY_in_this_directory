@@ -1,10 +1,16 @@
 Place Google Maps API key in this directory
 
+NEVER share your API key. 
+
+NEVER push API key to public repositories.
+
+***
+
 The file should be named:
 'API_KEY_GOOG_route-optimization_dev.php'
 
 In this file, it should contain:
 
 <?php
-define('API_KEY_GOOGLE','YOUR_API_KEY');
+  define('API_KEY_GOOGLE','YOUR_API_KEY');
 ?>

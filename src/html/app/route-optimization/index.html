@@ -1,3 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" type="text/css" href= "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href= "../../css/styles.min.css">
+<title>Route Optimization</title>
+</head>
+<body>
 <div class="container maincontent">
   <div class="row">
     <div class="col-12 mb-3">
@@ -19,10 +30,14 @@
       <div>
         <p>We use Google Distance Matrix API and Google Map JavaScript API with a customized optimization algorithm to calculate the fastest route.</p>
       </div>
-      <hr/>
-      <div>
-        <p class="footnote mb-3">This project was done in collaboration with <a href="https://github.com/yiningwoof" target="_blank">Yining Wang</a>. We thank <a href="https://github.com/bgjehu" target="_blank">Jieyi "Jay" Hu</a> for his support and input.</p>
-      </div>
     </div><!--column-->
   </div><!--row-->
 </div><!--maincontent-->
+<script type="text/javascript" defer src="./app.js"></script>
+<script type="text/javascript" defer src="./API_KEY_GOOG_route-optimization_dev.php">
+  urlGoogleMaps = 'https://maps.googleapis.com/maps/api/js?key=' + googleMapsAPIKEY + '&callback=initMap';
+</script>
+<script type="text/javascript" defer src=urlGoogleMaps></script>
+</script>
+</body>
+</html>
