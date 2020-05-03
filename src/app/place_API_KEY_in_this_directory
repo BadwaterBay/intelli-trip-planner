@@ -7,10 +7,8 @@ NEVER push API key to public repositories.
 ***
 
 The file should be named:
-'API_KEY_GOOG_route-optimization_dev.php'
+'API_KEY_GOOG_route-optimization_dev.js'
 
 In this file, it should contain:
 
-<?php
-  define('API_KEY_GOOGLE','YOUR_API_KEY');
-?>
+const googleMapsAPIKEY = "YOUR_API_KEY";
