@@ -33,8 +33,6 @@ function initMap() {
         $("#optimal-route").html('Error occurred.');
       }
       else {
-        // console.log('Status OK!')
-        console.log(response);
         // Add travel time of the first pair
         for (i=0; i<TestRoute.comb.length; ++i) {
           travelTime = 0;
@@ -50,14 +48,12 @@ function initMap() {
           }
         }
         optimalRoute = (TestRoute.comb[minTravelTime_i].map((index) => origin[index]));
-        // console.log(`The optimal travel route is: ${optimalRoute.join(' -> ')}.`);
         $("#optimal-route").html(optimalRoute.join(' &rarr; '));
       }
       }
     );
 
     function RouteComb(numDestn) {
-      // console.log('RouteComb activated!');
       const RouteComb = {}; // Create an object
       RouteComb.numDestn = numDestn;
       RouteComb.dest = [];
@@ -81,7 +77,6 @@ function initMap() {
 
     function permutator(inputArr) {
     // Generate all permutations
-      // console.log('permutator activated!');
       let results = [];
       function permute(arr, memo) {
         let cur, memo = memo || [];
