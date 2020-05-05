@@ -4,7 +4,7 @@ private/
 
 # Local configs #
 ######################
-
+.venv
 
 # Compiled source #
 ###################
