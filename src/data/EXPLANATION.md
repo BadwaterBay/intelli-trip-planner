@@ -1,4 +1,7 @@
-### [Source](https://simplemaps.com/data/us-cities)
+# EXPLANATION
+
+## [Source](https://simplemaps.com/data/us-cities)
+
 This is the free/basic version of the dataset, and attribution to the original website will be required.
 
 ### Ambiguous variable explanations
