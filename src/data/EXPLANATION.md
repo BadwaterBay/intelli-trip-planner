@@ -4,7 +4,8 @@
 
 This is the free/basic version of the dataset, and attribution to the original website will be required.
 
-### Ambiguous variable explanations
+## Ambiguous variable explanations
+
 - **city** - City name
 - **city_ascii** - City name converted to ascii (*recommended*)
 - **country_fips** - The 5-digit FIPS code for the primary county. The first two digits correspond to the state's FIPS code.
