@@ -4,7 +4,8 @@ private/
 
 # Local configs #
 ######################
-
+.venv
+.ipynb_checkpoints
 
 # Compiled source #
 ###################
