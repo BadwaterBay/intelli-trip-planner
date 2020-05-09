@@ -68,7 +68,7 @@ function initMap() {
       RouteComb.comb = permutator(RouteComb.dest);
       // Generate all permutations
 
-      for (var i=0; i<RouteComb.comb.length; RouteComb.comb[i].unshift(0), ++i);
+      RouteComb.comb.forEach(e => e.unshift(0));
       // Add origin 0 to the array
 
       return RouteComb;
