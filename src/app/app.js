@@ -3,7 +3,7 @@ function initMap() {
     // Prevent reload page
     e.preventDefault();
 
-    let origin = $("#route-opt-input").val().split('\n');
+    var origin = $("#route-opt-input").val().split('\n');
     origin = origin.filter(item => item);
 
     if (origin.length>10) {
@@ -11,14 +11,14 @@ function initMap() {
       return;
     }
 
-    let destination = origin;
-    let numDestinations = origin.length-1; // for example, 3 destinations, excluding the origin
+    var destination = origin;
+    var numDestinations = origin.length-1; // for example, 3 destinations, excluding the origin
     TestRoute = RouteComb(numDestinations); // Construct an object RouteComb
-    let travelTime = 0;
-    let minTravelTime = 0;
-    let minTravelTime_i = 0;
+    var travelTime = 0;
+    var minTravelTime = 0;
+    var minTravelTime_i = 0;
 
-    let service = new google.maps.DistanceMatrixService;
+    var service = new google.maps.DistanceMatrixService;
 
     service.getDistanceMatrix({
       origins: origin,
@@ -59,7 +59,7 @@ function initMap() {
       RouteComb.dest = [];
       RouteComb.comb = [];
 
-      for (let i=1; i<=numDestn; ++i) {
+      for (var i=1; i<=numDestn; ++i) {
         RouteComb.dest.push(i);
       }
       // Generate an array of destination indices from 1 to n, as 0 is reserved for
@@ -68,8 +68,7 @@ function initMap() {
       RouteComb.comb = permutator(RouteComb.dest);
       // Generate all permutations
 
-      let origin = 0;
-      for (let i=0; i<RouteComb.comb.length; RouteComb.comb[i].unshift(0), ++i);
+      for (var i=0; i<RouteComb.comb.length; RouteComb.comb[i].unshift(0), ++i);
       // Add origin 0 to the array
 
       return RouteComb;
@@ -77,11 +76,11 @@ function initMap() {
 
     function permutator(inputArr) {
     // Generate all permutations
-      let results = [];
+      var results = [];
       function permute(arr, memo) {
-        let cur, memo = memo || [];
+        var cur, memo = memo || [];
 
-        for (let i=0; i<arr.length; ++i) {
+        for (var i=0; i<arr.length; ++i) {
             cur = arr.splice(i, 1);
             if (arr.length === 0) {
             results.push(memo.concat(cur));
