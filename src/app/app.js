@@ -75,7 +75,8 @@ function initMap() {
           return e;
         });
         // Add origin 0 to the array. 0 represents the origin
-      }else {
+      }
+      else if (document.getElementById('notReturnToOrigin').checked) {
         RouteComb.comb.forEach(e => e.unshift(0));
         // Add origin 0 to the array. 0 represents the origin
       }

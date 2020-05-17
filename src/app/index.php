@@ -30,13 +30,13 @@
             </p>
             <div class="form-check">
               <input class="form-check-input" type="radio" name="selectReturnToOrigin" id="returnToOrigin" value="yes" checked>
-              <label class="form-check-label" for="exampleRadios1">
+              <label class="form-check-label" for="returnToOrigin">
                 Yes
               </label>
             </div>
             <div class="form-check">
               <input class="form-check-input" type="radio" name="selectReturnToOrigin" id="notReturnToOrigin" value="no">
-              <label class="form-check-label" for="exampleRadios2">
+              <label class="form-check-label" for="notReturnToOrigin">
                 No
               </label>
             </div>
