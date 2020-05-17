@@ -14,4 +14,3 @@ In this file, it should contain:
 <?php
 define("GOOGMAPS_APIKEY", "YOUR_API_KEY");
 ?>
-

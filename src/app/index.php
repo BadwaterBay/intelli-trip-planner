@@ -18,8 +18,29 @@
           <h1>Route Optimization</h1>
         </div>
         <div>
-          <p>Enter up to 10 destinations, one per line.</p>
-          <p>It is assumed that (1) the first location is the origin and (2) you don't return back to the origin.</p>
+          <p>
+            Enter up to 10 destinations, one per line.
+          </p>
+          <p>
+            The first location is assumed to be the origin.
+          </p>
+          <div class="mb-3">
+            <p>
+              Return back to the origin at the end of trip?
+            </p>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="selectReturnToOrigin" id="returnToOrigin" value="yes" checked>
+              <label class="form-check-label" for="returnToOrigin">
+                Yes
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="selectReturnToOrigin" id="notReturnToOrigin" value="no">
+              <label class="form-check-label" for="notReturnToOrigin">
+                No
+              </label>
+            </div>
+          </div>
           <form action="javascript:void(0);" method="post" id="route-opt-form">
             <textarea type="text" id="route-opt-input" placeholder="Destinations" required autofocus rows="10" cols="35"></textarea><br>
             <button type="submit">Submit</button>
