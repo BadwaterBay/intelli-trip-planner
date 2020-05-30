@@ -35,6 +35,24 @@ If you are interested in contributing to this project, you are welcome to reach 
 
 To contribute to this project, we follow a rather standard approach of open-source software development, such as: [https://github.com/firstcontributions/first-contributions](https://github.com/firstcontributions/first-contributions)
 
+## Development
+
+### Initial setup
+
+- Install Node with the package manager of your choice and npm.
+- Clone this repository.
+- Change directory to the project's root directory, use command `npm ci` to install all node dependencies in your local environment.
+
+### Tools
+
+- Linting using Eslint:
+  - Use `npm run lint` to see issues without writing to files. It runs `eslint . --fix-dry-run`
+  - Use `npm run lint-fix` to let Eslint fix problems and write to files. It runs `eslint . --fix`
+  - When you git-commit, it will automatically trigger `npm run lint`
+- Formatting using Prettier:
+  - Use `npm run format` to automatically format all files and save changes to them
+  - When you git-commit, it will automatically trigger `npm run format`
+
 ## Contributors
 
 [Click here to see our contributors.](https://github.com/Badwater-Apps/intelli-trip-planner/graphs/contributors)
