@@ -1,6 +1,6 @@
-# Fixes #000.  (<=== Add issue number here)
+# Fixes #000. (<=== Add issue number here)
 
-*IMPORTANT:* Please don't create a Pull Request (PR) before creating an issue first.
+_IMPORTANT:_ Please don't create a Pull Request (PR) before creating an issue first.
 
 Make sure these boxes are checked before your Pull Request is ready to be reviewed and merged. Thanks!
 
