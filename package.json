@@ -1,0 +1,37 @@
+{
+  "name": "intelli-trip-planner",
+  "version": "1.0.0",
+  "description": "[https://github.com/Badwater-Apps/intelli-trip-planner](https://github.com/Badwater-Apps/intelli-trip-planner)",
+  "main": "src/app/index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Badwater-Apps/intelli-trip-planner.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Badwater-Apps/intelli-trip-planner/issues"
+  },
+  "homepage": "https://github.com/Badwater-Apps/intelli-trip-planner#readme",
+  "devDependencies": {
+    "eslint": "^7.1.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.7",
+    "prettier": "^2.0.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./src/*.{js,jsx,ts,tsx}": [
+      "npx prettier --write",
+      "eslint src/*.js --fix-dry-run"
+    ]
+  }
+}
