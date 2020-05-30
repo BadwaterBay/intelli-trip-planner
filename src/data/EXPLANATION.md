@@ -7,7 +7,7 @@ This is the free/basic version of the dataset, and attribution to the original w
 ## Ambiguous variable explanations
 
 - **city** - City name
-- **city_ascii** - City name converted to ascii (*recommended*)
+- **city_ascii** - City name converted to ascii (_recommended_)
 - **country_fips** - The 5-digit FIPS code for the primary county. The first two digits correspond to the state's FIPS code.
 - **Density** - The estimated population per square kilometer
 - **Military** - `TRUE` if this place is a military establishment such as a fort or base.
