@@ -1,11 +1,17 @@
 # Directories #
 ###############
-private/
+/node_modules
+/build*
+/dist*
+/private
 
 # Local configs #
 ######################
+.env
+.env.local
 .venv
 .ipynb_checkpoints
+API_KEY*.*
 
 # Compiled source #
 ###################
@@ -15,10 +21,6 @@ private/
 *.exe
 *.o
 *.so
-
-# API key files #
-###################
-API_KEY*.*
 
 # Packages #
 ############
@@ -37,6 +39,7 @@ API_KEY*.*
 ######################
 *.log
 *.sqlite
+.eslintcache
 
 # OS generated files #
 ######################
@@ -48,4 +51,3 @@ API_KEY*.*
 ehthumbs.db
 Thumbs.db
 @turtledb
-node_modules

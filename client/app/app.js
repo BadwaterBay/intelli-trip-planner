@@ -51,11 +51,11 @@ function initMap() {
             }
           }
           optimalRoute = TestRoute.comb[minTravelTime_i].map(
-            (index) => origin[index],
+            (index) => origin[index]
           );
           $('#optimal-route').html(optimalRoute.join(' &rarr; '));
         }
-      },
+      }
     );
 
     function RouteComb(numDestn) {

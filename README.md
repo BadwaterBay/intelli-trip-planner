@@ -46,12 +46,12 @@ To contribute to this project, we follow a rather standard approach of open-sour
 ### Tools
 
 - Linting using Eslint:
-  - Use `npm run lint` to see issues without writing to files. It runs `eslint . --fix-dry-run`
-  - Use `npm run lint-fix` to let Eslint fix problems and write to files. It runs `eslint . --fix`
-  - When you git-commit, it will automatically trigger `npm run lint`
+  - Use `yarn lint` to see issues without writing to files. It runs `eslint . --fix-dry-run`
+  - Use `yarn lint-fix` to let Eslint fix problems and write to files. It runs `eslint . --fix`
+  - When you git-commit, it will automatically trigger `yarn lint`
 - Formatting using Prettier:
-  - Use `npm run format` to automatically format all files and save changes to them
-  - When you git-commit, it will automatically trigger `npm run format`
+  - Use `yarn format` to automatically format all files and save changes to them
+  - When you git-commit, it will automatically trigger `yarn format`
 
 ## Contributors
 
