@@ -39,19 +39,24 @@ To contribute to this project, we follow a rather standard approach of open-sour
 
 ### Initial setup
 
-- Install Node with the package manager of your choice and npm.
-- Clone this repository.
-- Change directory to the project's root directory, use command `npm ci` to install all node dependencies in your local environment.
+- Prerequisites: having [Node.js 10.x or 12.x](https://nodejs.org/en/) and the latest [yarn](https://classic.yarnpkg.com/en/docs/install/) installed on your machine.
+- Clone this repository. [How to clone a repository?](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+- Change directory to the project's root directory, run command `yarn --frozen-lockfile` to install all dependencies. This might take a while.
 
-### Tools
+### Commands
 
-- Linting using Eslint:
-  - Use `yarn lint` to see issues without writing to files. It runs `eslint . --fix-dry-run`
-  - Use `yarn lint-fix` to let Eslint fix problems and write to files. It runs `eslint . --fix`
-  - When you git-commit, it will automatically trigger `yarn lint`
+- Run a local server out for development:
+  - `yarn dev-server:watch` will server an Express app on your machine at [http://localhost:9000/](http://localhost:9000/) by default. The server will automatically recompile and reload when you save changes inside `/server` directory.
 - Formatting using Prettier:
-  - Use `yarn format` to automatically format all files and save changes to them
-  - When you git-commit, it will automatically trigger `yarn format`
+  - `yarn format` will format files with Prettier and save changes.
+  - Tip: when you git-commit, `yarn format` will be automatically triggrred.
+- Linting using Eslint:
+  - `yarn lint` will run Eslint to check the code quality. Please try to resolve these issues before commiting any changes.
+  - Tip: when you git-commit, `yarn lint` will be automatically triggrred.
+- Run tests:
+  - `yarn test` will run preset tests. However, this is a dummy for now, because we haven't written any tests yet. This is to show that we are aware of the importance of unit testing.
+- Create a production build:
+  - `yarn build-server` will generate a production build of the Express app in directory `/dist-server`.
 
 ## Contributors
 
