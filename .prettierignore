@@ -1,4 +1,8 @@
-// The following files will be ignored by Prettier
+# The following files will be ignored by Eslint
+
+/node_modules
+/build*
+/dist*
 
 *.min.*
-.*ignore
+colorpicker.js

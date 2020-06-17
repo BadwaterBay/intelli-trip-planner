@@ -2,26 +2,24 @@ module.exports = {
   env: {
     browser: true,
     commonjs: true,
-    es6: true,
+    node: true,
+    es2020: true,
     jquery: true,
   },
-  extends: [
-    'google',
-    'plugin:prettier/recommended',
-    'plugin:css-modules/recommended',
-    'plugin:json/recommended',
-  ],
+  extends: ['airbnb-base', 'plugin:prettier/recommended'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
   },
   parserOptions: {
-    ecmaVersion: 11,
+    ecmaVersion: 2020,
+    sourceType: 'module',
   },
   rules: {
-    'prettier/prettier': 'error',
-    'no-invalid-this': 1,
     'new-cap': 1,
+    'no-invalid-this': 1,
+    'no-unused-vars': ['error', { argsIgnorePattern: 'next' }],
+    'prettier/prettier': 'error',
   },
-  plugins: ['prettier', 'html', 'jquery', 'css-modules', 'markdown'],
+  plugins: ['prettier', 'html', 'jquery'],
 };

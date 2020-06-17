@@ -1,49 +1,81 @@
 {
   "name": "intelli-trip-planner",
-  "version": "1.0.0",
-  "description": "[https://github.com/Badwater-Apps/intelli-trip-planner](https://github.com/Badwater-Apps/intelli-trip-planner)",
-  "main": "src/app/index.php",
-  "scripts": {
-    "lint": "eslint . --fix-dry-run",
-    "lint-fix": "eslint . --fix",
-    "format": "npx prettier . --write",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "version": "0.2.0",
+  "description": "[https://github.com/BadwaterBay/intelli-trip-planner](https://github.com/Badwater-Apps/intelli-trip-planner)",
+  "homepage": "https://github.com/BadwaterBay/intelli-trip-planner",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Badwater-Apps/intelli-trip-planner.git"
+    "url": "git+https://github.com/BadwaterBay/intelli-trip-planner.git"
   },
-  "author": "",
+  "author": "Badwater Bay",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Badwater-Apps/intelli-trip-planner/issues"
+    "url": "https://github.com/BadwaterBay/intelli-trip-planner/issues"
   },
-  "homepage": "https://github.com/Badwater-Apps/intelli-trip-planner#readme",
-  "devDependencies": {
-    "eslint": "^6.8.0",
-    "eslint-config-google": "^0.14.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-css-modules": "2.11.0",
-    "eslint-plugin-html": "6.0.2",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-jquery": "1.5.1",
-    "eslint-plugin-json": "^2.1.1",
-    "eslint-plugin-markdown": "^1.0.2",
-    "eslint-plugin-prettier": "^3.1.3",
-    "husky": "4.2.5",
-    "lint-staged": "10.2.7",
-    "prettier": "2.0.5",
-    "pretty-quick": "^2.0.1"
+  "main": "",
+  "scripts": {
+    "format": "prettier './**/*.{js,html,scss}' --write",
+    "lint": "eslint './**/*.js' --cache --fix",
+    "clean-client": "rimraf dist-client",
+    "clean-server": "rimraf dist-server",
+    "transpile-server": "babel ./server --out-dir dist-server",
+    "build-server": "npm-run-all clean-server transpile-server",
+    "test": "echo 'No test specified yet' && exit 0",
+    "server": "node ./dist-server/bin/www",
+    "dev-server": "NODE_ENV=development npm-run-all build-server server",
+    "dev-server:watch": "nodemon --config ./nodemon.json",
+    "prod-server": "NODE_ENV=production npm-run-all build-server server",
+    "start": "yarn prod-server"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged && lint-staged"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "*": [
-      "npx prettier --write",
-      "eslint ."
+    "./**/*.{js,html,css,scss}": [
+      "prettier --write"
+    ],
+    "./**/*.js": [
+      "eslint --cache --fix"
     ]
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "clean-css": "^4.2.3",
+    "constantinople": "^4.0.1",
+    "cookie-parser": "^1.4.5",
+    "core-js": "^3.6.5",
+    "cors": "^2.8.5",
+    "debug": "^4.1.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "http-errors": "^1.7.3",
+    "mongoose": "^5.9.19",
+    "morgan": "^1.10.0",
+    "pug": "^3.0.0",
+    "serve-favicon": "^2.5.0",
+    "uglify-js": "^3.9.4",
+    "uuid": "^8.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "browser-sync": "^2.26.7",
+    "concurrently": "^5.2.0",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-html": "6.0.2",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jquery": "1.5.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.10",
+    "nodemon": "^2.0.4",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.2"
   }
 }

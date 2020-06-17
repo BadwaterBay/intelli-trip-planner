@@ -1,0 +1,5 @@
+{
+  "exec": "yarn dev-server",
+  "watch": ["server/*"],
+  "ignore": ["**/__tests__/**", "*.test.js", "*.spec.js"]
+}

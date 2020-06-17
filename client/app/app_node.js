@@ -31,7 +31,7 @@ async function main() {
         acc.duration += duration.value;
         return acc;
       },
-      { distance: 0, duration: 0 },
+      { distance: 0, duration: 0 }
     );
     return {
       ...stats,
@@ -42,10 +42,10 @@ async function main() {
   const compare = (measurement) => (a, b) => a[measurement] - b[measurement];
   const shortestDurationRoute = routeStats.sort(compare('duration'))[0];
   console.log(
-    `Shortest Time Routing: ${shortestDurationRoute.duration} seconds`,
+    `Shortest Time Routing: ${shortestDurationRoute.duration} seconds`
   );
   console.log(
-    shortestDurationRoute.route.map((v, i) => `${i + 1}. ${v}`).join('\n'),
+    shortestDurationRoute.route.map((v, i) => `${i + 1}. ${v}`).join('\n')
   );
 }
 
