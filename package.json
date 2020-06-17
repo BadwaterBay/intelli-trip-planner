@@ -1,22 +1,44 @@
 {
   "name": "intelli-trip-planner",
-  "version": "1.0.0",
-  "description": "[https://github.com/Badwater-Apps/intelli-trip-planner](https://github.com/Badwater-Apps/intelli-trip-planner)",
-  "homepage": "https://github.com/Badwater-Apps/intelli-trip-planner",
+  "version": "0.2.0",
+  "description": "[https://github.com/BadwaterBay/intelli-trip-planner](https://github.com/Badwater-Apps/intelli-trip-planner)",
+  "homepage": "https://github.com/BadwaterBay/intelli-trip-planner",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Badwater-Apps/intelli-trip-planner.git"
+    "url": "git+https://github.com/BadwaterBay/intelli-trip-planner.git"
   },
   "author": "Badwater Bay",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Badwater-Apps/intelli-trip-planner/issues"
+    "url": "https://github.com/BadwaterBay/intelli-trip-planner/issues"
   },
   "main": "",
   "scripts": {
     "format": "prettier './**/*.{js,html,scss}' --write",
     "lint": "eslint './**/*.js' --cache --fix",
-    "test": "echo 'No test specified yet' && exit 0"
+    "clean-client": "rimraf dist-client",
+    "clean-server": "rimraf dist-server",
+    "transpile-server": "babel ./server --out-dir dist-server",
+    "build-server": "npm-run-all clean-server transpile-server",
+    "test": "echo 'No test specified yet' && exit 0",
+    "server": "node ./dist-server/bin/www",
+    "dev-server": "NODE_ENV=development npm-run-all build-server server",
+    "dev-server:watch": "nodemon --config ./nodemon.json",
+    "prod-server": "NODE_ENV=production npm-run-all build-server server",
+    "start": "yarn prod-server"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./**/*.{js,html,css,scss}": [
+      "prettier --write"
+    ],
+    "./**/*.js": [
+      "eslint --cache --fix"
+    ]
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -55,18 +77,5 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.5",
     "rimraf": "^3.0.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "./**/*.{js,html,scss}": [
-      "prettier --write"
-    ],
-    "./**/*.js": [
-      "eslint --cache --fix"
-    ]
   }
 }
