@@ -38,11 +38,10 @@ To contribute to this project, we follow a rather standard approach of open-sour
 - Prerequisites: having [Node.js 10.x or 12.x](https://nodejs.org/en/) and the latest [yarn](https://classic.yarnpkg.com/en/docs/install/) installed on your machine.
 - Clone this repository. [How to clone a repository?](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 - Change directory to the project's root directory, run command `yarn --frozen-lockfile` to install all dependencies. This might take a while.
+- Run the server on your machine for development with command `yarn dev-server:watch`. The server will be hosted at [http://localhost:9000/](http://localhost:9000/) by default. When you save changes inside `/server` directory, it will automatically recompile and reload the server.
 
-### Commands
+### Other commands
 
-- Run a local server out for development:
-  - `yarn dev-server:watch` will server an Express app on your machine at [http://localhost:9000/](http://localhost:9000/) by default. The server will automatically recompile and reload when you save changes inside `/server` directory.
 - Formatting using Prettier:
   - `yarn format` will format files with Prettier and save changes.
   - Tip: when you git-commit, `yarn format` will be automatically triggrred.
