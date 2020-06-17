@@ -2,7 +2,8 @@
 
 [https://github.com/Badwater-Apps/intelli-trip-planner](https://github.com/Badwater-Apps/intelli-trip-planner)
 
-[![CodeFactor](https://www.codefactor.io/repository/github/badwater-apps/intelli-trip-planner/badge)](https://www.codefactor.io/repository/github/badwater-apps/intelli-trip-planner)
+[![CodeFactor](https://www.codefactor.io/repository/github/badwaterbay/intelli-trip-planner/badge)](https://www.codefactor.io/repository/github/badwaterbay/intelli-trip-planner)
+[![DeepScan grade](https://deepscan.io/api/teams/9440/projects/11966/branches/179827/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=9440&pid=11966&bid=179827)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Grand Goal
