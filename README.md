@@ -4,6 +4,7 @@
 
 [![CodeFactor](https://www.codefactor.io/repository/github/badwaterbay/intelli-trip-planner/badge)](https://www.codefactor.io/repository/github/badwaterbay/intelli-trip-planner)
 [![DeepScan grade](https://deepscan.io/api/teams/9440/projects/11966/branches/179827/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=9440&pid=11966&bid=179827)
+![Node.js CI](https://github.com/BadwaterBay/intelli-trip-planner/workflows/Node.js%20CI/badge.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Grand Goal
@@ -21,12 +22,6 @@ Hence, we break down it into smaller steps.
 - **Develop core algorithms that can intelligently recommend road trip routes**.
 - In the meantime, **design and implement the big database** of attractions. We should further break this huge task down to smaller tasks. For example, a database of all National Parks in the US will be a good starting point, given there are only 58 of them. Then we can further include more attractions, and even in other countries. Because the world is huge, to save us some time, let's try to include attractions that are meaningful to road trips.
 - In the meantime, **design the UI** of the web app.
-
-## Web App
-
-The app is currently hosted at: [https://app.skylerdong.com/route-optimization/](https://app.skylerdong.com/route-optimization/)
-
-Shortly, it will be hosted at: [https://badwater-apps.github.io/](https://badwater-apps.github.io/).
 
 ## Contributing to this project
 
