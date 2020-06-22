@@ -60,7 +60,7 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.10.3",
-    "@babel/core": "^7.10.2",
+    "@babel/core": "^7.10.3",
     "@babel/preset-env": "^7.10.2",
     "browser-sync": "^2.26.7",
     "concurrently": "^5.2.0",
