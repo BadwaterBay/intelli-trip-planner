@@ -8,24 +8,27 @@
     "url": "git+https://github.com/BadwaterBay/intelli-trip-planner.git"
   },
   "author": "Badwater Bay",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/BadwaterBay/intelli-trip-planner/issues"
   },
   "main": "",
   "scripts": {
-    "format": "prettier './**/*.{js,html,scss}' --write",
+    "ci": "yarn --frozen-lockfile",
+    "format": "prettier './**/*.{js,html,css,scss}' --write",
     "lint": "eslint './**/*.js' --cache --fix",
-    "clean-client": "rimraf dist-client",
-    "clean-server": "rimraf dist-server",
-    "transpile-server": "babel ./server --out-dir dist-server",
-    "build-server": "npm-run-all clean-server transpile-server",
+    "clean": "rimraf dist-server",
+    "transpile": "babel ./server --out-dir dist-server",
+    "build": "run-s clean transpile",
     "test": "echo 'No test specified yet' && exit 0",
-    "server": "node ./dist-server/bin/www",
-    "dev-server": "NODE_ENV=development npm-run-all build-server server",
-    "dev-server:watch": "nodemon --config ./nodemon.json",
-    "prod-server": "NODE_ENV=production npm-run-all build-server server",
-    "start": "yarn prod-server"
+    "serve": "node ./dist-server/bin/www",
+    "development": "nodemon --config ./nodemon.json",
+    "production": "NODE_ENV=production run-s ci build serve",
+    "start": "run-s ci development",
+    "refresh": "rm -rf ./node_modules/ && yarn --frozen-lockfile"
+  },
+  "engines": {
+    "node": ">=0.12 <0.14"
   },
   "husky": {
     "hooks": {
@@ -67,9 +70,9 @@
     "eslint": "^7.3.1",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-html": "6.0.2",
+    "eslint-plugin-html": "^6.0.2",
     "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jquery": "1.5.1",
+    "eslint-plugin-jquery": "^1.5.1",
     "eslint-plugin-prettier": "^3.1.4",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",

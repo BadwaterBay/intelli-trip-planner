@@ -33,7 +33,7 @@ const normalizePort = (val) => {
 /**
  * Get port from environment and store in Express.
  */
-const port = normalizePort(process.env.PORT || '9000');
+const port = normalizePort(process.env.PORT || '7050');
 app.set('port', port);
 
 /**
@@ -81,3 +81,7 @@ const onListening = () => {
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
+
+if (process.env.NODE_ENV === 'development') {
+  console.log(`The server is hosted at http://localhost:${port}`);
+}
