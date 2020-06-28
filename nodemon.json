@@ -1,5 +1,5 @@
 {
-  "exec": "NODE_ENV=development run-s ci build dev-setup serve",
+  "exec": "NODE_ENV=development run-s build dev-setup serve",
   "watch": ["server/**/*", "public/**/*"],
   "ignore": ["**/__tests__/**", "*.test.js", "*.spec.js"],
   "restartable": "rs"
