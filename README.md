@@ -47,7 +47,7 @@ Hence, we break down it into smaller steps.
   - `yarn test` will run preset tests. However, this is a dummy for now, because we haven't written any tests yet. This is to show that we are aware of the importance of unit testing.
 - If you run into problems with dependencies:
   - Try `yarn --frozen-lockfile` to see if it solves your problems.
-  - If not, run `yarn refresh` to remove all dependencies in the `node_modules` directory and reinstall them.
+  - If not, run `yarn refresh` to remove all dependencies in the `node_modules` directory and do a clean install of dependencies.
 
 ## Contributing to Intelli Trip Planner
 
