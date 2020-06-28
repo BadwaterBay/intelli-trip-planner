@@ -138,10 +138,10 @@ If you are stuck, you are welcome to reach out and leave a comment.
 
 ### Other useful commands
 
-- Formatting using Prettier:
+- Format your code using Prettier:
   - `yarn format` will format files with Prettier and save changes.
   - Tip: when you git-commit, `yarn format` will be automatically triggrred.
-- Linting using Eslint:
+- Lint your code using Eslint:
   - `yarn lint` will run Eslint to check the code quality. Please try to resolve these issues before commiting any changes.
   - Tip: when you git-commit, `yarn lint` will be automatically triggrred.
 - Create a production build:
