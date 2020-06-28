@@ -22,7 +22,6 @@
     "build": "run-s clean transpile",
     "test": "echo 'No test specified yet' && exit 0",
     "serve": "node ./dist-server/bin/www",
-    "dev-setup": "PORT='7050' && echo \"By default, the server is hosted at http://localhost:$PORT\"",
     "development": "nodemon --config ./nodemon.json",
     "production": "NODE_ENV=production run-s ci build serve",
     "start": "run-s ci development",

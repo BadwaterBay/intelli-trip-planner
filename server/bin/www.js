@@ -81,3 +81,7 @@ const onListening = () => {
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
+
+if (process.env.NODE_ENV === 'development') {
+  console.log(`The server is hosted at http://localhost:${port}`);
+}
