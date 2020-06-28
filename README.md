@@ -30,7 +30,7 @@ Hence, we break down it into smaller steps.
 - Prerequisites: having [Node.js 12.x](https://nodejs.org/en/) and the latest [yarn](https://classic.yarnpkg.com/en/docs/install/) installed on your machine.
 - Clone this repository. [How to clone a repository?](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 - Change directory to the project's root directory, run command `yarn --frozen-lockfile` to install all dependencies. This could take a while.
-- Run the server on your machine for development with command `yarn start`. The server will be hosted at [http://localhost:7050/](http://localhost:7050/) by default. When you save changes inside `server` or `public` directory, it will automatically recompile and reload the server.
+- Run the server on your machine for development with command `yarn start`. The server will be hosted at [http://localhost:7050/](http://localhost:7050/) by default. When you save changes inside `server` or `public` directories, it will automatically recompile and reload the server.
 - To stop the server, press "Ctrl + C".
 
 ### Other commands
