@@ -27,10 +27,10 @@ Hence, we break down it into smaller steps.
 
 ### Initial setup
 
-- Prerequisites: having [Node.js 10.x or 12.x](https://nodejs.org/en/) and the latest [yarn](https://classic.yarnpkg.com/en/docs/install/) installed on your machine.
+- Prerequisites: having [Node.js 12.x](https://nodejs.org/en/) and the latest [yarn](https://classic.yarnpkg.com/en/docs/install/) installed on your machine.
 - Clone this repository. [How to clone a repository?](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 - Change directory to the project's root directory, run command `yarn --frozen-lockfile` to install all dependencies. This could take a while.
-- Run the server on your machine for development with command `yarn dev-server:watch`. The server will be hosted at [http://localhost:9000/](http://localhost:9000/) by default. When you save changes inside `/server` directory, it will automatically recompile and reload the server.
+- Run the server on your machine for development with command `yarn start`. The server will be hosted at [http://localhost:7050/](http://localhost:7050/) by default. When you save changes inside `server` or `public` directory, it will automatically recompile and reload the server.
 - To stop the server, press "Ctrl + C".
 
 ### Other commands
@@ -41,14 +41,18 @@ Hence, we break down it into smaller steps.
 - Linting using Eslint:
   - `yarn lint` will run Eslint to check the code quality. Please try to resolve these issues before commiting any changes.
   - Tip: when you git-commit, `yarn lint` will be automatically triggrred.
+- Create a production build:
+  - `yarn build` will generate a production build of the Express app in directory `/dist-server`.
 - Run tests:
   - `yarn test` will run preset tests. However, this is a dummy for now, because we haven't written any tests yet. This is to show that we are aware of the importance of unit testing.
-- Create a production build:
-  - `yarn build-server` will generate a production build of the Express app in directory `/dist-server`.
+- If you run into problems with dependencies:
+  - Try `yarn --frozen-lockfile` to see if it solves your problems.
+  - If not, run `yarn refresh` to remove all dependencies in the `node_modules` directory and reinstall them.
 
 ## Contributing to Intelli Trip Planner
 
 Our workflow is:
+
 - Claim an issue
 - Fork the repository
 - Modify the code and commit changes

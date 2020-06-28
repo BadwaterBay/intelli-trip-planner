@@ -5,7 +5,7 @@ import cors from 'cors';
 import logger from 'morgan';
 import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
-// import favicon from 'serve-favicon';
+import favicon from 'serve-favicon';
 import indexRouter from './routes/index';
 
 // Create Express server
@@ -20,8 +20,8 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
-// app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(express.static(path.join(__dirname, '..', 'public')));
+app.use(favicon(path.join(__dirname, '..', 'public', 'favicon.ico')));
 app.use(bodyParser.json());
 
 app.use('/', indexRouter);

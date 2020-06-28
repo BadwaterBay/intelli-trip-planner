@@ -1,5 +1,6 @@
 {
-  "exec": "yarn dev-server",
-  "watch": ["server/*"],
-  "ignore": ["**/__tests__/**", "*.test.js", "*.spec.js"]
+  "exec": "NODE_ENV=development run-s build dev-setup serve",
+  "watch": ["server/**/*", "public/**/*"],
+  "ignore": ["**/__tests__/**", "*.test.js", "*.spec.js"],
+  "restartable": "rs"
 }
