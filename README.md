@@ -14,6 +14,7 @@ Repository: [https://github.com/BadwaterBay/intelli-trip-planner](https://github
   - [Initial setup](#Initial-setup)
   - [Bring your fork up to date with the original repository](#Bring-your-fork-up-to-date-with-the-original-repository)
   - [Other useful commands](#Other-useful-commands)
+  - [Recommended practicies](#Recommended-practicies)
 - [Contributors](#Contributors)
 
 ---
@@ -151,6 +152,12 @@ If you are stuck, you are welcome to reach out and leave a comment.
 - If you run into problems with dependencies:
   - Try `yarn --frozen-lockfile` to see if it solves your problems.
   - If not, run `yarn refresh` to remove all dependencies in the `node_modules` directory and do a clean install of dependencies.
+
+### Recommended practicies
+
+- Sign commits with signature verifications
+  - It is encouraged to sign your commits with signature verifications with GPG keys.
+  - [How?](https://help.github.com/en/github/authenticating-to-github/managing-commit-signature-verification)
 
 ---
 
