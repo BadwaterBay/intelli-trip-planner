@@ -12,10 +12,9 @@
   "bugs": {
     "url": "https://github.com/BadwaterBay/intelli-trip-planner/issues"
   },
-  "main": "",
   "scripts": {
     "ci": "yarn --frozen-lockfile",
-    "format": "prettier './**/*.{js,html,css,scss}' --write",
+    "format": "prettier './**/*.{js,html,css,scss,md}' --write",
     "lint": "eslint './**/*.js' --cache --fix",
     "clean": "rimraf dist-server",
     "transpile": "babel ./server --out-dir dist-server",
@@ -36,7 +35,7 @@
     }
   },
   "lint-staged": {
-    "./**/*.{js,html,css,scss}": [
+    "./**/*.{js,html,css,scss,md}": [
       "prettier --write"
     ],
     "./**/*.js": [
