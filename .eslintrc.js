@@ -4,7 +4,6 @@ module.exports = {
     commonjs: true,
     node: true,
     es2020: true,
-    jquery: true,
   },
   extends: ['airbnb-base', 'plugin:prettier/recommended'],
   globals: {
@@ -21,5 +20,5 @@ module.exports = {
     'no-unused-vars': ['error', { argsIgnorePattern: 'next' }],
     'prettier/prettier': 'error',
   },
-  plugins: ['prettier', 'html', 'jquery'],
+  plugins: ['prettier', 'html'],
 };

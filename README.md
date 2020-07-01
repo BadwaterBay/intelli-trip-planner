@@ -104,13 +104,14 @@ If you are stuck, you are welcome to reach out and leave a comment.
 - Install all dependencies with the following command. This could take a while.
   ```
   yarn --frozen-lockfile
+  poetry install
   ```
-- Run the server on your machine with command:
+- Run the server for development on your machine with command:
   ```
   yarn start
   ```
-  By default, the server will be hosted at [http://localhost:7050/](http://localhost:7050/). When you save changes inside `server` or `public` directories, it will automatically recompile and reload the server to reflect the changes.
-- Visit [http://localhost:7050/](http://localhost:7050/) in your browser to confirm the server is running.
+  By default, the server is hosted on [http://127.0.0.1:5000/](http://127.0.0.1:5000/).
+- Visit [http://127.0.0.1:5000/](http://127.0.0.1:5000/) in your browser to confirm the server is running.
 - To stop the server, press "Ctrl + C".
 
 ### Bring your fork up to date with the original repository

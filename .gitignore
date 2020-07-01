@@ -12,6 +12,7 @@
 .venv
 .ipynb_checkpoints
 API_KEY*.*
+.python-version
 
 # Compiled source #
 ###################
@@ -39,7 +40,7 @@ API_KEY*.*
 ######################
 *.log
 *.sqlite
-.eslintcache
+*cache*
 
 # OS generated files #
 ######################

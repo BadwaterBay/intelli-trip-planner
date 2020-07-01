@@ -1,6 +1,0 @@
-{
-  "exec": "NODE_ENV=development run-s build serve",
-  "watch": ["server/**/*", "public/**/*"],
-  "ignore": ["**/__tests__/**", "*.test.js", "*.spec.js"],
-  "restartable": "rs"
-}
