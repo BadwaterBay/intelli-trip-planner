@@ -14,11 +14,13 @@
   },
   "scripts": {
     "ci": "yarn --frozen-lockfile && poetry install",
-    "format": "prettier './**/*.{js,json,html,css,scss,md}' --write && black ./**/*.py --verbose",
+    "format-prettier": "prettier './**/*.{js,json,html,css,scss,md}' --write",
+    "format-black": "black ./**/*.py --verbose",
+    "format": "run-s format-prettier format-black",
     "lint-js": "eslint './**/*.js' --cache --fix",
     "lint-sh": "shellcheck ./src/**/*.sh",
-    "lint-py": "pylint ./**/*.py",
-    "lint": "run-p lint-js lint-sh lint-py",
+    "lint-py": "pylint ./src/**/*.py",
+    "lint": "run-s lint-js lint-sh lint-py",
     "clean": "rimraf dist",
     "test": "echo 'No test specified yet' && exit 0",
     "development": "bash ./src/bin/www.sh",
@@ -34,14 +36,12 @@
     }
   },
   "lint-staged": {
-    "./**/*.{js,html,css,scss,md}": [
-      "prettier --write"
-    ],
-    "./**/*.py": [
-      "black -verbose"
-    ],
-    "./**/*.js": [
-      "eslint --cache --fix"
+    "./**/*.{js,html,css,scss,md}": "prettier --write",
+    "./**/*.js": "eslint --cache --fix",
+    "./src/**/*.sh": "shellcheck",
+    "./src/**/*.py": [
+      "black --verbose",
+      "pylint"
     ]
   },
   "dependencies": {
