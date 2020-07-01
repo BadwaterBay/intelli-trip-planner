@@ -35,9 +35,9 @@ function initMap() {
           $('#optimal-route').html('Error occurred.');
         } else {
           // Add travel time of the first pair
-          for (i = 0; i < TestRoute.comb.length; ++i) {
+          for (let i = 0; i < TestRoute.comb.length; ++i) {
             travelTime = 0;
-            for (j = 0; j < TestRoute.comb[0].length - 1; ++j) {
+            for (let j = 0; j < TestRoute.comb[0].length - 1; ++j) {
               travelTime +=
                 response.rows[TestRoute.comb[i][j]].elements[
                   TestRoute.comb[i][j + 1]

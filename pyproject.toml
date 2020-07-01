@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "intelli-trip-planner"
+version = "0.2.0"
+description = ""
+authors = ["Badwater Bay <info@badwaterbay.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "~3.8"
+Flask = "^1.1.2"
+ortools = "^7.7.7810"
+
+[tool.poetry.dev-dependencies]
+pylint = "^2.5.3"
+black = "^19.10b0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+include = '\.pyi?$'
+exclude = '''
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+  )/
+)
+'''

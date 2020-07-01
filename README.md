@@ -81,7 +81,7 @@ If you are stuck, you are welcome to reach out and leave a comment.
 
 ### Initial setup
 
-- Prerequisites: having [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), [Node.js 12.x](https://nodejs.org/en/) and [Yarn](https://classic.yarnpkg.com/en/docs/install/) installed on your machine.
+- Prerequisites: having [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), [Python 3.8.x](https://www.python.org/downloads/), [Poetry](https://python-poetry.org/docs/), [Node.js 12.x](https://nodejs.org/en/) and [Yarn](https://classic.yarnpkg.com/en/docs/install/) installed on your machine.
 - Fork the repository. ([How to fork a repository?](https://help.github.com/en/github/getting-started-with-github/fork-a-repo#fork-an-example-repository))
 - Clone this repository. ([How to clone a repository?](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository))
 - In the terminal, change directory to the repository's root directory.
@@ -104,13 +104,14 @@ If you are stuck, you are welcome to reach out and leave a comment.
 - Install all dependencies with the following command. This could take a while.
   ```
   yarn --frozen-lockfile
+  poetry install
   ```
-- Run the server on your machine with command:
+- Run the server for development on your machine with command:
   ```
   yarn start
   ```
-  By default, the server will be hosted at [http://localhost:7050/](http://localhost:7050/). When you save changes inside `server` or `public` directories, it will automatically recompile and reload the server to reflect the changes.
-- Visit [http://localhost:7050/](http://localhost:7050/) in your browser to confirm the server is running.
+  By default, the server is hosted on [http://127.0.0.1:5000/](http://127.0.0.1:5000/).
+- Visit [http://127.0.0.1:5000/](http://127.0.0.1:5000/) in your browser to confirm the server is running.
 - To stop the server, press "Ctrl + C".
 
 ### Bring your fork up to date with the original repository
@@ -149,7 +150,10 @@ If you are stuck, you are welcome to reach out and leave a comment.
   - `yarn build` will generate a production build of the Express app in directory `/dist-server`.
 - Run tests:
   - `yarn test` will run preset tests. However, this is a dummy for now, because we haven't written any tests yet. This is to show that we are aware of the importance of unit testing.
-- If you run into problems with dependencies:
+- If you run into problems with Python dependencies:
+  - Check if you are running Python 3.8.x in your local environment
+  - Try `poetry install` to see if it solves your problems.
+- If you run into problems with Node dependencies:
   - Try `yarn --frozen-lockfile` to see if it solves your problems.
   - If not, run `yarn refresh` to remove all dependencies in the `node_modules` directory and do a clean install of dependencies.
 
