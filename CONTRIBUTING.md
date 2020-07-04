@@ -171,21 +171,23 @@ If you are stuck, you are welcome to reach out and leave a comment.
 
 - Use the present tense ("Add feature" not "Added feature").
 - Use the imperative mood ("Move cursor to..." not "Moves cursor to...").
+- Use '&' instead of spelling out 'and'
 - Limit the first line to 70 characters or less.
 - Reference issues and pull requests liberally after the first line.
 - When only changing documentation, include `[ci skip]` in the commit title.
 - Consider starting the commit message with an applicable emoji:
-  - :art: `:art:` when improving the format/structure of the code
-  - :racehorse: `:racehorse:` when improving performance
-  - :memo: `:memo:` when writing docs
-  - :bug: `:bug:` when fixing a bug
-  - :fire: `:fire:` when removing code or files
-  - :green_heart: `:green_heart:` when fixing the CI build
+  - :star: `:star:` when adding new features or enhancements
+  - :bug: `:bug:` when fixing bugs
+  - :art: `:art:` when improving the UI
+  - :memo: `:memo:` when writing documentations
+  - :shirt: `:shirt:` when fixing linter warnings or improving the format of the code
+  - :bath: `:bath:` when fixing CI builds
+  - :racehorse: `:racehorse:` when improving the performance
   - :white_check_mark: `:white_check_mark:` when adding tests
   - :lock: `:lock:` when dealing with security
   - :arrow_up: `:arrow_up:` when upgrading dependencies
   - :arrow_down: `:arrow_down:` when downgrading dependencies
-  - :shirt: `:shirt:` when removing linter warnings
+  - :wrench: `:wrench:` when configuring infrastructures
 
 ### Python styleguide
 
