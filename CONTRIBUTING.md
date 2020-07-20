@@ -15,7 +15,7 @@
   - [Workflow](#Workflow)
   - [Bring your fork up to date with the original repository](#Bring-your-fork-up-to-date-with-the-original-repository)
   - [Other useful commands](#Other-useful-commands)
-- [Style guides](#Style guides)
+- [Style guides](#Style-guides)
   - [Git commit messages](#Git-commit-messages)
   - [Python style guide](#Python-style-guide)
 - [Other recommended practices](#Other-recommended-practices)
@@ -51,7 +51,7 @@ Please follow these steps:
 
 - Complete the [initial setup](#Initial-setup)
 - Follow the [workflow](#Workflow)
-- Follow the [style guides](#Style guides)
+- Follow the [style guides](#Style-guides)
 
 ---
 
