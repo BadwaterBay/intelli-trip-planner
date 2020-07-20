@@ -28,7 +28,7 @@
     "refresh": "rm -rf ./node_modules/ && yarn --frozen-lockfile && poetry install"
   },
   "engines": {
-    "node": ">=0.12 <0.14"
+    "node": ">=0.12 <0.13"
   },
   "husky": {
     "hooks": {
