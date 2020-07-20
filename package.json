@@ -15,7 +15,7 @@
   "scripts": {
     "ci": "yarn --frozen-lockfile && poetry install",
     "format-prettier": "prettier './**/*.{js,json,html,css,scss,md}' --write",
-    "format-black": "black ./**/*.py --verbose",
+    "format-black": "black . --verbose",
     "format": "run-s format-prettier format-black",
     "lint-js": "eslint './**/*.js' --cache --fix",
     "lint-sh": "shellcheck ./src/**/*.sh",
