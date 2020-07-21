@@ -1,6 +1,6 @@
 # Fix #000 (<-- Add issue number here)
 
-**IMPORTANT:** _Please create an issue before submitting a pull request (PR) to resolve it, unless you're fixing typos or making minor changes to documentation or infrastructure. In that case, just leave the issue number as #000_
+**IMPORTANT:** _Please create an issue before submitting a pull request (PR) to resolve it, unless you're fixing typos or making minor changes to documentation or infrastructure. In that case, just leave the issue number as #000._
 
 ## Details
 
