@@ -15,9 +15,9 @@
   - [Workflow](#Workflow)
   - [Bring your fork up to date with the original repository](#Bring-your-fork-up-to-date-with-the-original-repository)
   - [Other useful commands](#Other-useful-commands)
-- [Styleguides](#Styleguides)
+- [Style guides](#Style-guides)
   - [Git commit messages](#Git-commit-messages)
-  - [Python styleguide](#Python-styleguide)
+  - [Python style guide](#Python-style-guide)
 - [Other recommended practices](#Other-recommended-practices)
   - [Sign commits with signature verifications](#Sign-commits-with-signature-verifications)
 
@@ -33,7 +33,7 @@ In the bug report, please follow these steps:
 - Describe the exact steps which reproduce the bug.
 - Describe the behavior you **_observed_** and point out what exactly is the problem with that behavior.
 - Explain the behavior you **_expected_** to see instead and why.
-- Include screenshots, animated GIFs or videos to demostrate the bug.
+- Include screenshots, animated GIFs or videos to demonstrate the bug.
 - Describe the environment in which the bug is observed, including the operating system, the Python version and the browser you are using (if applicable).
 
 ### Suggesting features and enhancements
@@ -51,7 +51,7 @@ Please follow these steps:
 
 - Complete the [initial setup](#Initial-setup)
 - Follow the [workflow](#Workflow)
-- Follow the [styleguides](#Styleguides)
+- Follow the [style guides](#Style-guides)
 
 ---
 
@@ -61,7 +61,7 @@ Please follow these steps:
 
 - Prerequisites: having [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), [Python 3.8.x](https://www.python.org/downloads/), [Poetry](https://python-poetry.org/docs/), [Node.js 12.x](https://nodejs.org/en/) and [Yarn](https://classic.yarnpkg.com/en/docs/install/) installed on your machine.
 - Fork the repository. ([How to fork a repository?](https://help.github.com/en/github/getting-started-with-github/fork-a-repo#fork-an-example-repository))
-- Clone this repository. ([How to clone a repository?](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository))
+- Clone the forked repository. ([How to clone a repository?](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository))
 - In the terminal, change directory to the repository's root directory.
 - Add the original repository as a remote called `upstream`:
   - To add the original repository as `upstream`, run command:
@@ -148,10 +148,10 @@ If you are stuck, you are welcome to reach out and leave a comment.
 
 - Format your code using Prettier:
   - `yarn format` will format files with Prettier and save changes.
-  - Tip: when you git-commit, `yarn format` will be automatically triggrred.
+  - Tip: when you git-commit, `yarn format` will be automatically triggered.
 - Lint your code using Eslint:
-  - `yarn lint` will run Eslint to check the code quality. Please try to resolve these issues before commiting any changes.
-  - Tip: when you git-commit, `yarn lint` will be automatically triggrred.
+  - `yarn lint` will run Eslint to check the code quality. Please try to resolve these issues before committing any changes.
+  - Tip: when you git-commit, `yarn lint` will be automatically triggered.
 - Create a production build:
   - `yarn build` will generate a production build of the Express app in directory `/dist-server`.
 - Run tests:
@@ -165,7 +165,7 @@ If you are stuck, you are welcome to reach out and leave a comment.
 
 ---
 
-## Styleguides
+## Style guides
 
 ### Git commit messages
 
@@ -189,7 +189,7 @@ If you are stuck, you are welcome to reach out and leave a comment.
   - :arrow_down: `:arrow_down:` when downgrading dependencies
   - :wrench: `:wrench:` when configuring infrastructures
 
-### Python styleguide
+### Python style guide
 
 We follow the [PEP 8 style guide](https://www.python.org/dev/peps/pep-0008/) and the [Black code style](https://github.com/psf/black/blob/master/docs/the_black_code_style.md). The [Black code style](https://github.com/psf/black/blob/master/docs/the_black_code_style.md) can be viewed as a strict subset of [PEP 8 style guide](https://www.python.org/dev/peps/pep-0008/).
 

@@ -23,7 +23,7 @@ The goal of this project is to build an API that can intelligently recommend roa
 ## Badges
 
 [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 ![Node.js CI](https://github.com/BadwaterBay/intelli-trip-planner/workflows/Node.js%20CI/badge.svg)
 [![CodeFactor](https://www.codefactor.io/repository/github/badwaterbay/intelli-trip-planner/badge)](https://www.codefactor.io/repository/github/badwaterbay/intelli-trip-planner)

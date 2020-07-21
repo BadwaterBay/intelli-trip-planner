@@ -3,7 +3,7 @@ name = "intelli-trip-planner"
 version = "0.2.0"
 description = ""
 authors = ["Badwater Bay <info@badwaterbay.com>"]
-license = "MIT"
+license = "GPL-3.0"
 
 [tool.poetry.dependencies]
 python = "~3.8"
