@@ -12,10 +12,8 @@ from ortools.constraint_solver import pywrapcp
 
 def create_data_model():
     """Stores the data for the problem."""
-
     with open("./src/data/distance_matrix_list.pkl", "rb") as file:
         distance_matrix = pickle.load(file)
-
     data = {}
     data["distance_matrix"] = distance_matrix
     data["num_vehicles"] = 1

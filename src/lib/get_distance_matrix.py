@@ -1,11 +1,14 @@
 #!/usr/bin/env python
 
+"""
+Get distance matrix from Google Maps API and process the response
+"""
+
 import os
-from dotenv import load_dotenv
-import googlemaps
 import json
 import pickle
-
+import googlemaps
+from dotenv import load_dotenv
 
 def get_distance_matrix(origins: []) -> dict:
     """
@@ -13,9 +16,9 @@ def get_distance_matrix(origins: []) -> dict:
     """
 
     load_dotenv()
-    API_KEY = os.environ.get("API_KEY_GOOGLE")
+    api_key = os.environ.get("api_key_GOOGLE")
 
-    gmaps = googlemaps.Client(key=API_KEY)
+    gmaps = googlemaps.Client(key=api_key)
 
     destinations = origins
 
@@ -34,11 +37,11 @@ def save_distance_matrix_to_json(distance_matrix: dict, to_file: str) -> None:
         json.dump(distance_matrix, file, indent=2)
 
 
-def convert_json_to_list(json_file: str, type: str) -> [[int]]:
+def convert_json_to_list(json_file: str, measurement: str) -> [[int]]:
     """
     Convert distance matrix JSON to 2D list for OR-Tools
 
-    "type" can be either "distance" or "duration"
+    "measurement" can be either "distance" or "duration"
     """
 
     with open(json_file, "r") as read_file:
@@ -53,7 +56,7 @@ def convert_json_to_list(json_file: str, type: str) -> [[int]]:
         inner_list: [] = [None] * len_2d
 
         for j in range(0, len_2d):
-            inner_list[j] = data["rows"][i]["elements"][j][type]["value"]
+            inner_list[j] = data["rows"][i]["elements"][j][measurement]["value"]
 
         distance_matrix_list[i] = inner_list
 
@@ -69,7 +72,7 @@ def save_distance_matrix_list_to_txt(distance_list: [[int]], to_file: str) -> No
         file.write("%s\n" % distance_list)
 
 
-def pickle(data, to_file: str) -> None:
+def save_to_pickle(data, to_file: str) -> None:
     """
     Save distance list to pickle file
     """
