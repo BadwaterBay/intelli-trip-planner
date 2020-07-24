@@ -13,17 +13,17 @@ RUN mkdir /app/
 
 WORKDIR /app
 
-RUN pip3 install poetry
+COPY requirements.txt /app/
 
-COPY package.json yarn.lock pyproject.toml poetry.lock /app/
+RUN pip3 install -r requirements.txt
 
-RUN poetry install
-
-COPY . /app/
+COPY src /app/src/
 
 # Switching to a non-root user, please refer to https://aka.ms/vscode-docker-python-user-rights
 RUN useradd appuser && chown -R appuser /app
 USER appuser
 
+# ENTRYPOINT [ "python" ]
+
 # During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
-CMD ["gunicorn", "--bind", "localhost:5000", "src.app:app"]
+# CMD ["gunicorn", "--bind", "localhost:5000", "src.app:app"]

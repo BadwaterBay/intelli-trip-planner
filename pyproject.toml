@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "intelli-trip-planner"
-version = "0.2.0"
+version = "0.0.2"
 description = ""
 authors = ["Badwater Bay <info@badwaterbay.com>"]
 license = "GPL-3.0"
