@@ -51,7 +51,7 @@
     "uglify-js": "^3.10.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.10",
+    "browser-sync": "^2.26.12",
     "concurrently": "^5.2.0",
     "eslint": "^7.5.0",
     "eslint-config-airbnb-base": "^14.2.0",
