@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "intelli-trip-planner"
-version = "0.2.0"
+version = "0.0.2"
 description = ""
 authors = ["Badwater Bay <info@badwaterbay.com>"]
 license = "GPL-3.0"
@@ -11,6 +11,7 @@ Flask = "^1.1.2"
 ortools = "^7.7.7810"
 googlemaps = "^4.4.1"
 python-dotenv = "^0.14.0"
+gunicorn = "^20.0.4"
 
 [tool.poetry.dev-dependencies]
 pylint = "^2.5.3"

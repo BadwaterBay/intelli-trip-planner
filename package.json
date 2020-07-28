@@ -1,6 +1,6 @@
 {
   "name": "intelli-trip-planner",
-  "version": "0.2.0",
+  "version": "0.0.2",
   "description": "[https://github.com/BadwaterBay/intelli-trip-planner](https://github.com/Badwater-Apps/intelli-trip-planner)",
   "homepage": "https://github.com/BadwaterBay/intelli-trip-planner",
   "repository": {
@@ -22,6 +22,7 @@
     "lint-py": "pylint ./src/**/*.py",
     "lint": "run-s lint-js lint-sh lint-py",
     "clean": "rimraf dist",
+    "export-req": "poetry export -f requirements.txt > requirements.txt",
     "test": "echo 'No test specified yet' && exit 0",
     "development": "bash ./src/bin/www.sh",
     "start": "run-s development",
