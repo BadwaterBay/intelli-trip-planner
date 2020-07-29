@@ -111,7 +111,7 @@ description = "Python client library for Google Maps Platform"
 name = "googlemaps"
 optional = false
 python-versions = ">=3.5"
-version = "4.4.1"
+version = "4.4.2"
 
 [package.dependencies]
 requests = ">=2.20.0,<3.0"
@@ -343,7 +343,7 @@ python-versions = "*"
 version = "1.12.1"
 
 [metadata]
-content-hash = "53f295fd29a9e2f69391e94e9ff0081407bbfdbf241f8cb719bac75ee102155d"
+content-hash = "edb84c5184a41a12c6d5f2e66599f07ef16e8389c99c23398ff131c5f8160389"
 python-versions = "~3.8"
 
 [metadata.files]
@@ -384,7 +384,7 @@ flask = [
     {file = "Flask-1.1.2.tar.gz", hash = "sha256:4efa1ae2d7c9865af48986de8aeb8504bf32c7f3d6fdc9353d34b21f4b127060"},
 ]
 googlemaps = [
-    {file = "googlemaps-4.4.1.tar.gz", hash = "sha256:2ae3a8907f43c8069744bd72e210497d89f18f7f7472de96ea835b049603e395"},
+    {file = "googlemaps-4.4.2.tar.gz", hash = "sha256:8e13cbecc9b5b0462d53a78074c166753027be285db0c9fff70f5b40241ce500"},
 ]
 gunicorn = [
     {file = "gunicorn-20.0.4-py2.py3-none-any.whl", hash = "sha256:cd4a810dd51bf497552cf3f863b575dabd73d6ad6a91075b65936b151cbf4f9c"},
