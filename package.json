@@ -22,7 +22,7 @@
     "lint-py": "pylint ./src/**/*.py",
     "lint": "run-s lint-js lint-sh lint-py",
     "clean": "rimraf dist",
-    "export-req": "poetry export -f requirements.txt > requirements.txt",
+    "x-req": "poetry export -f requirements.txt > requirements.txt",
     "test": "echo 'No test specified yet' && exit 0",
     "development": "bash ./src/bin/www.sh",
     "start": "run-s development",
