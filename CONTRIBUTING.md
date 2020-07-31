@@ -1,25 +1,33 @@
 # Contributing to Intelli Trip Planner
 
-:+1::tada: First off, thanks for taking the time to contribute! :tada::+1:
-
 ---
 
 ## Table of contents
 
-- [How can I contribute?](#How-can-I-contribute?)
-  - [Reporting bugs](#Reporting-bugs)
-  - [Suggesting features and enhancements](#Suggesting-features-and-enhancements)
-  - [Submitting pull requests](#Submitting-pull-requests)
-- [How do I get started?](#How-do-I-get-started?)
-  - [Initial setup](#Initial-setup)
-  - [Workflow](#Workflow)
-  - [Bring your fork up to date with the original repository](#Bring-your-fork-up-to-date-with-the-original-repository)
-  - [Other useful commands](#Other-useful-commands)
-- [Style guides](#Style-guides)
-  - [Git commit messages](#Git-commit-messages)
-  - [Python style guide](#Python-style-guide)
-- [Other recommended practices](#Other-recommended-practices)
-  - [Sign commits with signature verifications](#Sign-commits-with-signature-verifications)
+- [Thank you, contributors](#thank-you-contributors)
+- [How can I contribute?](#how-can-I-contribute)
+  - [Reporting bugs](#reporting-bugs)
+  - [Suggesting features and enhancements](#suggesting-features-and-enhancements)
+  - [Submitting pull requests](#submitting-pull-requests)
+- [How do I get started?](#how-do-I-get-started)
+  - [Initial setup](#initial-setup)
+  - [Workflow](#workflow)
+  - [Bring your fork up to date with the original repository](#bring-your-fork-up-to-date-with-the-original-repository)
+  - [Other useful commands](#other-useful-commands)
+- [Style guides](#style-guides)
+  - [Git commit messages](#git-commit-messages)
+  - [Python style guide](#python-style-guide)
+  - [Prefer functional-styled programming](#prefer-functional-styled-programming)
+- [Other recommended practices](#other-recommended-practices)
+  - [Sign commits with signature verifications](#sign-commits-with-signature-verifications)
+
+---
+
+## Thank you, contributors
+
+We'd like to thank all of our contributors.
+
+[Click here to see a list of our contributors.](https://github.com/BadwaterBay/intelli-trip-planner/graphs/contributors)
 
 ---
 
@@ -57,14 +65,26 @@ Please follow these steps:
 
 ## How do I get started?
 
+### Prerequisites
+
+Having the followings installed:
+
+- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+- [Node.js 12.x](https://nodejs.org/en/).
+- [Yarn](https://classic.yarnpkg.com/en/docs/install/).
+- [Python 3.8.x](https://www.python.org/downloads/):
+  - You can install Python with your favorite method, such as some sort of virtual environment.
+  - You can also use the Dockerfile in the repository to install Python 3.8.x environment.
+- [Poetry](https://python-poetry.org/docs/). This is optional if you are using Docker.
+
 ### Initial setup
 
-- Prerequisites: having [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), [Python 3.8.x](https://www.python.org/downloads/), [Poetry](https://python-poetry.org/docs/), [Node.js 12.x](https://nodejs.org/en/) and [Yarn](https://classic.yarnpkg.com/en/docs/install/) installed on your machine.
-- Fork the repository. ([How to fork a repository?](https://help.github.com/en/github/getting-started-with-github/fork-a-repo#fork-an-example-repository))
+- Satisfy the [prerequisites](#prerequisites).
+- Fork the repository. We're going to call it the 'original repository'. ([How to fork a repository?](https://help.github.com/en/github/getting-started-with-github/fork-a-repo#fork-an-example-repository))
 - Clone the forked repository. ([How to clone a repository?](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository))
 - In the terminal, change directory to the repository's root directory.
-- Add the original repository as a remote called `upstream`:
-  - To add the original repository as `upstream`, run command:
+- Add the original repository as a remote called `upstream` (assuming you're using HTTPS instead of SSH:
+  - Run command:
     ```
     git remote add upstream https://github.com/BadwaterBay/intelli-trip-planner.git
     ```
@@ -72,29 +92,35 @@ Please follow these steps:
     ```
     git remote -v
     ```
-  - You should see the following output (assuming you are using HTTPS):\
+  - You should see the following output:
     ```
     origin  https://github.com:<yourGitHubUsername>/intelli-trip-planner.git (fetch)
     origin  https://github.com:<yourGitHubUsername>/intelli-trip-planner.git (push)
     upstream  https://github.com/BadwaterBay/intelli-trip-planner.git (fetch)
     upstream  https://github.com/BadwaterBay/intelli-trip-planner.git (push)
     ```
-- Install all dependencies with the following command. This could take a while.
+- Install all Node dependencies:
   ```
   yarn --frozen-lockfile
-  poetry install
   ```
-- Run the server for development on your machine with command:
+- Install Python packages:
+  - If you're using Python inside a virtual environment, run command:
+    ```
+    poetry install
+    ```
+  - If you're using Docker, build and run the image with the Dockerfile. [How?](https://docs.docker.com/get-started/part2/) (At this juncture, we're focusing on building the core functionalities in Python without the REST API part, so you don't need to expose any port inside the Docker image.)
+
+<!-- - Run the server for development on your machine with command:
   ```
   yarn start
   ```
   By default, the server is hosted on [http://127.0.0.1:5000/](http://127.0.0.1:5000/).
 - Visit [http://127.0.0.1:5000/](http://127.0.0.1:5000/) in your browser to confirm the server is running.
-- To stop the server, press "Ctrl + C".
+- To stop the server, press "Ctrl + C". -->
 
 ---
 
-## Workflow
+### Workflow
 
 Our workflow is:
 
@@ -118,7 +144,7 @@ If you are stuck, you are welcome to reach out and leave a comment.
 
 ---
 
-## Bring your fork up to date with the original repository
+### Bring your fork up to date with the original repository
 
 - Completed the [initial setup](#Initial-setup), if you haven't.
 - Fetch updates from the original repository (`upstream`):
@@ -144,7 +170,7 @@ If you are stuck, you are welcome to reach out and leave a comment.
 
 ---
 
-## Other useful commands
+### Other useful commands
 
 - Format your code using Prettier:
   - `yarn format` will format files with Prettier and save changes.
@@ -171,27 +197,36 @@ If you are stuck, you are welcome to reach out and leave a comment.
 
 - Use the present tense ("Add feature" not "Added feature").
 - Use the imperative mood ("Move cursor to..." not "Moves cursor to...").
-- Use '&' instead of spelling out 'and'
+- Use '&' instead of spelling out 'and'.
 - Limit the first line to 70 characters or less.
 - Reference issues and pull requests liberally after the first line.
 - When only changing documentation, include `[ci skip]` in the commit title.
 - Consider starting the commit message with an applicable emoji:
-  - :star: `:star:` when adding new features or enhancements
-  - :bug: `:bug:` when fixing bugs
-  - :art: `:art:` when improving the UI
-  - :memo: `:memo:` when writing documentations
-  - :shirt: `:shirt:` when fixing linter warnings or improving the format of the code
-  - :bath: `:bath:` when fixing CI builds
-  - :racehorse: `:racehorse:` when improving the performance
-  - :white_check_mark: `:white_check_mark:` when adding tests
-  - :lock: `:lock:` when dealing with security
-  - :arrow_up: `:arrow_up:` when upgrading dependencies
-  - :arrow_down: `:arrow_down:` when downgrading dependencies
-  - :wrench: `:wrench:` when configuring infrastructures
+  - :star: `:star:` when adding new features or enhancements.
+  - :bug: `:bug:` when fixing bugs.
+  - :art: `:art:` when improving the UI.
+  - :memo: `:memo:` when writing documentations.
+  - :shirt: `:shirt:` when fixing linter warnings or improving the format of the code.
+  - :bath: `:bath:` when fixing CI builds.
+  - :racehorse: `:racehorse:` when improving the performance.
+  - :white_check_mark: `:white_check_mark:` when adding tests.
+  - :lock: `:lock:` when dealing with security.
+  - :arrow_up: `:arrow_up:` when upgrading dependencies.
+  - :arrow_down: `:arrow_down:` when downgrading dependencies.
+  - :wrench: `:wrench:` when configuring infrastructures.
 
 ### Python style guide
 
-We follow the [PEP 8 style guide](https://www.python.org/dev/peps/pep-0008/) and the [Black code style](https://github.com/psf/black/blob/master/docs/the_black_code_style.md). The [Black code style](https://github.com/psf/black/blob/master/docs/the_black_code_style.md) can be viewed as a strict subset of [PEP 8 style guide](https://www.python.org/dev/peps/pep-0008/).
+- We follow the [PEP 8 style guide](https://www.python.org/dev/peps/pep-0008/) and the [Black code style](https://github.com/psf/black/blob/master/docs/the_black_code_style.md). The [Black code style](https://github.com/psf/black/blob/master/docs/the_black_code_style.md) can be viewed as a strict subset of [PEP 8 style guide](https://www.python.org/dev/peps/pep-0008/).
+
+### Prefer functional-styled programming
+
+We prefer functional style programming, meaning that:
+
+- Prefer local variables and avoid unnecessary global variables.
+- Given the same input, a function should always return the same output, meaning that the function should not be implicitly (or weirdly) dependent on variables outside the scope of the function.
+- Minimize unnecessary [side effects](<https://en.wikipedia.org/wiki/Side_effect_(computer_science)>) of a function.
+- Prefer immutable data structures to mutable ones. For example, if you know a series of data isn't going to (or shouldn't) change in the future, use a tuple instead of a list.
 
 ---
 

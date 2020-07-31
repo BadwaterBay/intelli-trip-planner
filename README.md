@@ -6,11 +6,19 @@ Repository: [https://github.com/BadwaterBay/intelli-trip-planner](https://github
 
 ## Table of contents
 
-- [Description](#Description)
-- [Badges](#Badges)
-- [Tasks](#Tasks)
-- [Contributing to this project](#Contributing-to-this-project)
-- [Contributors](#Contributors)
+- [Thank you, contributors](#thank-you-contributors)
+- [Description](#description)
+- [Statuses](#statuses)
+- [Tasks](#tasks)
+- [Contributing to this project](#contributing-to-this-project)
+
+---
+
+## Thank you, contributors
+
+We'd like to thank all of our contributors.
+
+[Click here to see a list of our contributors.](https://github.com/BadwaterBay/intelli-trip-planner/graphs/contributors)
 
 ---
 
@@ -20,7 +28,7 @@ The goal of this project is to build an API that can intelligently recommend roa
 
 ---
 
-## Badges
+## Status
 
 [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
@@ -53,9 +61,3 @@ Hence, we break down it into smaller steps.
 ## Contributing to this project
 
 Please refer to our [Contributing Guidelines](https://github.com/BadwaterBay/intelli-trip-planner/blob/master/CONTRIBUTING.md).
-
----
-
-## Contributors
-
-[Click here to see a list of our contributors.](https://github.com/BadwaterBay/intelli-trip-planner/graphs/contributors)
