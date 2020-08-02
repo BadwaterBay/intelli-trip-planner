@@ -12,10 +12,12 @@ ortools = "^7.7.7810"
 googlemaps = "^4.4.2"
 python-dotenv = "^0.14.0"
 gunicorn = "^20.0.4"
+coverage = "^5.2.1"
 
 [tool.poetry.dev-dependencies]
 pylint = "^2.5.3"
 black = "^19.10b0"
+coverage = "^5.2.1"
 
 [tool.black]
 line-length = 88

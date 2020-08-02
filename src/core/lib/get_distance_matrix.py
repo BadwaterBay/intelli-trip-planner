@@ -10,6 +10,7 @@ import pickle
 import googlemaps
 from dotenv import load_dotenv
 
+
 def get_distance_matrix(origins: []) -> dict:
     """
     Get distance matrix from Google Maps API

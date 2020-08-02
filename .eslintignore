@@ -1,10 +1,6 @@
 # The following files will be ignored by Eslint
 
 /node_modules
-/build*
-/dist*
-
-*.min.*
-colorpicker.js
-
-*-legacy
+/build
+/dist
+.coverage
