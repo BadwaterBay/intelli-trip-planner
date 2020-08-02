@@ -1,10 +1,9 @@
 # .coveragerc to control coverage.py
 [run]
 branch = True
-source = 
-    src
-omit =
-    src/tests/*
+source = src
+omit = src/tests/*
+data_file = .coverage
 
 [report]
 # Regexes for lines to exclude from consideration
@@ -25,3 +24,6 @@ exclude_lines =
     if __name__ == .__main__.:
 
 ignore_errors = True
+
+[xml]
+output = coverage.xml

@@ -42,6 +42,7 @@
 *.sqlite
 *cache*
 .coverage
+coverage.xml
 
 # OS generated files #
 ######################
