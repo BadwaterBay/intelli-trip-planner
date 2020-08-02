@@ -14,30 +14,32 @@
   },
   "scripts": {
     "ci": "yarn --frozen-lockfile && poetry install",
-    "format-prettier": "prettier './**/*.{js,json,html,css,scss,md}' --write",
-    "format-black": "black . --verbose",
-    "format": "run-s format-prettier format-black",
+    "format-js": "prettier './**/*.{js,json,md}' --write",
+    "format-py": "black . --verbose",
+    "format": "run-s format-js format-py",
     "lint-js": "eslint './**/*.js' --cache --fix",
     "lint-sh": "shellcheck ./src/**/*.sh",
     "lint-py": "pylint ./src/**/*.py",
     "lint": "run-s lint-js lint-sh lint-py",
     "clean": "rimraf dist",
     "x-req": "poetry export -f requirements.txt > requirements.txt",
-    "test": "echo 'No test specified yet' && exit 0",
+    "test": "python -m unittest discover -v -s tests -p \"*_test.py\" -t src",
+    "coverage": "coverage run -m unittest discover -v -s tests -p \"*_test.py\" -t src && coverage report -m",
     "development": "bash ./src/bin/www.sh",
     "start": "run-s development",
-    "refresh": "rm -rf ./node_modules/ && yarn --frozen-lockfile && poetry install"
+    "refresh": "rm -rf ./node_modules/ && yarn ci"
   },
   "engines": {
     "node": ">=0.12 <0.13"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "pre-push": "run-p x-req coverage"
     }
   },
   "lint-staged": {
-    "./**/*.{js,html,css,scss,md}": "prettier --write",
+    "./**/*.{js,json,md}": "prettier --write",
     "./**/*.js": "eslint --cache --fix",
     "./src/**/*.sh": "shellcheck",
     "./src/**/*.py": [
