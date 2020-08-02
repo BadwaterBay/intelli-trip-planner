@@ -2,13 +2,24 @@
 
 Repository: [https://github.com/BadwaterBay/intelli-trip-planner](https://github.com/BadwaterBay/intelli-trip-planner)
 
+![Node.js CI](https://github.com/BadwaterBay/intelli-trip-planner/workflows/Node.js%20CI/badge.svg)
+[![codecov](https://codecov.io/gh/BadwaterBay/intelli-trip-planner/branch/master/graph/badge.svg)](https://codecov.io/gh/BadwaterBay/intelli-trip-planner)
+[![CodeFactor](https://www.codefactor.io/repository/github/badwaterbay/intelli-trip-planner/badge)](https://www.codefactor.io/repository/github/badwaterbay/intelli-trip-planner)
+[![DeepScan grade](https://deepscan.io/api/teams/9440/projects/11966/branches/179827/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=9440&pid=11966&bid=179827)
+[![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+[![GitHub issues](https://img.shields.io/github/issues/BadwaterBay/intelli-trip-planner.svg)](https://GitHub.com/BadwaterBay/intelli-trip-planner/issues/)
+[![GitHub issues-closed](https://img.shields.io/github/issues-closed/BadwaterBay/intelli-trip-planner.svg)](https://GitHub.com/BadwaterBay/intelli-trip-planner/issues?q=is%3Aissue+is%3Aclosed)
+[![GitHub pull-requests](https://img.shields.io/github/issues-pr/BadwaterBay/intelli-trip-planner.svg)](https://GitHub.com/BadwaterBay/intelli-trip-planner/pulls/)
+[![GitHub pull-requests closed](https://img.shields.io/github/issues-pr-closed/BadwaterBay/intelli-trip-planner.svg)](https://GitHub.com/BadwaterBay/intelli-trip-planner/pulls/)
+
 ---
 
 ## Table of contents
 
 - [Thank you, contributors](#thank-you-contributors)
 - [Description](#description)
-- [Statuses](#statuses)
 - [Tasks](#tasks)
 - [Contributing to this project](#contributing-to-this-project)
 
@@ -25,22 +36,6 @@ We'd like to thank all of our contributors.
 ## Description
 
 The goal of this project is to build an API that can intelligently recommend road trip routes, given a number of criteria, including trip duration, budget, region of interest, must-visit destinations, lodging places and time spent at a given location.
-
----
-
-## Status
-
-[![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-
-![Node.js CI](https://github.com/BadwaterBay/intelli-trip-planner/workflows/Node.js%20CI/badge.svg)
-[![CodeFactor](https://www.codefactor.io/repository/github/badwaterbay/intelli-trip-planner/badge)](https://www.codefactor.io/repository/github/badwaterbay/intelli-trip-planner)
-[![DeepScan grade](https://deepscan.io/api/teams/9440/projects/11966/branches/179827/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=9440&pid=11966&bid=179827)
-
-[![GitHub issues](https://img.shields.io/github/issues/BadwaterBay/intelli-trip-planner.svg)](https://GitHub.com/BadwaterBay/intelli-trip-planner/issues/)
-[![GitHub issues-closed](https://img.shields.io/github/issues-closed/BadwaterBay/intelli-trip-planner.svg)](https://GitHub.com/BadwaterBay/intelli-trip-planner/issues?q=is%3Aissue+is%3Aclosed)
-[![GitHub pull-requests](https://img.shields.io/github/issues-pr/BadwaterBay/intelli-trip-planner.svg)](https://GitHub.com/BadwaterBay/intelli-trip-planner/pulls/)
-[![GitHub pull-requests closed](https://img.shields.io/github/issues-pr-closed/BadwaterBay/intelli-trip-planner.svg)](https://GitHub.com/BadwaterBay/intelli-trip-planner/pulls/)
 
 ---
 
