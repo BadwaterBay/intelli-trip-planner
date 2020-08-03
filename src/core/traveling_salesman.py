@@ -11,14 +11,17 @@ from ortools.constraint_solver import routing_enums_pb2
 from ortools.constraint_solver import pywrapcp
 
 
-def create_data_model(filepath):
+def load_dm_pickle(file_path: str) -> dict:
+    """
+    Load distance matrix from pickle to dictionary
+    """
+    with open(file_path, "rb") as file:
+        return pickle.load(file)
+
+
+def create_data_model(distance_matrix):
     """Stores the data for the problem."""
-    with open(filepath, "rb") as file:
-        distance_matrix = pickle.load(file)
-    data = {}
-    data["distance_matrix"] = distance_matrix
-    data["num_vehicles"] = 1
-    data["depot"] = 0
+    data = {"distance_matrix": distance_matrix, "num_vehicles": 1, "depot": 0}
     return data
 
 
@@ -58,11 +61,12 @@ def print_plan(plan) -> None:
     return
 
 
-def solve_for_plan(filepath):
+def solve_for_plan(filepath: str):
     """Entry point of the program."""
 
     # Instantiate the data problem.
-    data = create_data_model(filepath)
+    distance_matrix = load_dm_pickle(filepath)
+    data = create_data_model(distance_matrix)
 
     # Create the routing index manager.
     manager = pywrapcp.RoutingIndexManager(
@@ -105,9 +109,9 @@ def main():
     """
     Driver function
     """
-    cur_dir = os.path.dirname(os.path.abspath(__file__))
-    filepath = os.path.join(cur_dir, "data/distance_matrix_list.pkl")
-    plan = solve_for_plan(filepath)
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(current_dir, "data", "parsed_distance_matrix_distance.pkl")
+    plan = solve_for_plan(file_path)
     print_plan(plan)
 
 
