@@ -23,8 +23,8 @@
     "lint": "run-s lint-js lint-sh lint-py",
     "clean": "rimraf dist",
     "x-req": "poetry export -f requirements.txt > requirements.txt",
-    "test": "python -m unittest discover -v -s tests -p \"*_test.py\" -t src",
-    "coverage": "coverage run -m unittest discover -v -s tests -p \"*_test.py\" -t src && coverage report -m && coverage xml",
+    "test": "python -m unittest discover -v -s tests -p \"test_*.py\" -t src",
+    "coverage": "coverage run -m unittest discover -v -s tests -p \"test_*.py\" -t src && coverage report -m && coverage xml",
     "development": "bash ./src/bin/www.sh",
     "start": "run-s development",
     "refresh": "rm -rf ./node_modules/ && yarn ci"

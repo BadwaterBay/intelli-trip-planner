@@ -50,7 +50,7 @@ async def dm_pipeline(origins: []) -> None:
     return
 
 
-async def main():
+async def main() -> None:
     """
     Main function for creating distance matrices for development
     """
