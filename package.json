@@ -50,7 +50,7 @@
   "dependencies": {
     "clean-css": "^4.2.3",
     "core-js": "^3.6.5",
-    "uglify-js": "^3.10.0"
+    "uglify-js": "^3.10.1"
   },
   "devDependencies": {
     "browser-sync": "^2.26.12",
