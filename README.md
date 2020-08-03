@@ -2,10 +2,10 @@
 
 Repository: [https://github.com/BadwaterBay/intelli-trip-planner](https://github.com/BadwaterBay/intelli-trip-planner)
 
+![Python application](https://github.com/BadwaterBay/intelli-trip-planner/workflows/Python%20application/badge.svg)
 ![Node.js CI](https://github.com/BadwaterBay/intelli-trip-planner/workflows/Node.js%20CI/badge.svg)
 [![codecov](https://codecov.io/gh/BadwaterBay/intelli-trip-planner/branch/master/graph/badge.svg)](https://codecov.io/gh/BadwaterBay/intelli-trip-planner)
 [![CodeFactor](https://www.codefactor.io/repository/github/badwaterbay/intelli-trip-planner/badge)](https://www.codefactor.io/repository/github/badwaterbay/intelli-trip-planner)
-[![DeepScan grade](https://deepscan.io/api/teams/9440/projects/11966/branches/179827/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=9440&pid=11966&bid=179827)
 [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
