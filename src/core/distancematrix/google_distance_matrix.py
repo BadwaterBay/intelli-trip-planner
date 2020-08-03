@@ -4,11 +4,16 @@
 Get distance matrices from Google Maps API and process the response
 """
 
+import sys
 import os
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
+
+# pylint: disable=wrong-import-position
 import json
 import googlemaps
 from dotenv import load_dotenv
-from helpers.read_write import save_dict_to_json, save_data_to_pickle
+from core.helpers.read_write import save_dict_to_json, save_data_to_pickle
 
 
 async def get_dm_from_google_api(origins: []) -> dict:
@@ -18,8 +23,7 @@ async def get_dm_from_google_api(origins: []) -> dict:
     load_dotenv()
     api_key = os.environ.get("API_KEY_GOOGLE")
     gmaps = googlemaps.Client(key=api_key)
-    destinations = origins
-    dm_response = gmaps.distance_matrix(origins, destinations)
+    dm_response = gmaps.distance_matrix(origins, origins)
     return dm_response
 
 

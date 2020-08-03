@@ -4,9 +4,14 @@
 Create distance matrices for development
 """
 
+import sys
 import os
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+# pylint: disable=wrong-import-position
 import asyncio
-from distancematrix.google_distance_matrix import (
+from core.distancematrix.google_distance_matrix import (
     get_dm_from_google_api,
     save_dm_dict_to_json,
     parse_dm_response,

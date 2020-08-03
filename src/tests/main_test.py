@@ -4,15 +4,16 @@
 Main script for unit testing
 """
 
+# pylint: disable=wrong-import-position
+
 import os
 import unittest
+
+# import asyncio
 import pickle
-
-# pylint: disable=no-name-in-module
-
 from core.traveling_salesman import create_data_model, solve_for_plan
 
-# pylint: enable=no-name-in-module
+# from core.distancematrix.google_distance_matrix import get_dm_from_google_api
 
 
 class TestTravelingSalesman(unittest.TestCase):
@@ -189,6 +190,26 @@ class TestTravelingSalesman(unittest.TestCase):
 
         # Assert
         self.assertEqual(output, answerkey)
+
+
+# class TestGoogleDistanceMatrix(unittest.TestCase):
+#     """
+#     Test google_distance_matrix.py
+#     """
+
+# def test_get_dm_from_google_api(self):
+#     """
+#     Test get_dm_from_google_api
+#     """
+#     origins = [
+#         "Denver, CO",
+#         "Austin, TX",
+#     ]
+
+#     loop = asyncio.get_event_loop()
+#     distance_matrix = loop.run_until_complete(get_dm_from_google_api(origins))
+#     loop.close()
+#     self.assertEqual(distance_matrix["status"], "OK")
 
 
 if __name__ == "__main__":
