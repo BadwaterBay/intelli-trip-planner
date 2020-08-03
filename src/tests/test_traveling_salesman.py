@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Main script for unit testing
+Test traveling_salesman.py
 """
 
 import unittest

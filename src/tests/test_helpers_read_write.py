@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Main script for unit testing
+Test helper functions: read_write.py
 """
 
 import os

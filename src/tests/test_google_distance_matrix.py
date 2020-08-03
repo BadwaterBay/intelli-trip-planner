@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Main script for unit testing
+Test google_distance_matrix.py
 """
 
 import os
