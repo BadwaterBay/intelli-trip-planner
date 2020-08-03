@@ -14,6 +14,14 @@ import json
 import pickle
 
 
+async def load_dm_pickle(file_path: str) -> dict:
+    """
+    Load distance matrix from pickle to dictionary
+    """
+    with open(file_path, "rb") as file:
+        return pickle.load(file)
+
+
 async def save_dict_to_json(dict_data: dict, to_file: str) -> None:
     """
     Save a dictionary to a json file

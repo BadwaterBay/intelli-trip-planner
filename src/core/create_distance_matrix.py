@@ -16,8 +16,8 @@ from core.distancematrix.google_distance_matrix import (
     save_dm_dict_to_json,
     parse_dm_response,
     save_dm_tuple_to_pickle,
-    save_dm_tuple_to_txt,
 )
+from core.helpers.read_write import save_dict_to_json
 
 
 async def dm_pipeline(origins: []) -> None:
@@ -37,27 +37,15 @@ async def dm_pipeline(origins: []) -> None:
     await save_dm_dict_to_json(dm_response, dm_json)
 
     # Parse distance matrix to a dictionary of two 2D tuples
-    parsed_dm = await parse_dm_response(dm_response)
+    parsed_dm: dict = await parse_dm_response(dm_response)
 
-    # Save 2D list to pickle
-    pickle_file_distance: str = os.path.join(
-        dir_for_data, "parsed_distance_matrix_distance.pkl"
-    )
-    await save_dm_tuple_to_pickle(parsed_dm["distance"], pickle_file_distance)
-    pickle_file_duration: str = os.path.join(
-        dir_for_data, "parsed_distance_matrix_duration.pkl"
-    )
-    await save_dm_tuple_to_pickle(parsed_dm["duration"], pickle_file_duration)
+    # Save parsed distance matrix to a pickle file
+    pickle_file: str = os.path.join(dir_for_data, "parsed_distance_matrix.pkl")
+    await save_dm_tuple_to_pickle(parsed_dm, pickle_file)
 
-    # Save 2D list to txt
-    txt_file_distance: str = os.path.join(
-        dir_for_data, "parsed_distance_matrix_distance.txt"
-    )
-    await save_dm_tuple_to_txt(parsed_dm["distance"], txt_file_distance)
-    txt_file_duration: str = os.path.join(
-        dir_for_data, "parsed_distance_matrix_duration.txt"
-    )
-    await save_dm_tuple_to_txt(parsed_dm["duration"], txt_file_duration)
+    # Save parsed distance matrix to a JSON file
+    json_file: str = os.path.join(dir_for_data, "parsed_distance_matrix.json")
+    await save_dict_to_json(parsed_dm, json_file)
 
     return
 
@@ -83,6 +71,4 @@ async def main():
 
 
 if __name__ == "__main__":
-    loop = asyncio.get_event_loop()
-    loop.run_until_complete(main())
-    loop.close()
+    asyncio.run(main())
