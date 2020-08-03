@@ -8,12 +8,10 @@ Main script for unit testing
 
 import os
 import unittest
-
-# import asyncio
+import asyncio
 import pickle
 from core.traveling_salesman import create_data_model, solve_for_plan
-
-# from core.distancematrix.google_distance_matrix import get_dm_from_google_api
+from core.distancematrix.google_distance_matrix import get_dm_from_google_api
 
 
 class TestTravelingSalesman(unittest.TestCase):
@@ -192,24 +190,24 @@ class TestTravelingSalesman(unittest.TestCase):
         self.assertEqual(output, answerkey)
 
 
-# class TestGoogleDistanceMatrix(unittest.TestCase):
-#     """
-#     Test google_distance_matrix.py
-#     """
+class TestGoogleDistanceMatrix(unittest.TestCase):
+    """
+    Test google_distance_matrix.py
+    """
 
-# def test_get_dm_from_google_api(self):
-#     """
-#     Test get_dm_from_google_api
-#     """
-#     origins = [
-#         "Denver, CO",
-#         "Austin, TX",
-#     ]
+    def test_get_dm_from_google_api(self):
+        """
+        Test get_dm_from_google_api
+        """
+        origins = [
+            "Denver, CO",
+            "Austin, TX",
+        ]
 
-#     loop = asyncio.get_event_loop()
-#     distance_matrix = loop.run_until_complete(get_dm_from_google_api(origins))
-#     loop.close()
-#     self.assertEqual(distance_matrix["status"], "OK")
+        loop = asyncio.get_event_loop()
+        distance_matrix = loop.run_until_complete(get_dm_from_google_api(origins))
+        loop.close()
+        self.assertEqual(distance_matrix["status"], "OK")
 
 
 if __name__ == "__main__":
