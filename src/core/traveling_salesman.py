@@ -39,25 +39,6 @@ async def get_solution(manager, routing, solution):
     return plan
 
 
-async def print_plan(plan) -> None:
-    """Prints solution on console."""
-    if plan is None:
-        print("No solution found.")
-        return
-    plan_output = ""
-    length = len(plan["waypoints"])
-    for i in range(length):
-        if i > 0:
-            plan_output += " "
-        plan_output += "{}".format(plan["waypoints"][i])
-        if i < length - 1:
-            plan_output += " ->"
-    print("Objective: {} meters".format(plan["objective_value"]))
-    print("True: {} meters".format(plan["true_value"]))
-    print(plan_output)
-    return
-
-
 async def solve_for_plan(data):
     """Entry point of the program."""
 
@@ -96,6 +77,25 @@ async def solve_for_plan(data):
     if solution:
         plan = await get_solution(manager, routing, solution)
         return plan
+
+
+async def print_plan(plan) -> None:
+    """Prints solution in stdout"""
+    if plan is None:
+        print("No solution found.")
+        return
+    plan_output = ""
+    length = len(plan["waypoints"])
+    for i in range(length):
+        if i > 0:
+            plan_output += " "
+        plan_output += "{}".format(plan["waypoints"][i])
+        if i < length - 1:
+            plan_output += " ->"
+    print("Objective: {} meters".format(plan["objective_value"]))
+    print("True: {} meters".format(plan["true_value"]))
+    print(plan_output)
+    return
 
 
 async def main():

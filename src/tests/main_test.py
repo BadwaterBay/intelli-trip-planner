@@ -6,10 +6,12 @@ Main script for unit testing
 
 import os
 import unittest
+from unittest.mock import patch
+from io import StringIO
 import asyncio
 import pickle
 import json
-from core.traveling_salesman import create_data_model, solve_for_plan
+from core.traveling_salesman import create_data_model, print_plan, solve_for_plan
 from core.distancematrix.google_distance_matrix import (
     # get_dm_from_google_api,
     dm_dict_to_2d_tuple,
@@ -27,20 +29,17 @@ class TestHelpersReadWrite(unittest.TestCase):
         """
         Test load_dm_pickle
         """
-        # Input
+        # Input:
         current_dir: str = os.path.dirname(os.path.abspath(__file__))
         pickle_file: str = os.path.join(
             current_dir, "mock_data", "parsed_distance_matrix.pkl"
         )
-
-        # Output
+        # Output:
         output = asyncio.run(load_dm_pickle(pickle_file))
-
-        # Answer key
+        # Answer key:
         with open(pickle_file, "rb") as file:
             answer_key = pickle.load(file)
-
-        # Assert
+        # Assert:
         self.assertEqual(output, answer_key)
 
 
@@ -58,7 +57,6 @@ class TestGoogleDistanceMatrix(unittest.TestCase):
     #         "Denver, CO",
     #         "Austin, TX",
     #     ]
-
     #     loop = asyncio.get_event_loop()
     #     distance_matrix = loop.run_until_complete(get_dm_from_google_api(origins))
     #     loop.close()
@@ -68,21 +66,20 @@ class TestGoogleDistanceMatrix(unittest.TestCase):
         """
         Test dm_dict_to_2d_tuple with "distance" argument
         """
-        # Input
+        # Input:
         current_dir: str = os.path.dirname(os.path.abspath(__file__))
         json_file: str = os.path.join(current_dir, "mock_data", "distance_matrix.json")
-
         with open(json_file, "r") as read_file:
-            distance_matrix = json.load(read_file)
+            distance_matrix: dict = json.load(read_file)
         parsed_file: str = os.path.join(
             current_dir, "mock_data", "parsed_distance_matrix.pkl"
         )
 
-        # Answer key
+        # Answer key:
         with open(parsed_file, "rb") as file:
             answer_key = pickle.load(file)["distance"]
 
-        # Output
+        # Output:
         output = asyncio.run(dm_dict_to_2d_tuple(distance_matrix, "distance"))
 
         # Asssert
@@ -92,48 +89,40 @@ class TestGoogleDistanceMatrix(unittest.TestCase):
         """
         Test dm_dict_to_2d_tuple with "duration" argument
         """
-        # Input
+        # Input:
         current_dir: str = os.path.dirname(os.path.abspath(__file__))
         json_file: str = os.path.join(current_dir, "mock_data", "distance_matrix.json")
-
         with open(json_file, "r") as read_file:
             distance_matrix = json.load(read_file)
         parsed_file: str = os.path.join(
             current_dir, "mock_data", "parsed_distance_matrix.pkl"
         )
-
-        # Answer key
+        # Answer key:
         with open(parsed_file, "rb") as file:
             answer_key = pickle.load(file)["duration"]
-
-        # Output
+        # Output:
         output = asyncio.run(dm_dict_to_2d_tuple(distance_matrix, "duration"))
-
-        # Assert
+        # Assert:
         self.assertEqual(output, answer_key)
 
     def test_parse_dm_response(self):
         """
         Test parse_dm_response
         """
-        # Input
+        # Input:
         current_dir: str = os.path.dirname(os.path.abspath(__file__))
         json_file: str = os.path.join(current_dir, "mock_data", "distance_matrix.json")
-
         with open(json_file, "r") as read_file:
             distance_matrix = json.load(read_file)
         parsed_file: str = os.path.join(
             current_dir, "mock_data", "parsed_distance_matrix.pkl"
         )
-
-        # Answer key
+        # Answer key:
         with open(parsed_file, "rb") as file:
             answer_key = pickle.load(file)
-
-        # Output
+        # Output:
         output = asyncio.run(parse_dm_response(distance_matrix))
-
-        # Assert
+        # Assert:
         self.assertEqual(output, answer_key)
 
 
@@ -146,18 +135,16 @@ class TestTravelingSalesman(unittest.TestCase):
         """
         Test create_data_model
         """
-        # Input
+        # Input:
         current_dir: str = os.path.dirname(os.path.abspath(__file__))
         file_path: str = os.path.join(
             current_dir, "mock_data", "parsed_distance_matrix.pkl"
         )
         with open(file_path, "rb") as file:
             distance_matrix = pickle.load(file)
-
-        # Output
+        # Output:
         output = asyncio.run(create_data_model(distance_matrix["distance"]))
-
-        # Answer key
+        # Answer key:
         answer_key = {
             "distance_matrix": (
                 (
@@ -284,24 +271,21 @@ class TestTravelingSalesman(unittest.TestCase):
             "num_vehicles": 1,
             "depot": 0,
         }
-
-        # Assert
+        # Assert:
         self.assertEqual(output, answer_key)
 
     def test_solve_for_plan(self):
         """
         Test solving for simple traveling salesman problem
         """
-
-        # Input
+        # Input:
         current_dir: str = os.path.dirname(os.path.abspath(__file__))
         file_path: str = os.path.join(
             current_dir, "mock_data", "parsed_distance_matrix.pkl"
         )
         with open(file_path, "rb") as file:
             distance_matrix = pickle.load(file)
-
-        # Output
+        # Output:
         async def get_output():
             """
             Output
@@ -310,16 +294,35 @@ class TestTravelingSalesman(unittest.TestCase):
             return await solve_for_plan(data)
 
         output = asyncio.run(get_output())
-
-        # Answer key
+        # Answer key:
         answer_key = {
             "waypoints": [0, 6, 7, 8, 9, 3, 4, 1, 5, 2, 0],
             "objective_value": 3076045,
             "true_value": 3076045,
         }
-
-        # Assert
+        # Assert:
         self.assertEqual(output, answer_key)
+
+    def test_print_plan(self):
+        """
+        Test printing the solution in stdout
+        """
+        # Input:
+        plan = {
+            "waypoints": [0, 6, 7, 8, 9, 3, 4, 1, 5, 2, 0],
+            "objective_value": 3076045,
+            "true_value": 3076045,
+        }
+        # Answer key:
+        answer_key = (
+            "Objective: 3076045 meters\n"
+            "True: 3076045 meters\n"
+            "0 -> 6 -> 7 -> 8 -> 9 -> 3 -> 4 -> 1 -> 5 -> 2 -> 0\n"
+        )
+        # Assert:
+        with patch("sys.stdout", new=StringIO()) as fake_out:
+            asyncio.run(print_plan(plan))
+            self.assertEqual(fake_out.getvalue(), answer_key)
 
 
 if __name__ == "__main__":
