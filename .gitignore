@@ -42,7 +42,7 @@
 *.sqlite
 *cache*
 .coverage
-coverage.json
+coverage.xml
 
 # OS generated files #
 ######################

@@ -25,5 +25,5 @@ exclude_lines =
 
 ignore_errors = True
 
-[json]
-output = coverage.json
+[xml]
+output = coverage.xml
