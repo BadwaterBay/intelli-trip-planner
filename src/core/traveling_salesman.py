@@ -4,25 +4,25 @@
 Solve for the fastest route
 """
 
-from __future__ import print_function
+import sys
 import os
-import pickle
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+# pylint: disable=wrong-import-position
+import asyncio
 from ortools.constraint_solver import routing_enums_pb2
 from ortools.constraint_solver import pywrapcp
+from core.helpers.read_write import load_dm_pickle
 
 
-def create_data_model(filepath):
+async def create_data_model(distance_matrix):
     """Stores the data for the problem."""
-    with open(filepath, "rb") as file:
-        distance_matrix = pickle.load(file)
-    data = {}
-    data["distance_matrix"] = distance_matrix
-    data["num_vehicles"] = 1
-    data["depot"] = 0
+    data = {"distance_matrix": distance_matrix, "num_vehicles": 1, "depot": 0}
     return data
 
 
-def get_solution(manager, routing, solution):
+async def get_solution(manager, routing, solution):
     """Prints solution on console."""
     index = routing.Start(0)
     plan = {
@@ -39,7 +39,7 @@ def get_solution(manager, routing, solution):
     return plan
 
 
-def print_plan(plan) -> None:
+async def print_plan(plan) -> None:
     """Prints solution on console."""
     if plan is None:
         print("No solution found.")
@@ -58,11 +58,8 @@ def print_plan(plan) -> None:
     return
 
 
-def solve_for_plan(filepath):
+async def solve_for_plan(data):
     """Entry point of the program."""
-
-    # Instantiate the data problem.
-    data = create_data_model(filepath)
 
     # Create the routing index manager.
     manager = pywrapcp.RoutingIndexManager(
@@ -97,19 +94,24 @@ def solve_for_plan(filepath):
 
     # Print solution on console.
     if solution:
-        plan = get_solution(manager, routing, solution)
+        plan = await get_solution(manager, routing, solution)
         return plan
 
 
-def main():
+async def main():
     """
     Driver function
     """
-    cur_dir = os.path.dirname(os.path.abspath(__file__))
-    filepath = os.path.join(cur_dir, "data/distance_matrix_list.pkl")
-    plan = solve_for_plan(filepath)
-    print_plan(plan)
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(current_dir, "data", "parsed_distance_matrix.pkl")
+
+    # Instantiate the data problem.
+    distance_matrix = await load_dm_pickle(file_path)
+    data = await create_data_model(distance_matrix["distance"])
+
+    plan = await solve_for_plan(data)
+    await print_plan(plan)
 
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())
