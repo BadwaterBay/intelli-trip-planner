@@ -36,7 +36,7 @@ async def create_data_model(
 
 async def get_solution(manager, routing, solution) -> dict:
     """
-    # Prints solution in stdout
+    # Parse solution
     """
     index = routing.Start(0)
     plan = {
@@ -116,11 +116,12 @@ async def solve_for_plan(data: dict, measure: str, quota: int = 0) -> dict:
     # Solve the problem.
     solution = routing.SolveWithParameters(search_parameters)
 
-    # Print solution in stdout.
+    # Return solution
     if solution:
         plan = await get_solution(manager, routing, solution)
         plan["quota"] = quota if quota != 0 else None
         return plan
+    return None
 
 
 async def print_plan(plan: dict) -> None:
