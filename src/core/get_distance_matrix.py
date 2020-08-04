@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Create distance matrices for development
+Get distance matrices from Google Maps API for development
 """
 
 import sys
@@ -11,6 +11,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")
 
 # pylint: disable=wrong-import-position
 import asyncio
+from typing import List
 from core.distancematrix.google_distance_matrix import (
     get_dm_from_google_api,
     save_dm_dict_to_json,
@@ -20,7 +21,7 @@ from core.distancematrix.google_distance_matrix import (
 from core.helpers.read_write import save_dict_to_json
 
 
-async def dm_pipeline(origins: []) -> None:
+async def dm_pipeline(origins: List[str]) -> None:
     """
     Pipeline for getting and manipulating distance matrices
     """
@@ -54,12 +55,12 @@ async def main() -> None:
     """
     Main function for creating distance matrices for development
     """
-    origins = [
+    origins: List[str] = [
         "Las Vegas McCarran International Airport, NV",
-        "Los Angeles International Airport",
+        "Los Angeles International Airport, CA",
         "Death Valley Furnace Creek Visitor Center, Furnace Creek, CA",
         "Mojave Kelso Depot Visitor Center, CA",
-        "Joshua Tree National Park Visitor Center, Park Boulevard, Joshua Tree, California",
+        "Joshua Tree National Park Visitor Center, Park Boulevard, Joshua Tree, CA",
         "Sequoia National Park - Visitor Center, Generals Highway, Three Rivers, CA",
         "Zion National Park Visitor Center, Zion – Mount Carmel Highway, Hurricane, UT",
         "Bryce Canyon National Park Visitor Center, Utah 63, Bryce Canyon City, UT",
