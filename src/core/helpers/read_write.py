@@ -22,6 +22,14 @@ async def load_dm_pickle(file_path: str) -> dict:
         return pickle.load(file)
 
 
+async def load_json_to_dict(json_file: str) -> dict:
+    """
+    Load a JSON file to a dictionary
+    """
+    with open(json_file, "r") as read_file:
+        return json.load(read_file)
+
+
 async def save_dict_to_json(dict_data: dict, to_file: str) -> None:
     """
     Save a dictionary to a json file

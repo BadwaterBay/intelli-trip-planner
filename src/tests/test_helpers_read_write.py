@@ -5,8 +5,8 @@ Test helper functions: read_write.py
 """
 
 import os
-import unittest
 import asyncio
+import unittest
 from core.helpers.read_write import load_dm_pickle
 from tests.load_answer_key import load_parsed_distance_matrix
 

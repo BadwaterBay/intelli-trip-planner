@@ -12,7 +12,7 @@ from core.find_route import create_data_model, print_plan, solve_for_plan
 from tests.load_answer_key import load_parsed_distance_matrix
 
 
-class TestTravelingSalesman(unittest.TestCase):
+class TestFindRoute(unittest.TestCase):
     """
     Test find_route.py
     """
@@ -26,7 +26,7 @@ class TestTravelingSalesman(unittest.TestCase):
         # Output:
         output = asyncio.run(
             create_data_model(
-                parsed_distance_matrix["distance"], parsed_distance_matrix["duration"]
+                parsed_distance_matrix["distance"], parsed_distance_matrix["duration"],
             )
         )
         # Answer key:
@@ -54,7 +54,7 @@ class TestTravelingSalesman(unittest.TestCase):
             Output
             """
             data = await create_data_model(
-                parsed_distance_matrix["distance"], parsed_distance_matrix["duration"]
+                parsed_distance_matrix["distance"], parsed_distance_matrix["duration"],
             )
             return await solve_for_plan(data, "distance_matrix")
 
@@ -84,7 +84,7 @@ class TestTravelingSalesman(unittest.TestCase):
             Output
             """
             data = await create_data_model(
-                parsed_distance_matrix["distance"], parsed_distance_matrix["duration"]
+                parsed_distance_matrix["distance"], parsed_distance_matrix["duration"],
             )
             return await solve_for_plan(data, "distance_matrix", 0)
 
@@ -114,7 +114,7 @@ class TestTravelingSalesman(unittest.TestCase):
             Output
             """
             data = await create_data_model(
-                parsed_distance_matrix["distance"], parsed_distance_matrix["duration"]
+                parsed_distance_matrix["distance"], parsed_distance_matrix["duration"],
             )
             return await solve_for_plan(data, "duration_matrix")
 
@@ -144,7 +144,7 @@ class TestTravelingSalesman(unittest.TestCase):
             Output
             """
             data = await create_data_model(
-                parsed_distance_matrix["distance"], parsed_distance_matrix["duration"]
+                parsed_distance_matrix["distance"], parsed_distance_matrix["duration"],
             )
             return await solve_for_plan(data, "duration_matrix", 0)
 
@@ -176,7 +176,7 @@ class TestTravelingSalesman(unittest.TestCase):
             Output
             """
             data = await create_data_model(
-                parsed_distance_matrix["distance"], parsed_distance_matrix["duration"]
+                parsed_distance_matrix["distance"], parsed_distance_matrix["duration"],
             )
             return await solve_for_plan(data, "distance_matrix", quota)
 
@@ -208,7 +208,7 @@ class TestTravelingSalesman(unittest.TestCase):
             Output
             """
             data = await create_data_model(
-                parsed_distance_matrix["distance"], parsed_distance_matrix["duration"]
+                parsed_distance_matrix["distance"], parsed_distance_matrix["duration"],
             )
             return await solve_for_plan(data, "duration_matrix", quota)
 
@@ -223,9 +223,9 @@ class TestTravelingSalesman(unittest.TestCase):
         # Assert:
         self.assertEqual(output, answer_key)
 
-    def test_print_plan(self):
+    def test_print_plan_with_valid_solution(self):
         """
-        Test printing the solution in stdout
+        Test printing the solution in stdout with a valid solution
         """
         # Input:
         plan = {
@@ -241,6 +241,19 @@ class TestTravelingSalesman(unittest.TestCase):
             "Quota: None units\n"
             "0 -> 6 -> 7 -> 8 -> 9 -> 3 -> 4 -> 1 -> 5 -> 2 -> 0\n"
         )
+        # Assert:
+        with patch("sys.stdout", new=StringIO()) as fake_out:
+            asyncio.run(print_plan(plan))
+            self.assertEqual(fake_out.getvalue(), answer_key)
+
+    def test_print_plan_with_no_solution(self):
+        """
+        Test printing the solution in stdout with no solution
+        """
+        # Input:
+        plan = None
+        # Answer key:
+        answer_key = "No solution found.\n"
         # Assert:
         with patch("sys.stdout", new=StringIO()) as fake_out:
             asyncio.run(print_plan(plan))
