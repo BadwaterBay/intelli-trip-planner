@@ -16,6 +16,8 @@ def seconds_in_x_hours(x_hours: Union[int, float, None] = 0) -> int:
     - :return: the number of seconds in x hours. Default to 0 if error occurs.
     - :rtype: int
     """
+    if isinstance(x_hours, bool):
+        return 0
     if isinstance(x_hours, (int, float)) and (x_hours >= 0):
         return round(3600 * x_hours)
     print(
