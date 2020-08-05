@@ -9,7 +9,7 @@ from unittest.mock import patch
 from io import StringIO
 import asyncio
 from core.find_route import create_data_model, print_plan, solve_for_plan, main
-from tests.load_answer_key import load_parsed_distance_matrix
+from tests.load_answer_key import load_parsed_distance_matrix_tuple
 
 
 class TestFindRoute(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestFindRoute(unittest.TestCase):
         Test create_data_model
         """
         # Input:
-        parsed_distance_matrix = load_parsed_distance_matrix()
+        parsed_distance_matrix = load_parsed_distance_matrix_tuple()
         # Output:
         output = asyncio.run(
             create_data_model(
@@ -60,7 +60,7 @@ class TestFindRoute(unittest.TestCase):
         - Test solve_for_plan() with missing `quota` argument
         """
         # Input:
-        parsed_distance_matrix = load_parsed_distance_matrix()
+        parsed_distance_matrix = load_parsed_distance_matrix_tuple()
         # Output:
         async def get_output():
             """
@@ -90,7 +90,7 @@ class TestFindRoute(unittest.TestCase):
         - Test solve_for_plan() with `quota` set to 0
         """
         # Input:
-        parsed_distance_matrix = load_parsed_distance_matrix()
+        parsed_distance_matrix = load_parsed_distance_matrix_tuple()
         # Output:
         async def get_output():
             """
@@ -120,7 +120,7 @@ class TestFindRoute(unittest.TestCase):
         - Test solve_for_plan() with missing `quota` argument
         """
         # Input:
-        parsed_distance_matrix = load_parsed_distance_matrix()
+        parsed_distance_matrix = load_parsed_distance_matrix_tuple()
         # Output:
         async def get_output():
             """
@@ -150,7 +150,7 @@ class TestFindRoute(unittest.TestCase):
         - Test solve_for_plan() with `quota` set to 0
         """
         # Input:
-        parsed_distance_matrix = load_parsed_distance_matrix()
+        parsed_distance_matrix = load_parsed_distance_matrix_tuple()
         # Output:
         async def get_output():
             """
@@ -180,7 +180,7 @@ class TestFindRoute(unittest.TestCase):
         - `quota` has a nonzero value
         """
         # Input:
-        parsed_distance_matrix = load_parsed_distance_matrix()
+        parsed_distance_matrix = load_parsed_distance_matrix_tuple()
         quota = int(2000000)  # Set quota to be 2 million meters
 
         # Output:
@@ -212,7 +212,7 @@ class TestFindRoute(unittest.TestCase):
         - `quota` has a nonzero value
         """
         # Input:
-        parsed_distance_matrix = load_parsed_distance_matrix()
+        parsed_distance_matrix = load_parsed_distance_matrix_tuple()
         quota = int(3600 * 8)  # Set quota to be 8 hours
 
         # Output:

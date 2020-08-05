@@ -31,12 +31,11 @@ async def get_dm_from_google_api(origins: List[str]) -> dict:
     return dm_response
 
 
-async def save_dm_dict_to_json(distance_matrix: dict, to_file: str) -> None:
+async def save_dm_dict_to_json(distance_matrix: dict, to_file: str) -> bool:
     """
     Save a distance matrix response to a JSON file
     """
-    await save_dict_to_json(distance_matrix, to_file)
-    return
+    return await save_dict_to_json(distance_matrix, to_file)
 
 
 async def dm_dict_to_2d_tuple(dm_response: dict, measurement: str) -> Tuple[Tuple[int]]:
@@ -65,25 +64,15 @@ async def parse_dm_response(dm_response: dict) -> dict:
     }
 
 
-async def load_dm_json_to_dict(json_file: str) -> dict:
+async def load_dm_json_to_dict(file_path: str) -> dict:
     """
     Load a JSON file to a dictionary
     """
-    return await load_json_to_dict(json_file)
+    return await load_json_to_dict(file_path)
 
 
-async def save_dm_tuple_to_txt(dm_tuple: Tuple[Tuple[int]], to_file: str) -> None:
-    """
-    Save a distance matrix tuple to a text file
-    """
-    with open(to_file, "w") as file:
-        file.write("%s\n" % str(dm_tuple))
-    return
-
-
-async def save_dm_tuple_to_pickle(dm_tuple: Tuple[Tuple[int]], to_file: str) -> None:
+async def save_dm_tuple_to_pickle(dm_tuple: Tuple[Tuple[int]], to_file: str) -> bool:
     """
     Save a distance matrix tuple to a pickle file
     """
-    await save_data_to_pickle(dm_tuple, to_file)
-    return
+    return await save_data_to_pickle(dm_tuple, to_file)

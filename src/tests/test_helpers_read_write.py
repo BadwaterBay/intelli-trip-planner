@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Test helper functions: read_write.py
+Test helper function read_write.py
 """
 
 import os
@@ -16,7 +16,7 @@ from core.helpers.read_write import (
     save_dict_to_json,
     save_data_to_pickle,
 )
-from tests.load_answer_key import load_parsed_distance_matrix
+from tests.load_answer_key import load_parsed_distance_matrix_tuple
 
 
 class TestHelpersReadWrite(unittest.TestCase):
@@ -50,7 +50,7 @@ class TestHelpersReadWrite(unittest.TestCase):
         # Output:
         output = asyncio.run(load_pickle(file_path))
         # Answer key:
-        answer_key = load_parsed_distance_matrix()
+        answer_key = load_parsed_distance_matrix_tuple()
         # Assert:
         self.assertEqual(output, answer_key)
 
@@ -126,7 +126,6 @@ class TestHelpersReadWrite(unittest.TestCase):
         data = {"a": 1, "b": 2, "c": 3}
         # Output
         file_path = mkstemp()[1]
-        print(file_path)
         asyncio.run(save_data_to_pickle(data, file_path))
         with open(file_path, "rb") as f_read:
             output = pickle.load(f_read)
