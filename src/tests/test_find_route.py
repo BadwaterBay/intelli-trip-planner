@@ -8,7 +8,7 @@ import unittest
 from unittest.mock import patch
 from io import StringIO
 import asyncio
-from core.find_route import create_data_model, print_plan, solve_for_plan
+from core.find_route import create_data_model, print_plan, solve_for_plan, main
 from tests.load_answer_key import load_parsed_distance_matrix
 
 
@@ -17,7 +17,20 @@ class TestFindRoute(unittest.TestCase):
     Test find_route.py
     """
 
-    def test_create_data_model(self):
+    def test_create_data_model_1(self):
+        """
+        Test create_data_model
+        """
+        # Input:
+        # No argument
+        # Output:
+        output = asyncio.run(create_data_model())
+        # Answer key:
+        answer_key = None
+        # Assert:
+        self.assertEqual(output, answer_key)
+
+    def test_create_data_model_2(self):
         """
         Test create_data_model
         """
@@ -258,6 +271,21 @@ class TestFindRoute(unittest.TestCase):
         with patch("sys.stdout", new=StringIO()) as fake_out:
             asyncio.run(print_plan(plan))
             self.assertEqual(fake_out.getvalue(), answer_key)
+
+    def test_main(self):
+        """
+        # Test main function
+        It is mainly a driver function for development purposes.
+        It should return True if everything runs fine.
+        """
+        # Input:
+        # No input argument
+        # Output:
+        output = asyncio.run(main())
+        # Answer key:
+        answer_key = True
+        # Assert:
+        self.assertEqual(output, answer_key)
 
 
 if __name__ == "__main__":
