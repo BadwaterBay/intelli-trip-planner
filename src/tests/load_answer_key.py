@@ -1,9 +1,11 @@
+#!/usr/bin/env python
+
 """
 Load answer keys for testing
 """
 
 
-def load_parsed_distance_matrix() -> dict:
+def load_parsed_distance_matrix_tuple() -> dict:
     """
     Load parsed distance matrix as answer key
     """
@@ -154,4 +156,15 @@ def load_parsed_distance_matrix() -> dict:
             (16806, 31556, 23530, 21451, 27854, 38303, 9818, 11284, 0, 18581),
             (15202, 27941, 22645, 17695, 21465, 34688, 20836, 22301, 18618, 0),
         ),
+    }
+
+
+def load_parsed_distance_matrix_list() -> dict:
+    """
+    Load parsed distance matrix (list) as answer key
+    """
+    distance_matrix = load_parsed_distance_matrix_tuple()
+    return {
+        "distance": list(map(list, distance_matrix["distance"])),
+        "duration": list(map(list, distance_matrix["duration"])),
     }
