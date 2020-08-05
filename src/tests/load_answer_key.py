@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """
 Load answer keys for testing
 """
