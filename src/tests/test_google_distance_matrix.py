@@ -15,6 +15,7 @@ from core.distancematrix.google_distance_matrix import (
     parse_dm_response,
 )
 from tests.load_answer_key import (
+    load_distance_matrix_response,
     load_distance_matrix_origins_list,
     load_parsed_distance_matrix_tuple,
 )
@@ -33,12 +34,8 @@ class TestGoogleDistanceMatrix(unittest.TestCase):
         - API key is omitted in the test
         """
         # Input & mock setup
-        current_dir: str = os.path.dirname(os.path.abspath(__file__))
-        file_path: str = os.path.join(current_dir, "mock_data", "distance_matrix.json")
-        with open(file_path, "r") as f_read:
-            distance_matrix_response = json.load(f_read)
         mock_gmaps = mock_googlemaps.Client()
-        mock_gmaps.distance_matrix.return_value = distance_matrix_response
+        mock_gmaps.distance_matrix.return_value = load_distance_matrix_response()
         origins = load_distance_matrix_origins_list()
         # Output
         distance_matrix_output = asyncio.run(get_dm_from_google_api(origins))
