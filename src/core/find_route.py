@@ -40,7 +40,7 @@ async def create_data_model(
     if distance_matrix is None and duration_matrix is None:
         print(
             "Neither distance matrix or duration matrix were given."
-            "At least one of them must be present. Return None.",
+            " At least one of them must be present. Return None.",
             file=sys.stderr,
         )
         return None

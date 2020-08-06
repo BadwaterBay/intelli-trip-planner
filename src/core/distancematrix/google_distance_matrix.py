@@ -13,11 +13,6 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..",
 from typing import List, Tuple
 import googlemaps
 from dotenv import load_dotenv
-from core.helpers.read_write import (
-    load_json_to_dict,
-    save_dict_to_json,
-    save_data_to_pickle,
-)
 
 
 async def get_dm_from_google_api(origins: List[str]) -> dict:
@@ -29,13 +24,6 @@ async def get_dm_from_google_api(origins: List[str]) -> dict:
     gmaps = googlemaps.Client(key=api_key)
     dm_response = gmaps.distance_matrix(origins, origins)
     return dm_response
-
-
-async def save_dm_dict_to_json(distance_matrix: dict, to_file: str) -> bool:
-    """
-    Save a distance matrix response to a JSON file
-    """
-    return await save_dict_to_json(distance_matrix, to_file)
 
 
 async def dm_dict_to_2d_tuple(dm_response: dict, measurement: str) -> Tuple[Tuple[int]]:
@@ -62,17 +50,3 @@ async def parse_dm_response(dm_response: dict) -> dict:
         "distance": await dm_dict_to_2d_tuple(dm_response, "distance"),
         "duration": await dm_dict_to_2d_tuple(dm_response, "duration"),
     }
-
-
-async def load_dm_json_to_dict(file_path: str) -> dict:
-    """
-    Load a JSON file to a dictionary
-    """
-    return await load_json_to_dict(file_path)
-
-
-async def save_dm_tuple_to_pickle(dm_tuple: Tuple[Tuple[int]], to_file: str) -> bool:
-    """
-    Save a distance matrix tuple to a pickle file
-    """
-    return await save_data_to_pickle(dm_tuple, to_file)
