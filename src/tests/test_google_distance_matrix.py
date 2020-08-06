@@ -50,7 +50,7 @@ class TestGoogleDistanceMatrix(unittest.TestCase):
         """
         # Input:
         current_dir: str = os.path.dirname(os.path.abspath(__file__))
-        file_path: str = os.path.join(current_dir, "mock_data", "distance_matrix.json")
+        file_path: str = os.path.join(current_dir, "test_data", "distance_matrix.json")
         with open(file_path, "r") as read_file:
             distance_matrix: dict = json.load(read_file)
         # Answer key:
@@ -67,7 +67,7 @@ class TestGoogleDistanceMatrix(unittest.TestCase):
         """
         # Input:
         current_dir: str = os.path.dirname(os.path.abspath(__file__))
-        file_path: str = os.path.join(current_dir, "mock_data", "distance_matrix.json")
+        file_path: str = os.path.join(current_dir, "test_data", "distance_matrix.json")
         with open(file_path, "r") as read_file:
             distance_matrix = json.load(read_file)
         # Answer key:
@@ -84,7 +84,7 @@ class TestGoogleDistanceMatrix(unittest.TestCase):
         """
         # Input:
         current_dir: str = os.path.dirname(os.path.abspath(__file__))
-        file_path: str = os.path.join(current_dir, "mock_data", "distance_matrix.json")
+        file_path: str = os.path.join(current_dir, "test_data", "distance_matrix.json")
         with open(file_path, "r") as read_file:
             distance_matrix = json.load(read_file)
         # Answer key:

@@ -32,7 +32,7 @@ class TestHelpersReadWrite(unittest.TestCase):
         """
         # Input:
         current_dir: str = os.path.dirname(os.path.abspath(__file__))
-        file_path: str = os.path.join(current_dir, "mock_data", "nonexistence_file.pkl")
+        file_path: str = os.path.join(current_dir, "test_data", "nonexistence_file.pkl")
         # Output:
         output = asyncio.run(load_pickle(file_path))
         # Answer key:
@@ -47,7 +47,7 @@ class TestHelpersReadWrite(unittest.TestCase):
         # Input:
         current_dir: str = os.path.dirname(os.path.abspath(__file__))
         file_path: str = os.path.join(
-            current_dir, "mock_data", "parsed_distance_matrix.pkl"
+            current_dir, "test_data", "parsed_distance_matrix.pkl"
         )
         # Output:
         output = asyncio.run(load_pickle(file_path))
@@ -63,7 +63,7 @@ class TestHelpersReadWrite(unittest.TestCase):
         # Input:
         current_dir: str = os.path.dirname(os.path.abspath(__file__))
         file_path: str = os.path.join(
-            current_dir, "mock_data", "nonexistence_file.json"
+            current_dir, "test_data", "nonexistence_file.json"
         )
         # Output:
         output = asyncio.run(load_json_to_dict(file_path))

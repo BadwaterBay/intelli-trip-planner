@@ -14,6 +14,7 @@
   - [Workflow](#workflow)
   - [Bring your fork up to date with the original repository](#bring-your-fork-up-to-date-with-the-original-repository)
   - [Other useful commands](#other-useful-commands)
+- [Essential file structure](#essential-file-structure)
 - [Style guides](#style-guides)
   - [Git commit messages](#git-commit-messages)
   - [Python style guide](#python-style-guide)
@@ -188,6 +189,12 @@ If you are stuck, you are welcome to reach out and leave a comment.
 - If you run into problems with Node dependencies:
   - Try `yarn --frozen-lockfile` to see if it solves your problems.
   - If not, run `yarn refresh` to remove all dependencies in the `node_modules` directory and do a clean install of dependencies.
+
+---
+
+## Essential file structure
+
+[Please see the section in README](https://github.com/BadwaterBay/intelli-trip-planner/blob/master/README.md#essential-file-structure).
 
 ---
 

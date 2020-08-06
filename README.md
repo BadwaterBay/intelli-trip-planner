@@ -22,6 +22,7 @@ Repository: [https://github.com/BadwaterBay/intelli-trip-planner](https://github
 - [Description](#description)
 - [Tasks](#tasks)
 - [Contributing to this project](#contributing-to-this-project)
+- [Essential file structure](#essential-file-structure)
 
 ---
 
@@ -56,3 +57,45 @@ Hence, we break down it into smaller steps.
 ## Contributing to this project
 
 Please refer to our [Contributing Guidelines](https://github.com/BadwaterBay/intelli-trip-planner/blob/master/CONTRIBUTING.md).
+
+---
+
+## Essential file structure
+
+```
+- <root>
+  - CONTRIBUTING.md
+  - Dockerfile
+  - LICENSE
+  - README.md
+  - package.json
+  - pyproject.toml
+  - requirements.txt
+  - src
+    - app.py: Flask API app
+    - bin
+      - www.sh: Flask API driver
+    - core
+      - find_route.py (Core functionality for finding route)
+      - get_distance_matrix.py (Driver function for getting distance matrices from Google Maps API for development purposes)
+      - data
+        - distance_matrix.json (Raw JSON response from Google Maps API)
+        - parsed_distance_matrix.json (Parsed distance matrix)
+        - parsed_distance_matrix.pkl (Parsed distance matrix)
+      - distancematrix
+        - google_distance_matrix.py (Get distance matrices from Google Maps API)
+      - helpers
+        - general.py (Helper functions that don't fit into other files in this directory)
+        - read_write.py (Helper functions for reading and writing files)
+    - tests (test scripts for testing each script in src)
+      - load_answer_key.py (load answer keys for certain testing scripts)
+      - test_find_route.py
+      - test_get_distance_matrix.py
+      - test_google_distance_matrix.py
+      - test_helpers_general.py
+      - test_helpers_read_white.py
+      - test_data (data for testing purposes)
+        - distance_matrix.json
+        - parsed_distance_matrix.json
+        - parsed_distance_matrix.pkl
+```

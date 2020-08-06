@@ -5,7 +5,7 @@ Test helpers.py
 """
 
 import unittest
-from core.helpers.helper import seconds_in_x_hours
+from core.helpers.general import seconds_in_x_hours
 
 
 class TestHelpersHelper(unittest.TestCase):

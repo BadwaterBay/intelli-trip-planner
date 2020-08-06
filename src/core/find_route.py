@@ -14,7 +14,7 @@ import asyncio
 from typing import Tuple, List, Union
 from ortools.constraint_solver import routing_enums_pb2
 from ortools.constraint_solver import pywrapcp
-from core.helpers.helper import seconds_in_x_hours
+from core.helpers.general import seconds_in_x_hours
 from core.helpers.read_write import load_pickle
 
 
