@@ -11,14 +11,14 @@ from unittest.mock import patch
 from tempfile import TemporaryDirectory
 import json
 import pickle
-from core.get_distance_matrix import dm_pipeline, main
+from core.get_distance_matrix import dm_pipeline
 from tests.load_answer_key import (
     load_distance_matrix_response,
     load_parsed_distance_matrix_tuple,
     load_parsed_distance_matrix_list,
 )
 
-
+# pylint: disable=bad-continuation
 class TestGetDistanceMatrix(TestCase):
     """
     # Test get_distance_matrix.py

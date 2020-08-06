@@ -6,6 +6,8 @@ Load answer keys for testing
 
 from typing import List
 
+# pylint: disable=line-too-long
+
 
 def load_distance_matrix_origins_list() -> List[str]:
     """

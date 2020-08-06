@@ -4,10 +4,12 @@
 Test helper function read_write.py
 """
 
+# pylint: disable=duplicate-code
+
 import os
 import asyncio
 import unittest
-from tempfile import mkstemp
+from tempfile import NamedTemporaryFile
 import json
 import pickle
 from core.helpers.read_write import (
@@ -77,11 +79,11 @@ class TestHelpersReadWrite(unittest.TestCase):
         # Input & answer key:
         data = {"a": 1, "b": 2, "c": 3}
         # Setup:
-        file_path = mkstemp()[1]
-        with open(file_path, "w") as f_write:
+        file_path = NamedTemporaryFile()
+        with open(file_path.name, "w") as f_write:
             json.dump(data, f_write, indent=2)
         # Output:
-        output = asyncio.run(load_json_to_dict(file_path))
+        output = asyncio.run(load_json_to_dict(file_path.name))
         # Assert:
         self.assertEqual(output, data)
 
@@ -92,12 +94,10 @@ class TestHelpersReadWrite(unittest.TestCase):
         # Input
         data = {"a": 1, "b": 2, "c": 3}
         # Output
-        file_path = mkstemp()[1]
-        output = asyncio.run(save_dict_to_json(data, file_path))
-        with open(file_path, "r") as f_read:
+        file_path = NamedTemporaryFile()
+        output = asyncio.run(save_dict_to_json(data, file_path.name))
+        with open(file_path.name, "r") as f_read:
             contents = json.load(f_read)
-        # Clean up
-        os.remove(file_path)
         # Answer key
         answer_key = True
         # Assert
@@ -111,8 +111,8 @@ class TestHelpersReadWrite(unittest.TestCase):
         # Input & answer key
         data = int
         # Output
-        file_path = mkstemp()[1]
-        output = asyncio.run(save_dict_to_json(data, file_path))
+        file_path = NamedTemporaryFile()
+        output = asyncio.run(save_dict_to_json(data, file_path.name))
         # Answer key
         answer_key = False
         # Assert
@@ -125,12 +125,10 @@ class TestHelpersReadWrite(unittest.TestCase):
         # Input & answer key
         data = {"a": 1, "b": 2, "c": 3}
         # Output
-        file_path = mkstemp()[1]
-        asyncio.run(save_data_to_pickle(data, file_path))
-        with open(file_path, "rb") as f_read:
+        file_path = NamedTemporaryFile()
+        asyncio.run(save_data_to_pickle(data, file_path.name))
+        with open(file_path.name, "rb") as f_read:
             output = pickle.load(f_read)
-        # Clean up
-        os.remove(file_path)
         # Assert
         self.assertEqual(output, data)
 
