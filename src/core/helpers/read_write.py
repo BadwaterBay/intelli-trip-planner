@@ -52,13 +52,9 @@ async def save_data_to_pickle(data, file_path: str) -> bool:
     - :return: True if succeeds. False if fails.
     - :rtype: bool
     """
-    try:
-        with open(file_path, "wb") as f_write:
-            pickle.dump(data, f_write)
-        return True
-    except TypeError:
-        print("Unable to serialize the object.", file=sys.stderr)
-        return False
+    with open(file_path, "wb") as f_write:
+        pickle.dump(data, f_write)
+    return True
 
 
 async def save_dict_to_json(dict_data: dict, file_path: str) -> bool:
