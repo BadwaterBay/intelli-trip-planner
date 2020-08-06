@@ -4,23 +4,31 @@
 Load answer keys for testing
 """
 
+from typing import List
+
+
+def load_distance_matrix_origins_list() -> List[str]:
+    """
+    Load origins of distance matrix
+    """
+    return [
+        "Las Vegas McCarran International Airport, NV",
+        "Los Angeles International Airport, CA",
+        "Death Valley Furnace Creek Visitor Center, Furnace Creek, CA",
+        "Mojave Kelso Depot Visitor Center, CA",
+        "Joshua Tree National Park Visitor Center, Park Boulevard, Joshua Tree, CA",
+        "Sequoia National Park - Visitor Center, Generals Highway, Three Rivers, CA",
+        "Zion National Park Visitor Center, Zion – Mount Carmel Highway, Hurricane, UT",
+        "Bryce Canyon National Park Visitor Center, Utah 63, Bryce Canyon City, UT",
+        "Grand Canyon North Rim Visitor Center, AZ-67, North Rim, AZ",
+        "Grand Canyon Visitor Center, South Entrance Road, Grand Canyon Village, AZ",
+    ]
+
 
 def load_parsed_distance_matrix_tuple() -> dict:
     """
     Load parsed distance matrix as answer key
     """
-    # current_dir: str = os.path.dirname(os.path.abspath(__file__))
-    # json_file: str = os.path.join(
-    #     current_dir, "mock_data", "parsed_distance_matrix.json"
-    # )
-    # with open(json_file, "r") as read_file:
-    #     distance_matrix_json: dict = json.load(read_file)
-    # parsed_distance_matrix = {
-    #     "distance": tuple(map(tuple, distance_matrix_json["distance"])),
-    #     "duration": tuple(map(tuple, distance_matrix_json["duration"])),
-    # }
-    # return parsed_distance_matrix
-
     return {
         "distance": (
             (
@@ -163,7 +171,7 @@ def load_parsed_distance_matrix_list() -> dict:
     """
     Load parsed distance matrix (list) as answer key
     """
-    distance_matrix = load_parsed_distance_matrix_tuple()
+    distance_matrix: dict = load_parsed_distance_matrix_tuple()
     return {
         "distance": list(map(list, distance_matrix["distance"])),
         "duration": list(map(list, distance_matrix["duration"])),

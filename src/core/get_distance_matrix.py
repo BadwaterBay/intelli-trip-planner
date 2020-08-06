@@ -14,11 +14,9 @@ import asyncio
 from typing import List
 from core.distancematrix.google_distance_matrix import (
     get_dm_from_google_api,
-    save_dm_dict_to_json,
     parse_dm_response,
-    save_dm_tuple_to_pickle,
 )
-from core.helpers.read_write import save_dict_to_json
+from core.helpers.read_write import save_dict_to_json, save_data_to_pickle
 
 
 async def dm_pipeline(origins: List[str]) -> None:
@@ -35,14 +33,14 @@ async def dm_pipeline(origins: List[str]) -> None:
 
     # Save distance matrix response from Google Maps API to JSON
     dm_json: str = os.path.join(dir_for_data, "distance_matrix.json")
-    await save_dm_dict_to_json(dm_response, dm_json)
+    await save_dict_to_json(dm_response, dm_json)
 
     # Parse distance matrix to a dictionary of two 2D tuples
     parsed_dm: dict = await parse_dm_response(dm_response)
 
     # Save parsed distance matrix to a pickle file
     pickle_file: str = os.path.join(dir_for_data, "parsed_distance_matrix.pkl")
-    await save_dm_tuple_to_pickle(parsed_dm, pickle_file)
+    await save_data_to_pickle(parsed_dm, pickle_file)
 
     # Save parsed distance matrix to a JSON file
     json_file: str = os.path.join(dir_for_data, "parsed_distance_matrix.json")
