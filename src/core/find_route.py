@@ -6,19 +6,21 @@
 
 import sys
 import os
-
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-
-# pylint: disable=wrong-import-position
 import asyncio
 from typing import Tuple, List, Union
 from ortools.constraint_solver import routing_enums_pb2
 from ortools.constraint_solver import pywrapcp
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+# pylint: disable=wrong-import-position
 from core.helpers.general import seconds_in_x_hours
 from core.helpers.read_write import load_pickle
 
 
 # pylint: disable=bad-continuation
+
+
 async def create_data_model(
     distance_matrix: Union[Tuple[Tuple[int]], List[List[int]]] = None,
     duration_matrix: Union[Tuple[Tuple[int]], List[List[int]]] = None,

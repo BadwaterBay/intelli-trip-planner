@@ -13,7 +13,7 @@
     "url": "https://github.com/BadwaterBay/intelli-trip-planner/issues"
   },
   "scripts": {
-    "ci": "yarn --frozen-lockfile && poetry install",
+    "i": "yarn --frozen-lockfile && poetry update && poetry install && poetry export -f requirements.txt > requirements.txt",
     "format-js": "prettier './**/*.{js,json,md}' --write",
     "format-py": "black . --verbose",
     "format": "run-s format-js format-py",
@@ -21,13 +21,12 @@
     "lint-sh": "shellcheck ./src/**/*.sh",
     "lint-py": "pylint ./src/**/*.py",
     "lint": "run-s lint-js lint-sh lint-py",
-    "clean": "rimraf dist",
-    "x-req": "poetry export -f requirements.txt > requirements.txt",
+    "clean": "rm -rf dist",
     "test": "python -m unittest discover -v -s tests -p \"test_*.py\" -t src",
     "coverage": "coverage run -m unittest discover -v -s tests -p \"test_*.py\" -t src && coverage report -m && coverage xml",
     "development": "bash ./src/bin/www.sh",
     "start": "run-s development",
-    "refresh": "rm -rf ./node_modules/ && yarn ci"
+    "refresh": "rm -rf ./node_modules/ && yarn i"
   },
   "engines": {
     "node": ">=0.12 <0.13"
@@ -50,12 +49,10 @@
   "dependencies": {
     "clean-css": "^4.2.3",
     "core-js": "^3.6.5",
-    "uglify-js": "^3.10.0"
+    "uglify-js": "^3.10.1"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.12",
-    "concurrently": "^5.2.0",
-    "eslint": "^7.5.0",
+    "eslint": "^7.6.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-html": "^6.0.2",
@@ -65,7 +62,6 @@
     "lint-staged": "^10.2.11",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.5",
-    "rimraf": "^3.0.2",
     "shellcheck": "^0.4.4"
   }
 }
