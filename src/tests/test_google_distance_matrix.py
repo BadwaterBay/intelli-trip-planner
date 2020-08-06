@@ -8,10 +8,11 @@ import os
 import asyncio
 import unittest
 from tempfile import mkstemp
+from unittest.mock import patch
 import json
 import pickle
 from core.distancematrix.google_distance_matrix import (
-    # get_dm_from_google_api,
+    get_dm_from_google_api,
     save_dm_dict_to_json,
     dm_dict_to_2d_tuple,
     parse_dm_response,
@@ -26,26 +27,45 @@ from tests.load_answer_key import (
 
 class TestGoogleDistanceMatrix(unittest.TestCase):
     """
-    Test google_distance_matrix.py
+    # Test google_distance_matrix.py
     """
 
-    # def test_get_dm_from_google_api(self):
-    #     """
-    #     Test get_dm_from_google_api
-    #     - It's too costly to call the real Google Maps API for routine testing
-    #     """
-    #     origins = [
-    #         "Denver, CO",
-    #         "Austin, TX",
-    #     ]
-    #     loop = asyncio.get_event_loop()
-    #     distance_matrix = loop.run_until_complete(get_dm_from_google_api(origins))
-    #     loop.close()
-    #     self.assertEqual(distance_matrix["status"], "OK")
+    @patch("core.distancematrix.google_distance_matrix.googlemaps")
+    def test_get_dm_from_google_api(self, mock_googlemaps):
+        """
+        # Test get_dm_from_google_api
+        - :param mock_googlemaps: Mock of googlemaps module
+        - API key is omitted in the test
+        """
+        # Input & mock setup
+        current_dir: str = os.path.dirname(os.path.abspath(__file__))
+        file_path: str = os.path.join(current_dir, "mock_data", "distance_matrix.json")
+        with open(file_path, "r") as f_read:
+            distance_matrix_response = json.load(f_read)
+        mock_gmaps = mock_googlemaps.Client()
+        mock_gmaps.distance_matrix.return_value = distance_matrix_response
+        origins = [
+            "Las Vegas McCarran International Airport, NV",
+            "Los Angeles International Airport, CA",
+            "Death Valley Furnace Creek Visitor Center, Furnace Creek, CA",
+            "Mojave Kelso Depot Visitor Center, CA",
+            "Joshua Tree National Park Visitor Center, Park Boulevard, Joshua Tree, CA",
+            "Sequoia National Park - Visitor Center, Generals Highway, Three Rivers, CA",
+            "Zion National Park Visitor Center, Zion – Mount Carmel Highway, Hurricane, UT",
+            "Bryce Canyon National Park Visitor Center, Utah 63, Bryce Canyon City, UT",
+            "Grand Canyon North Rim Visitor Center, AZ-67, North Rim, AZ 86023",
+            "Grand Canyon Visitor Center, South Entrance Road, Grand Canyon Village, AZ",
+        ]
+        # Output
+        distance_matrix_output = asyncio.run(get_dm_from_google_api(origins))
+        # Answer key
+        answer_key = "OK"
+        # Assert
+        self.assertEqual(distance_matrix_output["status"], answer_key)
 
     def test_save_dm_dict_to_json(self):
         """
-        Test save_dm_dict_to_json
+        # Test save_dm_dict_to_json
         """
         # Input
         data = load_parsed_distance_matrix_list()
@@ -64,7 +84,7 @@ class TestGoogleDistanceMatrix(unittest.TestCase):
 
     def test_dm_dict_to_2d_tuple_distance(self):
         """
-        Test dm_dict_to_2d_tuple with "distance" argument
+        # Test dm_dict_to_2d_tuple with "distance" argument
         """
         # Input:
         current_dir: str = os.path.dirname(os.path.abspath(__file__))
@@ -81,7 +101,7 @@ class TestGoogleDistanceMatrix(unittest.TestCase):
 
     def test_dm_dict_to_2d_tuple_duration(self):
         """
-        Test dm_dict_to_2d_tuple with "duration" argument
+        # Test dm_dict_to_2d_tuple with "duration" argument
         """
         # Input:
         current_dir: str = os.path.dirname(os.path.abspath(__file__))
@@ -98,7 +118,7 @@ class TestGoogleDistanceMatrix(unittest.TestCase):
 
     def test_parse_dm_response(self):
         """
-        Test parse_dm_response
+        # Test parse_dm_response
         """
         # Input:
         current_dir: str = os.path.dirname(os.path.abspath(__file__))
@@ -115,7 +135,7 @@ class TestGoogleDistanceMatrix(unittest.TestCase):
 
     def test_load_dm_json_to_dict(self):
         """
-        Test load_dm_json_to_dict
+        # Test load_dm_json_to_dict
         """
         # Input:
         current_dir: str = os.path.dirname(os.path.abspath(__file__))
