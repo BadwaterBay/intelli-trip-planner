@@ -34,7 +34,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "run-p x-req coverage"
+      "pre-push": "run-p coverage"
     }
   },
   "lint-staged": {
