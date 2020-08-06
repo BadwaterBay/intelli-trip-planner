@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Get distance matrices from Google Maps API and process the response
+# Get distance matrices from Google Maps API and process the response
 """
 
 import sys
@@ -17,7 +17,7 @@ from dotenv import load_dotenv
 
 async def get_dm_from_google_api(origins: List[str]) -> dict:
     """
-    Get a distance matrix from Google Maps API
+    # Get a distance matrix from Google Maps API
     """
     load_dotenv()
     api_key = os.environ.get("API_KEY_GOOGLE")
@@ -28,7 +28,7 @@ async def get_dm_from_google_api(origins: List[str]) -> dict:
 
 async def dm_dict_to_2d_tuple(dm_response: dict, measurement: str) -> Tuple[Tuple[int]]:
     """
-    Convert a distance matrix dictionary to a 2D tuple
+    # Convert a distance matrix dictionary to a 2D tuple
     - "measurement" is either "distance" or "duration"
     """
     len_1d: int = len(dm_response["rows"])
@@ -44,7 +44,7 @@ async def dm_dict_to_2d_tuple(dm_response: dict, measurement: str) -> Tuple[Tupl
 
 async def parse_dm_response(dm_response: dict) -> dict:
     """
-    Convert a distance matrix response to a dictionary of two 2D tuples
+    # Convert a distance matrix response to a dictionary of two 2D tuples
     """
     return {
         "distance": await dm_dict_to_2d_tuple(dm_response, "distance"),
