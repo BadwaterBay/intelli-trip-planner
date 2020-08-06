@@ -19,37 +19,33 @@ from core.distancematrix.google_distance_matrix import (
 from core.helpers.read_write import save_dict_to_json, save_data_to_pickle
 
 
-async def dm_pipeline(origins: List[str]) -> None:
+async def dm_pipeline(origins: List[str], dir_for_data: str) -> bool:
     """
     Pipeline for getting and manipulating distance matrices
     """
 
-    # Set the directory where distance matrix data will be saved
-    current_dir: str = os.path.dirname(os.path.abspath(__file__))
-    dir_for_data: str = os.path.join(current_dir, "data")
-
     # Get distance matrix from Google Maps API
     dm_response: dict = await get_dm_from_google_api(origins)
 
-    # Save distance matrix response from Google Maps API to JSON
+    # # Save distance matrix response from Google Maps API to JSON
     dm_json: str = os.path.join(dir_for_data, "distance_matrix.json")
-    await save_dict_to_json(dm_response, dm_json)
+    response_0 = await save_dict_to_json(dm_response, dm_json)
 
-    # Parse distance matrix to a dictionary of two 2D tuples
+    # # Parse distance matrix to a dictionary of two 2D tuples
     parsed_dm: dict = await parse_dm_response(dm_response)
 
-    # Save parsed distance matrix to a pickle file
+    # # Save parsed distance matrix to a pickle file
     pickle_file: str = os.path.join(dir_for_data, "parsed_distance_matrix.pkl")
-    await save_data_to_pickle(parsed_dm, pickle_file)
+    response_1 = await save_data_to_pickle(parsed_dm, pickle_file)
 
-    # Save parsed distance matrix to a JSON file
+    # # Save parsed distance matrix to a JSON file
     json_file: str = os.path.join(dir_for_data, "parsed_distance_matrix.json")
-    await save_dict_to_json(parsed_dm, json_file)
+    response_2 = await save_dict_to_json(parsed_dm, json_file)
 
-    return
+    return response_0 and response_1 and response_2
 
 
-async def main() -> None:
+async def main() -> bool:
     """
     Main function for creating distance matrices for development
     """
@@ -66,7 +62,11 @@ async def main() -> None:
         "Grand Canyon Visitor Center, South Entrance Road, Grand Canyon Village, AZ",
     ]
 
-    await dm_pipeline(origins)
+    # Set the directory where distance matrix data will be saved
+    current_dir: str = os.path.dirname(os.path.abspath(__file__))
+    dir_for_data: str = os.path.join(current_dir, "data")
+
+    return await dm_pipeline(origins, dir_for_data)
 
 
 if __name__ == "__main__":
