@@ -6,12 +6,12 @@
 
 import sys
 import os
+import asyncio
+from typing import List
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 # pylint: disable=wrong-import-position
-import asyncio
-from typing import List
 from core.distancematrix.google_distance_matrix import (
     get_dm_from_google_api,
     parse_dm_response,

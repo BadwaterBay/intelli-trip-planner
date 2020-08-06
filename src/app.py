@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Entry point of API
+# Entry point of API
 """
 
 from flask import Flask
