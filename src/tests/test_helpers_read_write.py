@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Test helper function read_write.py
+# Test helper function read_write.py
 """
 
 # pylint: disable=duplicate-code
@@ -23,12 +23,12 @@ from tests.load_answer_key import load_parsed_distance_matrix_tuple
 
 class TestHelpersReadWrite(unittest.TestCase):
     """
-    Test helper functions: read_write.py
+    # Test helper functions: read_write.py
     """
 
     def test_load_pickle_1(self):
         """
-        Test load_dm_pickle with nonexistence file
+        # Test load_dm_pickle with nonexistence file
         """
         # Input:
         current_dir: str = os.path.dirname(os.path.abspath(__file__))
@@ -42,7 +42,7 @@ class TestHelpersReadWrite(unittest.TestCase):
 
     def test_load_pickle_2(self):
         """
-        Test load_dm_pickle with a valid file
+        # Test load_dm_pickle with a valid file
         """
         # Input:
         current_dir: str = os.path.dirname(os.path.abspath(__file__))
@@ -58,7 +58,7 @@ class TestHelpersReadWrite(unittest.TestCase):
 
     def test_load_json_to_dict_1(self):
         """
-        Test load_json_to_dict with nonexistence file
+        # Test load_json_to_dict with nonexistence file
         """
         # Input:
         current_dir: str = os.path.dirname(os.path.abspath(__file__))
@@ -74,7 +74,7 @@ class TestHelpersReadWrite(unittest.TestCase):
 
     def test_load_json_to_dict_2(self):
         """
-        Test load_json_to_dict with a valid file
+        # Test load_json_to_dict with a valid file
         """
         # Input & answer key:
         data = {"a": 1, "b": 2, "c": 3}

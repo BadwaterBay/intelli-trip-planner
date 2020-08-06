@@ -8,9 +8,9 @@ import unittest
 from core.helpers.general import seconds_in_x_hours
 
 
-class TestHelpersHelper(unittest.TestCase):
+class TestHelpersGeneral(unittest.TestCase):
     """
-    # Test helper.py
+    # Test general.py
     """
 
     def test_seconds_in_x_hours_1(self):

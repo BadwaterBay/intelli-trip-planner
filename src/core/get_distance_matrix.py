@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Get distance matrices from Google Maps API for development
+# Get distance matrices from Google Maps API for development
 """
 
 import sys
@@ -21,7 +21,7 @@ from core.helpers.read_write import save_dict_to_json, save_data_to_pickle
 
 async def dm_pipeline(origins: List[str], dir_for_data: str) -> bool:
     """
-    Pipeline for getting and manipulating distance matrices
+    # Pipeline for getting and manipulating distance matrices
     """
 
     # Get distance matrix from Google Maps API
@@ -47,7 +47,7 @@ async def dm_pipeline(origins: List[str], dir_for_data: str) -> bool:
 
 async def main() -> bool:
     """
-    Main function for creating distance matrices for development
+    # Main function for creating distance matrices for development
     """
     origins: List[str] = [
         "Las Vegas McCarran International Airport, NV",

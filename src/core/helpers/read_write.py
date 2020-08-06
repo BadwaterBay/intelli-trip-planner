@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Helper functions for reading and writing files
+# Helper functions for reading and writing files
 """
 
 import sys

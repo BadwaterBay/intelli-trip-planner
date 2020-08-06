@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Solve for the fastest route
+# Solve for the fastest route
 """
 
 import sys

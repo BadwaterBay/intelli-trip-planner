@@ -14,12 +14,12 @@ from tests.load_answer_key import load_parsed_distance_matrix_tuple
 
 class TestFindRoute(unittest.TestCase):
     """
-    Test find_route.py
+    # Test find_route.py
     """
 
     def test_create_data_model_1(self):
         """
-        Test create_data_model
+        # Test create_data_model
         """
         # Input:
         # No argument
@@ -32,7 +32,7 @@ class TestFindRoute(unittest.TestCase):
 
     def test_create_data_model_2(self):
         """
-        Test create_data_model
+        # Test create_data_model
         """
         # Input:
         parsed_distance_matrix = load_parsed_distance_matrix_tuple()
@@ -238,7 +238,7 @@ class TestFindRoute(unittest.TestCase):
 
     def test_print_plan_with_valid_solution(self):
         """
-        Test printing the solution in stdout with a valid solution
+        # Test printing the solution in stdout with a valid solution
         """
         # Input:
         plan = {
@@ -261,7 +261,7 @@ class TestFindRoute(unittest.TestCase):
 
     def test_print_plan_with_no_solution(self):
         """
-        Test printing the solution in stdout with no solution
+        # Test printing the solution in stdout with no solution
         """
         # Input:
         plan = None
