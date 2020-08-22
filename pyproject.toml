@@ -13,6 +13,8 @@ googlemaps = "^4.4.2"
 python-dotenv = "^0.14.0"
 gunicorn = "^20.0.4"
 coverage = "^5.2.1"
+httpx = "^0.14.1"
+fuzzywuzzy = "^0.18.0"
 
 [tool.poetry.dev-dependencies]
 pylint = "^2.5.3"
