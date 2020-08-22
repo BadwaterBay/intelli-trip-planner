@@ -4,11 +4,10 @@
 # Get distance matrices from Google Maps API and process the response
 """
 
-import sys
 import os
 from typing import List, Tuple
-import googlemaps
 from dotenv import load_dotenv
+import googlemaps
 
 
 async def get_dm_from_google_api(origins: List[str]) -> dict:

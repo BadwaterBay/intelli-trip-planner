@@ -1,0 +1,379 @@
+﻿ParkName,Rank,Value,PercentOfTotal
+Golden Gate NRA,1,"15,002,227",4.58%
+Blue Ridge PKWY,2,"14,976,085",4.57%
+Great Smoky Mountains NP,3,"12,547,743",3.83%
+Gateway NRA,4,"9,405,622",2.87%
+Lincoln Memorial,5,"7,808,182",2.38%
+Lake Mead NRA,6,"7,499,049",2.29%
+George Washington MEM PKWY,7,"7,487,265",2.29%
+Natchez Trace PKWY,8,"6,296,041",1.92%
+Grand Canyon NP,9,"5,974,411",1.82%
+Gulf Islands NS,10,"5,600,240",1.71%
+Chesapeake & Ohio Canal NHP,11,"5,116,787",1.56%
+World War II Memorial,12,"4,831,327",1.48%
+Rocky Mountain NP,13,"4,670,053",1.43%
+Vietnam Veterans MEM,14,"4,580,587",1.40%
+Independence NHP,15,"4,532,459",1.38%
+Zion NP,16,"4,488,268",1.37%
+Yosemite NP,17,"4,422,861",1.35%
+Castle Clinton NM,18,"4,361,034",1.33%
+Glen Canyon NRA,19,"4,330,563",1.32%
+Statue of Liberty NM,20,"4,240,461",1.29%
+Cape Cod NS,21,"4,096,104",1.25%
+Yellowstone NP,22,"4,020,288",1.23%
+San Francisco Maritime NHP,23,"4,016,598",1.23%
+Korean War Veterans Memorial,24,"3,841,633",1.17%
+"Martin Luther King, Jr. Memorial",25,"3,667,562",1.12%
+Acadia NP,26,"3,437,286",1.05%
+Grand Teton NP,27,"3,405,614",1.04%
+Chattahoochee River NRA,28,"3,393,133",1.04%
+Delaware Water Gap NRA,29,"3,374,865",1.03%
+Colonial NHP,30,"3,327,268",1.02%
+Franklin Delano Roosevelt MEM,31,"3,303,573",1.01%
+Olympic NP,32,"3,245,806",0.99%
+Boston NHP,33,"3,201,834",0.98%
+Thomas Jefferson MEM,34,"3,096,895",0.95%
+Glacier NP,35,"3,049,839",0.93%
+Joshua Tree NP,36,"2,988,547",0.91%
+Kennesaw Mountain NBP,37,"2,621,050",0.80%
+Cape Hatteras NS,38,"2,606,632",0.80%
+Bryce Canyon NP,39,"2,594,904",0.79%
+Rock Creek Park,40,"2,416,232",0.74%
+Assateague Island NS,41,"2,344,536",0.72%
+Point Reyes NS,42,"2,265,301",0.69%
+Valley Forge NHP,43,"2,259,944",0.69%
+Cuyahoga Valley NP,44,"2,237,997",0.68%
+Indiana Dunes NP,45,"2,134,285",0.65%
+Stonewall NM,46,"2,088,929",0.64%
+Gateway Arch NP,47,"2,055,309",0.63%
+Mount Rushmore NMEM,48,"1,963,540",0.60%
+Canaveral NS,49,"1,884,122",0.58%
+National Capital Parks Central,50,"1,770,794",0.54%
+Death Valley NP,51,"1,740,945",0.53%
+Pearl Harbor NMEM,52,"1,716,535",0.52%
+Arches NP,53,"1,659,702",0.51%
+Sleeping Bear Dunes NL,54,"1,570,001",0.48%
+Mount Rainier NP,55,"1,501,621",0.46%
+Hot Springs NP,56,"1,467,153",0.45%
+"John D. Rockefeller, Jr. MEM PKWY",57,"1,426,666",0.44%
+Shenandoah NP,58,"1,425,507",0.44%
+Chickasaw NRA,59,"1,422,612",0.43%
+Fort Point NHS,60,"1,421,349",0.43%
+Hawaii Volcanoes NP,61,"1,368,376",0.42%
+Lake Roosevelt NRA,62,"1,358,818",0.41%
+Lake Meredith NRA,63,"1,328,340",0.41%
+Buffalo NR,64,"1,326,282",0.40%
+San Antonio Missions NHP,65,"1,281,121",0.39%
+Amistad NRA,66,"1,267,900",0.39%
+Sequoia NP,67,"1,246,053",0.38%
+Capitol Reef NP,68,"1,226,519",0.37%
+Ozark NSR,69,"1,221,489",0.37%
+National Capital Parks East,70,"1,210,641",0.37%
+Timucuan EHP,71,"1,205,065",0.37%
+San Juan NHS,72,"1,197,345",0.37%
+New River Gorge NR,73,"1,195,721",0.37%
+Everglades NP,74,"1,118,300",0.34%
+Klondike Gold Rush NHP Alaska,75,"1,116,161",0.34%
+Ross Lake NRA,76,"1,088,528",0.33%
+Saguaro NP,77,"1,020,226",0.31%
+Fort Vancouver NHS,78,"1,018,214",0.31%
+Minute Man NHP,79,"1,017,326",0.31%
+Big Cypress NPRES,80,"1,007,471",0.31%
+Haleakala NP,81,"994,394",0.30%
+Chickamauga & Chattanooga NMP,82,"977,158",0.30%
+Badlands NP,83,"970,998",0.30%
+Gettysburg NMP,84,"925,117",0.28%
+Fredericksburg & Spotsylvania NMP,85,"906,800",0.28%
+Fort Sumter and Fort Moultrie NHP,86,"877,894",0.27%
+Pictured Rocks NL,87,"858,715",0.26%
+Mojave NPRES,88,"841,516",0.26%
+Curecanti NRA,89,"836,034",0.26%
+Muir Woods NM,90,"812,073",0.25%
+"Martin Luther King, Jr. NHP",91,"761,650",0.23%
+Cabrillo NM,92,"761,485",0.23%
+Big South Fork NRRA,93,"750,494",0.23%
+Canyonlands NP,94,"733,996",0.22%
+President's Park,95,"715,911",0.22%
+Biscayne NP,96,"708,522",0.22%
+Santa Monica Mountains NRA,97,"707,566",0.22%
+Cumberland Gap NHP,98,"704,598",0.22%
+Crater Lake NP,99,"704,512",0.22%
+Theodore Roosevelt NP,100,"691,658",0.21%
+Whiskeytown NRA,101,"687,159",0.21%
+Castillo de San Marcos NM,102,"673,395",0.21%
+Glacier Bay NP & PRES,103,"672,087",0.21%
+Little River Canyon NPRES,104,"649,986",0.20%
+Petrified Forest NP,105,"643,588",0.20%
+Saint Croix NSR,106,"638,258",0.19%
+Kings Canyon NP,107,"632,110",0.19%
+Wind Cave NP,108,"615,350",0.19%
+White Sands NP,109,"608,785",0.19%
+Denali NP & PRES,110,"601,152",0.18%
+Fort Matanzas NM,111,"593,788",0.18%
+Governors Island NM,112,"590,993",0.18%
+Jean Lafitte NHP & PRES,113,"590,329",0.18%
+Cedar Breaks NM,114,"579,861",0.18%
+Vicksburg NMP,115,"576,456",0.18%
+Padre Island NS,116,"576,299",0.18%
+Ford's Theatre NHS,117,"572,373",0.17%
+Mesa Verde NP,118,"556,203",0.17%
+Mammoth Cave NP,119,"551,590",0.17%
+Great Sand Dunes NP & PRES,120,"527,546",0.16%
+Lassen Volcanic NP,121,"517,039",0.16%
+Manassas NBP,122,"510,427",0.16%
+Redwood NP,123,"504,722",0.15%
+Lowell NHP,124,"481,536",0.15%
+Big Bend NP,125,"463,832",0.14%
+Canyon de Chelly NM,126,"460,757",0.14%
+Cape Lookout NS,127,"455,526",0.14%
+White House,128,"454,117",0.14%
+Devils Tower NM,129,"450,785",0.14%
+Carlsbad Caverns NP,130,"440,691",0.13%
+Black Canyon of the Gunnison NP,131,"432,818",0.13%
+War in the Pacific NHP,132,"432,213",0.13%
+Fort Washington Park,133,"423,868",0.13%
+Boston African American NHS,134,"419,585",0.13%
+Fort McHenry NM & HS,135,"419,545",0.13%
+Pu'uhonua o Honaunau NHP,136,"414,410",0.13%
+Flight 93 NMEM,137,"411,226",0.13%
+Channel Islands NP,138,"409,630",0.13%
+Wolf Trap NP for the Performing Arts,139,"402,580",0.12%
+Wright Brothers NMEM,140,"400,135",0.12%
+Colorado NM,141,"397,032",0.12%
+Fire Island NS,142,"391,311",0.12%
+Montezuma Castle NM,143,"376,254",0.11%
+Mississippi NRRA,144,"374,682",0.11%
+Fort Pulaski NM,145,"374,290",0.11%
+Shiloh NMP,146,"360,989",0.11%
+Kenai Fjords NP,147,"356,601",0.11%
+Prince William Forest Park,148,"339,693",0.10%
+Salem Maritime NHS,149,"339,238",0.10%
+Piscataway Park,150,"329,729",0.10%
+Vanderbilt Mansion NHS,151,"326,822",0.10%
+Fort Necessity NB,152,"312,104",0.10%
+Harpers Ferry NHP,153,"299,577",0.09%
+Dinosaur NM,154,"298,965",0.09%
+Catoctin Mountain Park,155,"296,846",0.09%
+Petroglyph NM,156,"293,957",0.09%
+San Juan Island NHP,157,"292,507",0.09%
+Antietam NB,158,"287,343",0.09%
+Stones River NB,159,"284,516",0.09%
+Paterson Great Falls NHP,160,"276,985",0.08%
+Craters of the Moon NM & PRES,161,"272,224",0.08%
+Morristown NHP,162,"271,330",0.08%
+Lewis & Clark NHP,163,"270,993",0.08%
+Federal Hall NMEM,164,"264,849",0.08%
+Organ Pipe Cactus NM,165,"263,186",0.08%
+Kings Mountain NMP,166,"262,031",0.08%
+Big Thicket NPRES,167,"255,926",0.08%
+Fort Donelson NB,168,"254,431",0.08%
+Bighorn Canyon NRA,169,"249,659",0.08%
+Fort Raleigh NHS,170,"248,139",0.08%
+LBJ Memorial Grove on the Potomac,171,"244,246",0.07%
+Little Bighorn Battlefield NM,172,"241,304",0.07%
+Apostle Islands NL,173,"240,613",0.07%
+Abraham Lincoln Birthplace NHP,174,"238,226",0.07%
+Petersburg NB,175,"235,691",0.07%
+Voyageurs NP,176,"232,974",0.07%
+Kaloko Honokohau NHP,177,"232,921",0.07%
+Sitka NHP,178,"232,876",0.07%
+Wilson's Creek NB,179,"232,838",0.07%
+River Raisin NBP,180,"226,354",0.07%
+Guilford Courthouse NMP,181,"223,900",0.07%
+Cowpens NB,182,"223,413",0.07%
+Obed W&SR,183,"221,301",0.07%
+Nez Perce NHP,184,"216,068",0.07%
+Upper Delaware S&RR,185,"215,537",0.07%
+Fort Frederica NM,186,"212,330",0.06%
+Bandelier NM,187,"200,741",0.06%
+Lincoln Home NHS,188,"197,816",0.06%
+Richmond NBP,189,"197,242",0.06%
+John Day Fossil Beds NM,190,"197,091",0.06%
+Allegheny Portage Railroad NHS,191,"189,189",0.06%
+Guadalupe Mountains NP,192,"188,833",0.06%
+De Soto NMEM,193,"187,880",0.06%
+Fort Caroline NMEM,194,"187,658",0.06%
+Adams NHP,195,"187,400",0.06%
+Wupatki NM,196,"187,059",0.06%
+Johnstown Flood NMEM,197,"183,143",0.06%
+Natchez NHP,198,"182,123",0.06%
+Pinnacles NP,199,"177,224",0.05%
+Little Rock Central High School NHS,200,"168,918",0.05%
+Scotts Bluff NM,201,"166,007",0.05%
+Congaree NP,202,"159,445",0.05%
+El Malpais NM,203,"158,924",0.05%
+Walnut Canyon NM,204,"152,333",0.05%
+Theodore Roosevelt Island,205,"151,500",0.05%
+Palo Alto Battlefield NHP,206,"149,733",0.05%
+Devils Postpile NM,207,"147,864",0.05%
+Home of Franklin D. Roosevelt NHS,208,"147,109",0.04%
+Ocmulgee Mounds NHP,209,"146,925",0.04%
+Saratoga NHP,210,"145,118",0.04%
+Monocacy NB,211,"144,969",0.04%
+New Bedford Whaling NHP,212,"143,427",0.04%
+George Rogers Clark NHP,213,"140,130",0.04%
+George Washington Birthplace NM,214,"139,666",0.04%
+Lincoln Boyhood NMEM,215,"138,714",0.04%
+Pu'ukohola Heiau NHS,216,"133,573",0.04%
+Virgin Islands NP,217,"133,398",0.04%
+Great Basin NP,218,"131,802",0.04%
+Coronado NMEM,219,"130,328",0.04%
+Missouri NRR,220,"129,280",0.04%
+Greenbelt Park,221,"128,702",0.04%
+Minuteman Missile NHS,222,"125,776",0.04%
+Herbert Hoover NHS,223,"125,688",0.04%
+Fort Smith NHS,224,"125,500",0.04%
+Pennsylvania Avenue NHS,225,"125,035",0.04%
+Jewel Cave NM,226,"123,489",0.04%
+Perry's Victory & Intl. Peace MEM,227,"121,325",0.04%
+Gauley River NRA,228,"119,282",0.04%
+Rainbow Bridge NM,229,"115,108",0.04%
+General Grant NMEM,230,"113,852",0.03%
+Lyndon B. Johnson NHP,231,"111,972",0.03%
+Waco Mammoth NM,232,"111,331",0.03%
+Klondike Gold Rush NHP Seattle,233,"109,799",0.03%
+Lava Beds NM,234,"109,630",0.03%
+Washington Monument,235,"108,410",0.03%
+Sunset Crater Volcano NM,236,"108,379",0.03%
+Golden Spike NHP,237,"108,154",0.03%
+Steamtown NHS,238,"105,403",0.03%
+Andersonville NHS,239,"103,635",0.03%
+Christiansted NHS,240,"103,594",0.03%
+Timpanogos Cave NM,241,"103,512",0.03%
+Pea Ridge NMP,242,"102,753",0.03%
+Appomattox Court House NHP,243,"102,397",0.03%
+City of Rocks NRES,244,"99,311",0.03%
+Tuzigoot NM,245,"98,538",0.03%
+Fort Stanwix NM,246,"97,412",0.03%
+Manzanar NHS,247,"97,380",0.03%
+Ninety Six NHS,248,"97,295",0.03%
+Grand Portage NM,249,"94,985",0.03%
+Dayton Aviation Heritage NHP,250,"94,709",0.03%
+Natural Bridges NM,251,"88,090",0.03%
+Katmai NP & PRES,252,"84,167",0.03%
+Capulin Volcano NM,253,"81,617",0.02%
+Manhattan Project NHP,254,"79,870",0.02%
+Dry Tortugas NP,255,"79,200",0.02%
+Carl Sandburg Home NHS,256,"78,144",0.02%
+Pipestone NM,257,"77,508",0.02%
+Florissant Fossil Beds NM,258,"77,340",0.02%
+Moores Creek NB,259,"77,006",0.02%
+Wrangell-St. Elias NP & PRES,260,"74,518",0.02%
+Hamilton Grange NMEM,261,"71,247",0.02%
+Kalaupapa NHP,262,"69,401",0.02%
+El Morro NM,263,"68,867",0.02%
+Casa Grande Ruins NM,264,"68,379",0.02%
+Gila Cliff Dwellings NM,265,"66,614",0.02%
+Effigy Mounds NM,266,"65,581",0.02%
+Oregon Caves NM & PRES,267,"65,006",0.02%
+Aztec Ruins NM,268,"63,777",0.02%
+Homestead NM of America,269,"61,636",0.02%
+Frederick Douglass NHS,270,"61,063",0.02%
+Niobrara NSR,271,"60,812",0.02%
+Chiricahua NM,272,"60,655",0.02%
+Hopewell Culture NHP,273,"60,338",0.02%
+National Park of American Samoa,274,"60,006",0.02%
+Roger Williams NMEM,275,"59,419",0.02%
+Longfellow House Washington's HQ NHS,276,"55,012",0.02%
+Cumberland Island NS,277,"53,904",0.02%
+Fort Davis NHS,278,"51,995",0.02%
+Andrew Johnson NHS,279,"51,189",0.02%
+Jimmy Carter NHS,280,"50,789",0.02%
+Rosie The Riveter WWII Home Front NHP,281,"50,404",0.02%
+Hubbell Trading Post NHS,282,"50,285",0.02%
+Navajo NM,283,"49,983",0.02%
+Hopewell Furnace NHS,284,"49,861",0.02%
+George Washington Carver NM,285,"49,553",0.02%
+Whitman Mission NHS,286,"48,481",0.01%
+Eleanor Roosevelt NHS,287,"47,630",0.01%
+African Burial Ground NM,288,"47,427",0.01%
+Chaco Culture NHP,289,"47,342",0.01%
+Eisenhower NHS,290,"47,277",0.01%
+Marsh-Billings-Rockefeller NHP,291,"45,979",0.01%
+Big Hole NB,292,"45,861",0.01%
+Horseshoe Bend NMP,293,"45,372",0.01%
+Pecos NHP,294,"43,834",0.01%
+Fort Laramie NHS,295,"42,892",0.01%
+Thomas Edison NHP,296,"42,224",0.01%
+James A. Garfield NHS,297,"41,305",0.01%
+New Orleans Jazz NHP,298,"41,049",0.01%
+John Muir NHS,299,"40,725",0.01%
+Tumacacori NHP,300,"39,704",0.01%
+Ulysses S. Grant NHS,301,"39,449",0.01%
+Women's Rights NHP,302,"39,064",0.01%
+Lake Chelan NRA,303,"38,785",0.01%
+Weir Farm NHS,304,"38,700",0.01%
+Chamizal NMEM,305,"38,228",0.01%
+North Cascades NP,306,"38,208",0.01%
+Bluestone NSR,307,"37,663",0.01%
+Buck Island Reef NM,308,"37,085",0.01%
+Sagamore Hill NHS,309,"36,738",0.01%
+Tuskegee Institute NHS,310,"36,395",0.01%
+Charles Pinckney NHS,311,"35,495",0.01%
+Hovenweep NM,312,"35,399",0.01%
+Friendship Hill NHS,313,"34,159",0.01%
+Tallgrass Prairie NPRES,314,"33,750",0.01%
+William Howard Taft NHS,315,"32,396",0.01%
+Saint-Gaudens NHP,316,"31,759",0.01%
+Salinas Pueblo Missions NM,317,"31,672",0.01%
+Harry S Truman NHS,318,"30,746",0.01%
+Tuskegee Airmen NHS,319,"30,097",0.01%
+Cane River Creole NHP,320,"29,922",0.01%
+Tonto NM,321,"28,853",0.01%
+Arkansas Post NMEM,322,"28,519",0.01%
+Hampton NHS,323,"28,234",0.01%
+Pipe Spring NM,324,"27,482",0.01%
+Theodore Roosevelt Inaugural NHS,325,"26,994",0.01%
+Fort Larned NHS,326,"26,958",0.01%
+Isle Royale NP,327,"26,410",0.01%
+Theodore Roosevelt Birthplace NHS,328,"25,978",0.01%
+Grant-Kohrs Ranch NHS,329,"25,043",0.01%
+John F. Kennedy NHS,330,"24,838",0.01%
+Booker T. Washington NM,331,"24,640",0.01%
+Fort Scott NHS,332,"24,068",0.01%
+Hagerman Fossil Beds NM,333,"23,768",0.01%
+Bent's Old Fort NHS,334,"21,674",0.01%
+Brown v. Board of Education NHS,335,"21,413",0.01%
+Springfield Armory NHS,336,"20,979",0.01%
+Martin Van Buren NHS,337,"20,623",0.01%
+Fossil Butte NM,338,"20,554",0.01%
+Keweenaw NHP,339,"20,535",0.01%
+Saint Paul's Church NHS,340,"18,537",0.01%
+Noatak NPRES,341,"17,216",0.01%
+Lake Clark NP & PRES,342,"17,157",0.01%
+Agate Fossil Beds NM,343,"16,657",0.01%
+Russell Cave NM,344,"16,642",0.01%
+Cesar E. Chavez NM,345,"16,490",0.01%
+Cape Krusenstern NM,346,"16,226",0.00%
+Kobuk Valley NP,347,"15,766",0.00%
+Edgar Allan Poe NHS,348,"15,527",0.00%
+Charles Young Buffalo Soldiers NM,349,"14,106",0.00%
+Minidoka NHS,350,"13,647",0.00%
+Fort Union Trading Post NHS,351,"12,967",0.00%
+Saint Croix Island IHS,352,"11,613",0.00%
+Fort Union NM,353,"11,063",0.00%
+First Ladies NHS,354,"10,913",0.00%
+Gates of the Arctic NP & PRES,355,"10,518",0.00%
+Knife River Indian Villages NHS,356,"10,354",0.00%
+Belmont-Paul Women's Equality NM,357,"9,913",0.00%
+Maggie L. Walker NHS,358,"9,602",0.00%
+Washita Battlefield NHS,359,"9,119",0.00%
+Alibates Flint Quarries NM,360,"8,847",0.00%
+President W.J. Clinton Birthplace Home NHS,361,"8,758",0.00%
+Saugus Iron Works NHS,362,"8,150",0.00%
+Thomas Stone NHS,363,"8,020",0.00%
+Frederick Law Olmsted NHS,364,"7,791",0.00%
+Fort Bowie NHS,365,"7,577",0.00%
+Sand Creek Massacre NHS,366,"5,701",0.00%
+Salt River Bay NHP & Ecological Pres,367,"5,215",0.00%
+Clara Barton NHS,368,"4,100",0.00%
+Mary McLeod Bethune Council House NHS,369,"3,788",0.00%
+Nicodemus NHS,370,"3,540",0.00%
+Eugene O'Neill NHS,371,"2,944",0.00%
+Bering Land Bridge NPRES,372,"2,642",0.00%
+Carter G. Woodson Home NHS,373,"2,381",0.00%
+Thaddeus Kosciuszko NMEM,374,"1,921",0.00%
+Yukon-Charley Rivers NPRES,375,"1,114",0.00%
+Port Chicago Naval Magazine NMEM,376,830,0.00%
+Rio Grande W&SR,377,324,0.00%
+Aniakchak NM & PRES,378,100,0.00%
