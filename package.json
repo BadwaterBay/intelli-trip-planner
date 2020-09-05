@@ -1,7 +1,7 @@
 {
   "name": "intelli-trip-planner",
   "version": "0.0.2",
-  "description": "[https://github.com/BadwaterBay/intelli-trip-planner](https://github.com/Badwater-Apps/intelli-trip-planner)",
+  "description": "[https://github.com/BadwaterBay/intelli-trip-planner](https://github.com/BadwaterBay/intelli-trip-planner)",
   "homepage": "https://github.com/BadwaterBay/intelli-trip-planner",
   "repository": {
     "type": "git",
@@ -13,32 +13,31 @@
     "url": "https://github.com/BadwaterBay/intelli-trip-planner/issues"
   },
   "scripts": {
-    "i": "yarn --frozen-lockfile && poetry update && poetry install && poetry export -f requirements.txt > requirements.txt",
-    "format-js": "prettier './**/*.{js,json,md}' --write",
+    "i": "yarn --frozen-lockfile && poetry update && poetry export -f requirements.txt > requirements.txt && poetry install",
+    "format-js": "prettier './**/*.{js,json,md,html}' --write",
     "format-py": "black . --verbose",
-    "format": "run-s format-js format-py",
+    "format": "yarn format-js && yarn format-py",
     "lint-js": "eslint './**/*.js' --cache --fix",
     "lint-sh": "shellcheck ./src/**/*.sh",
     "lint-py": "pylint ./src/**/*.py",
-    "lint": "run-s lint-js lint-sh lint-py",
-    "clean": "rm -rf dist",
+    "lint": "yarn lint-js && yarn lint-sh && yarn lint-py",
     "test": "python -m unittest discover -v -s tests -p \"test_*.py\" -t src",
     "coverage": "coverage run -m unittest discover -v -s tests -p \"test_*.py\" -t src && coverage report -m && coverage xml",
     "development": "bash ./src/bin/www.sh",
-    "start": "run-s development",
+    "start": "yarn development",
     "refresh": "rm -rf ./node_modules/ && yarn i"
   },
   "engines": {
-    "node": ">=0.12 <0.13"
+    "node": ">=0.12 <=0.14"
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "run-p coverage"
+      "pre-push": "yarn coverage"
     }
   },
   "lint-staged": {
-    "./**/*.{js,json,md}": "prettier --write",
+    "./**/*.{js,json,md,html}": "prettier --write",
     "./**/*.js": "eslint --cache --fix",
     "./src/**/*.sh": "shellcheck",
     "./src/**/*.py": [
@@ -60,7 +59,6 @@
     "eslint-plugin-prettier": "^3.1.4",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
-    "npm-run-all": "^4.1.5",
     "prettier": "^2.0.5",
     "shellcheck": "^0.4.4"
   }
