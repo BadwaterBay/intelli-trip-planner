@@ -48,7 +48,7 @@
   "dependencies": {
     "clean-css": "^4.2.3",
     "core-js": "^3.6.5",
-    "uglify-js": "^3.10.1"
+    "uglify-js": "^3.10.3"
   },
   "devDependencies": {
     "eslint": "^7.6.0",
@@ -59,7 +59,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
-    "prettier": "^2.0.5",
+    "prettier": "^2.1.1",
     "shellcheck": "^0.4.4"
   }
 }
