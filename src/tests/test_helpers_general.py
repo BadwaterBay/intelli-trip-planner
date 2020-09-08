@@ -5,33 +5,19 @@ Test helpers.py
 """
 
 import unittest
-from core.helpers.general import seconds_in_x_hours
+from core.helpers.general import get_seconds_in_x_hours
 
 
 class TestHelpersGeneral(unittest.TestCase):
-    """
-    # Test general.py
-    """
-
     def test_seconds_in_x_hours_1(self):
-        """
-        # Test seconds_in_x_hours with no argument
-        """
-        # Input:
-        # No argument
-        # Ouput:
-        output: int = seconds_in_x_hours()
-        # Answer key:
+        output: int = get_seconds_in_x_hours()
+
         answer_key = 0
-        # Assert:
+
         self.assertEqual(output, answer_key)
 
     def test_seconds_in_x_hours_2(self):
-        """
-        # Test seconds_in_x_hours with a variety of arguments
-        """
-        # Input:
-        input_hours = [
+        test_cases = [
             0,
             1,
             3,
@@ -51,11 +37,11 @@ class TestHelpersGeneral(unittest.TestCase):
             [],
             (),
         ]
-        # Ouput:
+
         output = []
-        for x_hours in input_hours:
-            output.append(seconds_in_x_hours(x_hours))
-        # Answer key:
+        for x_hours in test_cases:
+            output.append(get_seconds_in_x_hours(x_hours))
+
         answer_key = [
             0,
             3600,
@@ -76,7 +62,7 @@ class TestHelpersGeneral(unittest.TestCase):
             0,
             0,
         ]
-        # Assert:
+
         self.assertEqual(output, answer_key)
 
 

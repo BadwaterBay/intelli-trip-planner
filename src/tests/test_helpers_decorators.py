@@ -1,24 +1,16 @@
 #!/usr/bin/env python
 
 """
-Test decorators.py
+Test helpers.decorators
 """
 
 import unittest
-from core.helpers.decorators import convert_to_tuple, convert_to_list
+from core.helpers.decorators import convert_list_to_tuple, convert_tuple_to_list
 
 
 class TestHelpersDecorators(unittest.TestCase):
-    """
-    # Test core.helpers.decorators
-    """
-
-    def test_convert_to_tuple(self):
-        """
-        # Test decorator convert_to_tuple
-        """
-
-        @convert_to_tuple
+    def test_convert_list_to_tuple(self):
+        @convert_list_to_tuple
         def return_arg(test_case):
             return test_case
 
@@ -35,12 +27,8 @@ class TestHelpersDecorators(unittest.TestCase):
         ]
         self.assertEqual(output, answer_key)
 
-    def test_convert_to_list(self):
-        """
-        # Test decorator convert_to_list
-        """
-
-        @convert_to_list
+    def test_convert_tuple_to_list(self):
+        @convert_tuple_to_list
         def return_arg(test_case):
             return test_case
 

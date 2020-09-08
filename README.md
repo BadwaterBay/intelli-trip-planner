@@ -4,7 +4,7 @@ Repository: [https://github.com/BadwaterBay/intelli-trip-planner](https://github
 
 ![Python application](https://github.com/BadwaterBay/intelli-trip-planner/workflows/Python%20application/badge.svg)
 ![Node.js CI](https://github.com/BadwaterBay/intelli-trip-planner/workflows/Node.js%20CI/badge.svg)
-[![codecov](https://codecov.io/gh/BadwaterBay/intelli-trip-planner/branch/master/graph/badge.svg)](https://codecov.io/gh/BadwaterBay/intelli-trip-planner)
+[![codecov](https://codecov.io/gh/BadwaterBay/intelli-trip-planner/branch/main/graph/badge.svg)](https://codecov.io/gh/BadwaterBay/intelli-trip-planner)
 [![CodeFactor](https://www.codefactor.io/repository/github/badwaterbay/intelli-trip-planner/badge)](https://www.codefactor.io/repository/github/badwaterbay/intelli-trip-planner)
 [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
@@ -56,7 +56,7 @@ Hence, we break down it into smaller steps.
 
 ## Contributing to this project
 
-Please refer to our [Contributing Guidelines](https://github.com/BadwaterBay/intelli-trip-planner/blob/master/CONTRIBUTING.md).
+Please refer to our [Contributing Guidelines](https://github.com/BadwaterBay/intelli-trip-planner/blob/main/CONTRIBUTING.md).
 
 ---
 

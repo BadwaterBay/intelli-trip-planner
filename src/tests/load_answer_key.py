@@ -10,9 +10,6 @@ from typing import List
 
 
 def load_distance_matrix_origins_list() -> List[str]:
-    """
-    # Load origins of distance matrix
-    """
     return [
         "Las Vegas McCarran International Airport, NV",
         "Los Angeles International Airport, CA",
@@ -28,9 +25,6 @@ def load_distance_matrix_origins_list() -> List[str]:
 
 
 def load_distance_matrix_response():
-    """
-    # Load raw distance matrix response from Google Maps API
-    """
     return {
         "destination_addresses": [
             "McCarran International Airport (LAS), 5757 Wayne Newton Blvd, Las Vegas, NV 89119, USA",
