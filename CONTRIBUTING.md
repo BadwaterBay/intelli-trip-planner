@@ -224,7 +224,8 @@ If you are stuck, you are welcome to reach out and leave a comment.
 
 ### Python style guide
 
-- We follow the [PEP 8 style guide](https://www.python.org/dev/peps/pep-0008/) and the [Black code style](https://github.com/psf/black/blob/master/docs/the_black_code_style.md). The [Black code style](https://github.com/psf/black/blob/master/docs/the_black_code_style.md) can be viewed as a strict subset of [PEP 8 style guide](https://www.python.org/dev/peps/pep-0008/).
+- We follow a modified [PEP 8 style guide](https://www.python.org/dev/peps/pep-0008/) and the [Black code style](https://github.com/psf/black/blob/master/docs/the_black_code_style.md). The [Black code style](https://github.com/psf/black/blob/master/docs/the_black_code_style.md) can be viewed as a strict subset of [PEP 8 style guide](https://www.python.org/dev/peps/pep-0008/).
+- It is encouraged to minimize the usage of comments and make the code self-explanatory by having descriptive and concise function and variable names. Hence, PEP-8's rules of writing docstrings for classes and functions are disabled. The only docstring required is the one at the top of each file.
 
 ### Prefer functional-styled programming
 
