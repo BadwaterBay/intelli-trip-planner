@@ -1,9 +1,9 @@
 [tool.poetry]
 name = "intelli-trip-planner"
 version = "0.0.2"
-description = ""
+description = "[https://github.com/BadwaterBay/intelli-trip-planner](https://github.com/BadwaterBay/intelli-trip-planner)"
 authors = ["Badwater Bay <info@badwaterbay.com>"]
-license = "GPL-3.0"
+license = "BSD-3-Clause"
 
 [tool.poetry.dependencies]
 python = "~3.8"

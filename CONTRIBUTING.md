@@ -71,7 +71,7 @@ Please follow these steps:
 Having the followings installed:
 
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-- [Node.js 12.x](https://nodejs.org/en/).
+- [Node.js 12.x or 14.x](https://nodejs.org/en/).
 - [Yarn](https://classic.yarnpkg.com/en/docs/install/).
 - [Python 3.8.x](https://www.python.org/downloads/):
   - You can install Python with your favorite method, such as some sort of virtual environment.
@@ -132,12 +132,12 @@ Our workflow is:
 - Make sure your base is up to date with the original repository (`upstream`) with commands:
   ```
   git fetch upstream
-  git rebase upstream/master
+  git rebase upstream/main
   ```
 - Push your commit to the remote of your forked repository. ([How to push commits to remote?](https://help.github.com/en/github/using-git/pushing-commits-to-a-remote-repository))
-- Submit a pull request (PR) to be merged into the original repository's `master` branch. ([How to create a PR?](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request))
+- Submit a pull request (PR) to be merged into the original repository's `main` branch. ([How to create a PR?](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request))
 - Peers will review your PR and may request revisions.
-- Once your PR is approved, your commit will be merged to the `master` branch. Congratulations!
+- Once your PR is approved, your commit will be merged to the `main` branch. Congratulations!
 
 If you are new to this workflow, you can a practice run here: [https://github.com/firstcontributions/first-contributions](https://github.com/firstcontributions/first-contributions)
 
@@ -152,21 +152,21 @@ If you are stuck, you are welcome to reach out and leave a comment.
   ```
   git fetch upstream
   ```
-- Make sure you are on your local `master` branch:
+- Make sure you are on your local `main` branch:
   ```
-  git checkout master
+  git checkout main
   ```
-- Rebase your local `master` branch with `upstream/master` branch:
+- Rebase your local `main` branch with `upstream/main` branch:
   ```
-  git rebase upstream/master
+  git pull --rebase upstream/main
   ```
-- Push your local `master` to remote:
+- Push your local `main` to remote:
   ```
-  git push origin master
+  git push origin main
   ```
   If your push is rejected ([why?](https://www.reddit.com/r/git/comments/6jzogp/why_am_i_force_pushing_after_a_rebase/)), you might need to force-push to remote:
   ```
-  git push -f origin master
+  git push -f origin main
   ```
 
 ---
@@ -194,7 +194,7 @@ If you are stuck, you are welcome to reach out and leave a comment.
 
 ## Essential file structure
 
-[Please see the section in README](https://github.com/BadwaterBay/intelli-trip-planner/blob/master/README.md#essential-file-structure).
+[Please see the section in README](https://github.com/BadwaterBay/intelli-trip-planner/blob/main/README.md#essential-file-structure).
 
 ---
 

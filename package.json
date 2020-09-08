@@ -8,7 +8,7 @@
     "url": "git+https://github.com/BadwaterBay/intelli-trip-planner.git"
   },
   "author": "Badwater Bay",
-  "license": "GPL-3.0",
+  "license": "BSD-3-Clause",
   "bugs": {
     "url": "https://github.com/BadwaterBay/intelli-trip-planner/issues"
   },

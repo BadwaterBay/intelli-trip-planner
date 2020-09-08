@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-# Get info from National Park Services (NPS) API
+# Call National Park Services (NPS) API
 """
 
 import os
@@ -14,10 +14,7 @@ NPS_API_URL_BASE = "https://developer.nps.gov/api/v1"
 RESULTS_PER_PAGE = 50
 
 
-def url_nps_visitor_centers(park_code, page_number=0) -> str:
-    """
-    # Query info of visitor centers
-    """
+def compose_url_nps_visitor_centers(park_code, page_number=0) -> str:
     return (
         NPS_API_URL_BASE
         + "/visitorcenters"
@@ -30,10 +27,7 @@ def url_nps_visitor_centers(park_code, page_number=0) -> str:
     )
 
 
-def url_nps_activities(park_code, page_number=0) -> str:
-    """
-    # Query info of activities
-    """
+def compose_url_nps_activities(park_code, page_number=0) -> str:
     return (
         NPS_API_URL_BASE
         + "/activities"
@@ -46,10 +40,7 @@ def url_nps_activities(park_code, page_number=0) -> str:
     )
 
 
-def url_nps_campgrounds(park_code, page_number=0) -> str:
-    """
-    # Query info of campgrounds
-    """
+def compose_url_nps_campgrounds(park_code, page_number=0) -> str:
     return (
         NPS_API_URL_BASE
         + "/campgrounds"
@@ -62,10 +53,7 @@ def url_nps_campgrounds(park_code, page_number=0) -> str:
     )
 
 
-async def nps_api_get(url_get, park_code, api_key, page_number=0) -> list:
-    """
-    # Make GET API calls recursively
-    """
+async def call_nps_api_with_get(url_get, park_code, api_key, page_number=0) -> list:
     headers_nps = {"X-Api-Key": api_key}
 
     async with httpx.AsyncClient() as client:
@@ -81,23 +69,19 @@ async def nps_api_get(url_get, park_code, api_key, page_number=0) -> list:
         return response_json.get("data")
 
     page_number += 1
-    return response_json.get("data") + await nps_api_get(
+    return response_json.get("data") + await call_nps_api_with_get(
         url_get, park_code, api_key, page_number
     )
 
 
 async def main() -> list:
-    """
-    # Driver function
-    """
-
-    # Park codes:
-    # Death Valley: deva
-    # Zion: zion
+    # Example park codes:
+    # - Death Valley: deva
+    # - Zion: zion
 
     load_dotenv()
     api_key = os.environ.get("API_KEY_NPS")
-    response = await nps_api_get(url_nps_activities, "deva", api_key)
+    response = await call_nps_api_with_get(compose_url_nps_activities, "deva", api_key)
     print(response)
     print(len(response))
     return response
