@@ -1,0 +1,13 @@
+---
+'**/*.{html,js,json,md,yaml,yml}':
+  - prettier --config '.prettierrc.yml' --write
+
+'**/*.js':
+  - eslint --config '.eslintrc.yml' --no-eslintrc --cache --fix
+
+'src/**/*.sh':
+  - shellcheck
+
+'src/**/*.py':
+  - black --verbose
+  - pylint

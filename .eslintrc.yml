@@ -1,0 +1,19 @@
+---
+env:
+  node: true,
+  es2020: true,
+
+parserOptions:
+  ecmaVersion: 2020
+  sourceType: module
+
+rules:
+  prettier/prettier: 2
+
+plugins:
+  - prettier
+
+extends:
+  - airbnb-base
+  - plugin:prettier/recommended
+  - prettier
