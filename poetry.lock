@@ -172,7 +172,7 @@ description = "The next generation HTTP client."
 name = "httpx"
 optional = false
 python-versions = ">=3.6"
-version = "0.15.3"
+version = "0.15.4"
 
 [package.dependencies]
 certifi = "*"
@@ -436,7 +436,7 @@ python-versions = "*"
 version = "1.12.1"
 
 [metadata]
-content-hash = "cd8d895f02087acb2cc272a32ffcf93cc479210b802a874d789138600a9c81fd"
+content-hash = "6505f12c8bc3600b9f1244be99c1e6829b883e459d1e9d5397bddf32828909b8"
 lock-version = "1.0"
 python-versions = "~3.8"
 
@@ -528,8 +528,8 @@ httpcore = [
     {file = "httpcore-0.11.0.tar.gz", hash = "sha256:35ffc735d746b83f8fc6d36f82600e56117b9e8adc65d0c0423264b6ebfef7bf"},
 ]
 httpx = [
-    {file = "httpx-0.15.3-py3-none-any.whl", hash = "sha256:6ae4eb43bd4bf9004afaebf81abcf353decbeb29ae0e17e19ae38369593cc7b9"},
-    {file = "httpx-0.15.3.tar.gz", hash = "sha256:65b5086d58f70a20927240f2a4dd401cc79528cc4e4b5d8323e21436ad70ea21"},
+    {file = "httpx-0.15.4-py3-none-any.whl", hash = "sha256:7b3c07bfdcdadd92020dd4c07b15932abdcf1c898422a4e98de3d19b2223310b"},
+    {file = "httpx-0.15.4.tar.gz", hash = "sha256:4c81dbf98a29cb4f51f415140df56542f9d4860798d713e336642e953cddd1db"},
 ]
 idna = [
     {file = "idna-2.10-py2.py3-none-any.whl", hash = "sha256:b97d804b1e9b523befed77c48dacec60e6dcb0b5391d57af6a65a312a90648c0"},
