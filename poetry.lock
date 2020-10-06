@@ -157,14 +157,14 @@ description = "A minimal low-level HTTP client."
 name = "httpcore"
 optional = false
 python-versions = ">=3.6"
-version = "0.11.0"
+version = "0.12.0"
 
 [package.dependencies]
-h11 = ">=0.8,<0.10"
+h11 = "<1.0.0"
 sniffio = ">=1.0.0,<2.0.0"
 
 [package.extras]
-http2 = ["h2 (>=3.0.0,<4.0.0)"]
+http2 = ["h2 (>=3,<5)"]
 
 [[package]]
 category = "main"
@@ -172,11 +172,11 @@ description = "The next generation HTTP client."
 name = "httpx"
 optional = false
 python-versions = ">=3.6"
-version = "0.15.5"
+version = "0.16.0"
 
 [package.dependencies]
 certifi = "*"
-httpcore = ">=0.11.0,<0.12.0"
+httpcore = ">=0.12.0,<0.13.0"
 sniffio = "*"
 
 [package.dependencies.rfc3986]
@@ -436,7 +436,7 @@ python-versions = "*"
 version = "1.12.1"
 
 [metadata]
-content-hash = "6bf061bbff87d43f8df3da27220299797e3090d566fcf1947f609129e8227689"
+content-hash = "79151a1348def1321c1e12390727bf12aba85663d4d840be6ec5eff0a3d779c5"
 lock-version = "1.0"
 python-versions = "~3.8"
 
@@ -524,12 +524,12 @@ h11 = [
     {file = "h11-0.9.0.tar.gz", hash = "sha256:33d4bca7be0fa039f4e84d50ab00531047e53d6ee8ffbc83501ea602c169cae1"},
 ]
 httpcore = [
-    {file = "httpcore-0.11.0-py3-none-any.whl", hash = "sha256:7a6804b18e1b8fc61ec4df868cb5c679d225fffbb81e48455ee9b57792cc3ac6"},
-    {file = "httpcore-0.11.0.tar.gz", hash = "sha256:35ffc735d746b83f8fc6d36f82600e56117b9e8adc65d0c0423264b6ebfef7bf"},
+    {file = "httpcore-0.12.0-py3-none-any.whl", hash = "sha256:18c4afcbfe884b635e59739105aed1692e132bc5d31597109f3c1c97e4ec1cac"},
+    {file = "httpcore-0.12.0.tar.gz", hash = "sha256:2526a38f31ac5967d38b7f593b5d8c4bd3fa82c21400402f866ba3312946acbf"},
 ]
 httpx = [
-    {file = "httpx-0.15.5-py3-none-any.whl", hash = "sha256:02326f2d3c61133db31e4b88dd3432479b434e52a68d813eab6db930f13611ea"},
-    {file = "httpx-0.15.5.tar.gz", hash = "sha256:254b371e3880a8e2387bf9ead6949bac797bd557fda26eba19a6153a0c06bd2b"},
+    {file = "httpx-0.16.0-py3-none-any.whl", hash = "sha256:824325d2dfb42ee6e3be31e072199a33e5a98dc2bda76fd6c9a844871948eb73"},
+    {file = "httpx-0.16.0.tar.gz", hash = "sha256:032c624c703cfa3aafe2d3a766150b48bcf8df71e833c1440fa74151da9df143"},
 ]
 idna = [
     {file = "idna-2.10-py2.py3-none-any.whl", hash = "sha256:b97d804b1e9b523befed77c48dacec60e6dcb0b5391d57af6a65a312a90648c0"},
