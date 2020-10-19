@@ -33,7 +33,7 @@
   "dependencies": {
     "clean-css": "^4.2.3",
     "core-js": "^3.6.5",
-    "uglify-js": "^3.11.0"
+    "uglify-js": "^3.11.3"
   },
   "devDependencies": {
     "eslint": "^7.10.0",
