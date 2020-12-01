@@ -23,4 +23,4 @@ updates:
     rebase-strategy: auto
     reviewers:
       - BadwaterBay/maintainers
-    open-pull-requests-limit: 16
+    open-pull-requests-limit: 32
