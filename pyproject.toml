@@ -8,12 +8,12 @@ license = "BSD-3-Clause"
 [tool.poetry.dependencies]
 python = "~3.8"
 Flask = "^1.1.2"
-ortools = "^7.8.7959"
+ortools = "^8.0.8283"
 googlemaps = "^4.4.2"
-python-dotenv = "^0.14.0"
+python-dotenv = "^0.15.0"
 gunicorn = "^20.0.4"
 coverage = "^5.3"
-httpx = "^0.15.5"
+httpx = "^0.16.1"
 fuzzywuzzy = "^0.18.0"
 
 [tool.poetry.dev-dependencies]
