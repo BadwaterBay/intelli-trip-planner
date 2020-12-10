@@ -1,4 +1,15 @@
 [[package]]
+name = "absl-py"
+version = "0.11.0"
+description = "Abseil Python Common Libraries, see https://github.com/abseil/abseil-py."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+six = "*"
+
+[[package]]
 name = "appdirs"
 version = "1.4.4"
 description = "A small Python module for determining appropriate platform-specific dirs, e.g. a \"user data dir\"."
@@ -257,15 +268,15 @@ python-versions = "*"
 
 [[package]]
 name = "ortools"
-version = "8.0.8283"
+version = "8.1.8487"
 description = "Google OR-Tools python libraries and modules"
 category = "main"
 optional = false
 python-versions = "*"
 
 [package.dependencies]
-protobuf = ">=3.13.0"
-six = ">=1.10"
+absl-py = ">=0.11"
+protobuf = ">=3.14.0"
 
 [[package]]
 name = "pathspec"
@@ -428,9 +439,13 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "~3.8"
-content-hash = "dc3a21a68e655be4cb382e40f6a211274652b466f7674ba50a3f8bab467bf3d6"
+content-hash = "9cf0c96f1135d8bb8cf9abd18c88312275ee488edc66d241c719dba0de46f15b"
 
 [metadata.files]
+absl-py = [
+    {file = "absl-py-0.11.0.tar.gz", hash = "sha256:673cccb88d810e5627d0c1c818158485d106f65a583880e2f730c997399bcfa7"},
+    {file = "absl_py-0.11.0-py3-none-any.whl", hash = "sha256:b3d9eb5119ff6e0a0125f6dabf2f9fae02f8acae7be70576002fac27235611c5"},
+]
 appdirs = [
     {file = "appdirs-1.4.4-py2.py3-none-any.whl", hash = "sha256:a841dacd6b99318a741b166adb07e19ee71a274450e68237b4650ca1055ab128"},
     {file = "appdirs-1.4.4.tar.gz", hash = "sha256:7d5d0167b2b1ba821647616af46a749d1c653740dd0d2415100fe26e27afdf41"},
@@ -604,19 +619,18 @@ mypy-extensions = [
     {file = "mypy_extensions-0.4.3.tar.gz", hash = "sha256:2d82818f5bb3e369420cb3c4060a7970edba416647068eb4c5343488a6c604a8"},
 ]
 ortools = [
-    {file = "ortools-8.0.8283-cp35-cp35m-manylinux1_x86_64.whl", hash = "sha256:c7b0f6a34dea9fbbae6e8d3c4b0a90f736e06867f20110550c92ac297b2fcf64"},
-    {file = "ortools-8.0.8283-cp36-cp36m-macosx_10_6_intel.whl", hash = "sha256:adf62067fb748a5937800153da4ea878836236fc61898cc90cd63ec821250ea2"},
-    {file = "ortools-8.0.8283-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:e5ed9ee041b10d02e3db79b1aba7bba1c3a42afa9c37ac08013b87e2571daa59"},
-    {file = "ortools-8.0.8283-cp36-cp36m-win_amd64.whl", hash = "sha256:60c676417e63fcd72eaf75a9f4cc918f59cd2ba716ad1e10cc0d676af44d471e"},
-    {file = "ortools-8.0.8283-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:62b64634eec4a369a16d0d2d41fe02a0dac7398587dca02990ee46d3a7868af8"},
-    {file = "ortools-8.0.8283-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:3712735b6ca0caef0d72ae8c7036e5c9cec0fdd7af3e9e23fb35bcc8eda7c372"},
-    {file = "ortools-8.0.8283-cp37-cp37m-win_amd64.whl", hash = "sha256:2f551cbce8b556fd41d074bd7c98cb42c1a290d10dc5292e10f28855e32cc60f"},
-    {file = "ortools-8.0.8283-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:de333ded08f1103c5b938e6d57706c72f807a595ba1214a947964ee0930fe57f"},
-    {file = "ortools-8.0.8283-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:31020d0b46c8e4ff7d920803c3bb5cbfc5630d319b9b46f70de8d18f9456e9c9"},
-    {file = "ortools-8.0.8283-cp38-cp38-win_amd64.whl", hash = "sha256:ec879d7066cf319b8b3664fd86b17ab8651950ae506ba26e88385177fa72d5de"},
-    {file = "ortools-8.0.8283-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:9bb89f0685fe844b4c0b14525adbc617153ebe89785dca5d27c93acccb0d6817"},
-    {file = "ortools-8.0.8283-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:fc4582a69497a5790115afd5a3b4d246487138eaa055ad68350457653dffc6af"},
-    {file = "ortools-8.0.8283-cp39-cp39-win_amd64.whl", hash = "sha256:6ff22710a75da9d39926d63e66a3632f5eb38ee1d3eacd8988892a7cecc3b7c6"},
+    {file = "ortools-8.1.8487-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:c3d5cabb2e91852b2bd708040745d12c7a74432227880e7e6c3f0bd2e68ebab9"},
+    {file = "ortools-8.1.8487-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:c0f34a3bfb6900f40ffa10e1f48588ab0241e95a2aeac56b3f33056e8384d941"},
+    {file = "ortools-8.1.8487-cp36-cp36m-win_amd64.whl", hash = "sha256:812c23fdee2501cc4319f9b08bfdd9a156c704682831294a97dcb65ccfb0abfd"},
+    {file = "ortools-8.1.8487-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:86e325ed85767d8d4e1ebd6a0e8d7cbba24bbe93cbdebb78cdceef450427c0f9"},
+    {file = "ortools-8.1.8487-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:a6d9797b5842f3b0053c5b05367584dcc7a79f96758c79b17a99a22aeb21050f"},
+    {file = "ortools-8.1.8487-cp37-cp37m-win_amd64.whl", hash = "sha256:102f01502e087e872fb5d8b6c0bcf02b90898c7ed37c09966618f3fa53749acb"},
+    {file = "ortools-8.1.8487-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:299c5c55a25cb865f215c295d31c439ce0c28562d363556070d5a40a0203346f"},
+    {file = "ortools-8.1.8487-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:a74a6cb0425f5bbbcd724658425b09bd0a71939902c1ff3c670d3cdd23e0229b"},
+    {file = "ortools-8.1.8487-cp38-cp38-win_amd64.whl", hash = "sha256:abb1f8abf2978e4d836ef52c4c3ef5891043ee0ed850a6d3a93673649c28739c"},
+    {file = "ortools-8.1.8487-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:542a3f57fe64b3911be7dafb267f1a1bdcbf7bade8fedfa0cfb24d69b5ec8539"},
+    {file = "ortools-8.1.8487-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:75ea6ce057b8663d3e04b29ebd8380a3805fc68577a84c0a99ccd33f6311a9c4"},
+    {file = "ortools-8.1.8487-cp39-cp39-win_amd64.whl", hash = "sha256:57949f00fbcb96612812c4459149d01a3f51770bf42fd17521a173be63507687"},
 ]
 pathspec = [
     {file = "pathspec-0.8.1-py2.py3-none-any.whl", hash = "sha256:aa0cb481c4041bf52ffa7b0d8fa6cd3e88a2ca4879c533c9153882ee2556790d"},
