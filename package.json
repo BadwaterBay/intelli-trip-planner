@@ -33,17 +33,17 @@
   },
   "dependencies": {
     "clean-css": "^4.2.3",
-    "core-js": "^3.8.0",
+    "core-js": "^3.8.1",
     "uglify-js": "^3.12.0"
   },
   "devDependencies": {
-    "eslint": "^7.14.0",
+    "eslint": "^7.15.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-config-prettier": "^6.15.0",
+    "eslint-config-prettier": "^7.0.0",
     "eslint-plugin-html": "^6.1.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^3.2.0",
-    "husky": "^4.3.0",
+    "husky": "^4.3.5",
     "lint-staged": "^10.5.3",
     "prettier": "^2.2.1",
     "shellcheck": "^0.4.4"
