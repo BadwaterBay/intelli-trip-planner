@@ -15,7 +15,7 @@ from core.distancematrix.google_distance_matrix import (
     get_distancematrix_from_google,
     parse_distancematrix_response,
 )
-from core.helpers.read_write import save_dict_to_json, save_to_pickle
+from core.helpers.read_write import save_dict_to_json
 
 
 async def process_distancematrix_response(
@@ -24,17 +24,14 @@ async def process_distancematrix_response(
     dm_response: dict = await get_distancematrix_from_google(origins)
 
     dm_json: str = os.path.join(dir_for_data, "distance_matrix.json")
-    response_0 = await save_dict_to_json(dm_response, dm_json)
+    raw_response = await save_dict_to_json(dm_response, dm_json)
 
     parsed_dm: dict = await parse_distancematrix_response(dm_response)
 
-    pickle_file: str = os.path.join(dir_for_data, "parsed_distance_matrix.pkl")
-    response_1 = await save_to_pickle(parsed_dm, pickle_file)
-
     json_file: str = os.path.join(dir_for_data, "parsed_distance_matrix.json")
-    response_2 = await save_dict_to_json(parsed_dm, json_file)
+    parsed_response = await save_dict_to_json(parsed_dm, json_file)
 
-    return response_0 and response_1 and response_2
+    return raw_response and parsed_response
 
 
 async def create_distancematrix_for_dev(origins: List[str]) -> bool:
