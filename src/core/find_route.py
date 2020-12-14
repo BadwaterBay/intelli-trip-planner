@@ -14,7 +14,7 @@ from ortools.constraint_solver import pywrapcp
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from core.helpers.general import get_seconds_in_x_hours
-from core.helpers.read_write import load_pickle
+from core.helpers.read_write import load_json_to_dict
 
 
 async def construct_premise_for_solving_for_optimal_route(
@@ -168,9 +168,9 @@ async def print_optimal_route(optimal_route: Union[dict, None] = None) -> bool:
 
 async def main() -> bool:
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    file_path = os.path.join(current_dir, "data", "parsed_distance_matrix.pkl")
+    file_path = os.path.join(current_dir, "data", "parsed_distance_matrix.json")
 
-    distance_matrix = await load_pickle(file_path)
+    distance_matrix = await load_json_to_dict(file_path)
     routing_premise = await construct_premise_for_solving_for_optimal_route(
         distance_matrix["distance"], distance_matrix["duration"]
     )
