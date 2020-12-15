@@ -4,23 +4,23 @@ updates:
     directory: /
     schedule:
       interval: daily
-      time: '14:00'
-      timezone: America/Chicago
+      time: '00:00'
+      timezone: UTC
     labels:
       - dependencies
     rebase-strategy: auto
-    open-pull-requests-limit: 16
+    open-pull-requests-limit: 32
     reviewers:
       - BadwaterBay/maintainers
   - package-ecosystem: npm
     directory: /
     schedule:
       interval: daily
-      time: '14:00'
-      timezone: America/Chicago
+      time: '00:00'
+      timezone: UTC
     labels:
       - dependencies
     rebase-strategy: auto
+    open-pull-requests-limit: 32
     reviewers:
       - BadwaterBay/maintainers
-    open-pull-requests-limit: 32

@@ -188,7 +188,7 @@ If you are stuck, you are welcome to reach out and leave a comment.
   - Try `poetry install` to see if it solves your problems.
 - If you run into problems with Node dependencies:
   - Try `yarn --frozen-lockfile` to see if it solves your problems.
-  - If not, run `yarn refresh` to remove all dependencies in the `node_modules` directory and do a clean install of dependencies.
+  - If not, remove all dependencies in the `node_modules` directory and do a clean install of dependencies with `yarn --frozen-lockfile`.
 
 ---
 
