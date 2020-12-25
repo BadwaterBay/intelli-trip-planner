@@ -31,9 +31,9 @@ async def convert_distancematrix_to_tuple(
     len_1d: int = len(dm_response["rows"])
     len_2d: int = len(dm_response["rows"][0]["elements"])
     output: [] = [None] * len_1d
-    for i in range(0, len_1d):
+    for i in range(len_1d):
         inner_list: [] = [None] * len_2d
-        for j in range(0, len_2d):
+        for j in range(len_2d):
             inner_list[j] = dm_response["rows"][i]["elements"][j][measurement]["value"]
         output[i] = tuple(inner_list)
     return tuple(output)
