@@ -13,7 +13,7 @@ googlemaps = "^4.4.2"
 python-dotenv = "^0.15.0"
 gunicorn = "^20.0.4"
 coverage = "^5.3"
-httpx = "^0.16.1"
+httpx = "^0.18.2"
 fuzzywuzzy = "^0.18.0"
 
 [tool.poetry.dev-dependencies]
